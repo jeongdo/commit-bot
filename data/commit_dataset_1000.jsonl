@@ -1,0 +1,1000 @@
+{"src": "버그 문서 최적화", "action": ["fix", "optimize", "update"], "translation": "fix bug docs", "keywords": ["fix", "bug", "docs"], "category": "docs"}
+{"src": "인증 추가", "action": ["add"], "translation": "add auth", "keywords": ["add", "auth", "code", "commit", "change"], "category": "build"}
+{"src": "버그 관련 추가", "action": ["fix", "add"], "translation": "fix bug", "keywords": ["fix", "bug", "code", "commit", "change"], "category": "docs"}
+{"src": "버그 삭제", "action": ["fix", "remove"], "translation": "fix bug", "keywords": ["fix", "bug", "code", "commit", "change"], "category": "docs"}
+{"src": "캐시 해결로 코드 개선", "action": ["optimize"], "translation": "optimize code cache", "keywords": ["optimize", "code", "cache"], "category": "test"}
+{"src": "응답 캐시 업데이트", "action": ["update"], "translation": "update response cache", "keywords": ["update", "response", "cache"], "category": "refactor"}
+{"src": "회원가입 추가", "action": ["add"], "translation": "add signup", "keywords": ["add", "signup", "code", "commit", "change"], "category": "style"}
+{"src": "배포 배포 리팩토링", "action": ["refactor"], "translation": "refactor deploy", "keywords": ["refactor", "deploy", "code", "commit", "change"], "category": "bugfix"}
+{"src": "회원가입 관련 구현", "action": ["implement"], "translation": "implement signup", "keywords": ["implement", "signup", "code", "commit", "change"], "category": "feature"}
+{"src": "테스트 최적화로 배포 개선", "action": ["add", "optimize"], "translation": "add test deploy", "keywords": ["add", "test", "deploy"], "category": "feature"}
+{"src": "코드 테스트 추가", "action": ["add"], "translation": "add code test", "keywords": ["add", "code", "test"], "category": "docs"}
+{"src": "로그 문서 해결", "action": ["update"], "translation": "update docs log", "keywords": ["update", "docs", "log"], "category": "chore"}
+{"src": "배포 최적화", "action": ["optimize"], "translation": "optimize deploy", "keywords": ["optimize", "deploy", "code", "commit", "change"], "category": "test"}
+{"src": "응답 인증 최적화", "action": ["optimize"], "translation": "optimize response auth", "keywords": ["optimize", "response", "auth"], "category": "refactor"}
+{"src": "문서 관련 삭제", "action": ["remove", "update"], "translation": "update docs", "keywords": ["update", "docs", "code", "commit", "change"], "category": "docs"}
+{"src": "오류 및 코드 수정", "action": ["fix"], "translation": "fix error code", "keywords": ["fix", "error", "code"], "category": "chore"}
+{"src": "로그인 관련 최적화", "action": ["optimize"], "translation": "optimize login log", "keywords": ["optimize", "login", "log"], "category": "build"}
+{"src": "성능 및 UI 구현", "action": ["implement", "optimize"], "translation": "optimize performance UI", "keywords": ["optimize", "performance", "UI"], "category": "perf"}
+{"src": "API 최적화", "action": ["optimize"], "translation": "optimize API", "keywords": ["optimize", "API", "code", "commit", "change"], "category": "ci"}
+{"src": "문서 구현로 권한 개선", "action": ["implement", "update"], "translation": "update docs permission", "keywords": ["update", "docs", "permission"], "category": "build"}
+{"src": "코드 관련 개선", "action": ["revert"], "translation": "update code", "keywords": ["update", "code", "code", "commit", "change"], "category": "perf"}
+{"src": "오류 회원가입 개선", "action": ["fix"], "translation": "fix error signup", "keywords": ["fix", "error", "signup"], "category": "refactor"}
+{"src": "로그 관련 구현", "action": ["implement"], "translation": "implement log", "keywords": ["implement", "log", "code", "commit", "change"], "category": "build"}
+{"src": "문서 관련 삭제", "action": ["remove", "update"], "translation": "update docs", "keywords": ["update", "docs", "code", "commit", "change"], "category": "bugfix"}
+{"src": "인증 문서 업데이트", "action": ["update"], "translation": "update docs auth", "keywords": ["update", "docs", "auth"], "category": "feature"}
+{"src": "캐시 및 응답 해결", "action": ["fix"], "translation": "fix response cache", "keywords": ["fix", "response", "cache"], "category": "test"}
+{"src": "응답 추가로 서버 개선", "action": ["add"], "translation": "add response server", "keywords": ["add", "response", "server"], "category": "test"}
+{"src": "성능 업데이트로 API 개선", "action": ["optimize"], "translation": "optimize API performance", "keywords": ["optimize", "API", "performance"], "category": "refactor"}
+{"src": "서버 업데이트로 버그 개선", "action": ["fix"], "translation": "fix bug server", "keywords": ["fix", "bug", "server"], "category": "perf"}
+{"src": "회원가입 배포 리팩토링", "action": ["refactor"], "translation": "refactor signup deploy", "keywords": ["refactor", "signup", "deploy"], "category": "docs"}
+{"src": "코드 권한 추가", "action": ["add"], "translation": "add code permission", "keywords": ["add", "code", "permission"], "category": "feature"}
+{"src": "인증 관련 개선", "action": ["remove"], "translation": "update auth", "keywords": ["update", "auth", "code", "commit", "change"], "category": "perf"}
+{"src": "응답 삭제로 문서 개선", "action": ["remove", "update"], "translation": "update response docs", "keywords": ["update", "response", "docs"], "category": "build"}
+{"src": "인증 관련 최적화", "action": ["optimize"], "translation": "optimize auth", "keywords": ["optimize", "auth", "code", "commit", "change"], "category": "test"}
+{"src": "쿼리 관련 삭제", "action": ["remove"], "translation": "update query", "keywords": ["update", "query", "code", "commit", "change"], "category": "perf"}
+{"src": "코드 코드 추가", "action": ["add"], "translation": "add code", "keywords": ["add", "code", "code", "commit", "change"], "category": "chore"}
+{"src": "권한 인증 최적화", "action": ["optimize"], "translation": "optimize auth permission", "keywords": ["optimize", "auth", "permission"], "category": "build"}
+{"src": "로그인 수정", "action": ["refactor"], "translation": "refactor login log", "keywords": ["refactor", "login", "log"], "category": "feature"}
+{"src": "의존성 로그인 삭제", "action": ["remove"], "translation": "update login dependencies log", "keywords": ["update", "login", "dependencies", "log"], "category": "docs"}
+{"src": "UI 및 성능 삭제", "action": ["remove", "optimize"], "translation": "optimize performance UI", "keywords": ["optimize", "performance", "UI"], "category": "refactor"}
+{"src": "권한 최적화로 UI 개선", "action": ["optimize"], "translation": "optimize UI permission", "keywords": ["optimize", "UI", "permission"], "category": "perf"}
+{"src": "회원가입 관련 추가", "action": ["add"], "translation": "add signup", "keywords": ["add", "signup", "code", "commit", "change"], "category": "style"}
+{"src": "캐시 및 캐시 해결", "action": ["fix"], "translation": "fix cache", "keywords": ["fix", "cache", "code", "commit", "change"], "category": "feature"}
+{"src": "로그 의존성 추가", "action": ["add"], "translation": "add dependencies log", "keywords": ["add", "dependencies", "log"], "category": "docs"}
+{"src": "인증 해결", "action": ["remove"], "translation": "update auth", "keywords": ["update", "auth", "code", "commit", "change"], "category": "style"}
+{"src": "쿼리 최적화", "action": ["optimize"], "translation": "optimize query", "keywords": ["optimize", "query", "code", "commit", "change"], "category": "feature"}
+{"src": "회원가입 관련 수정", "action": ["revert"], "translation": "update signup", "keywords": ["update", "signup", "code", "commit", "change"], "category": "bugfix"}
+{"src": "코드 응답 구현", "action": ["implement"], "translation": "implement response code", "keywords": ["implement", "response", "code"], "category": "perf"}
+{"src": "로그 관련 수정", "action": ["remove"], "translation": "update log", "keywords": ["update", "log", "code", "commit", "change"], "category": "style"}
+{"src": "로그 문서 해결", "action": ["update"], "translation": "update docs log", "keywords": ["update", "docs", "log"], "category": "test"}
+{"src": "UI 관련 개선", "action": ["refactor"], "translation": "refactor UI", "keywords": ["refactor", "UI", "code", "commit", "change"], "category": "test"}
+{"src": "권한 삭제", "action": ["remove"], "translation": "update permission", "keywords": ["update", "permission", "code", "commit", "change"], "category": "bugfix"}
+{"src": "오류 및 오류 해결", "action": ["fix"], "translation": "fix error", "keywords": ["fix", "error", "code", "commit", "change"], "category": "ci"}
+{"src": "응답 삭제로 오류 개선", "action": ["fix", "remove"], "translation": "fix error response", "keywords": ["fix", "error", "response"], "category": "feature"}
+{"src": "로그인 최적화", "action": ["optimize"], "translation": "optimize login log", "keywords": ["optimize", "login", "log"], "category": "style"}
+{"src": "권한 코드 수정", "action": ["optimize"], "translation": "optimize code permission", "keywords": ["optimize", "code", "permission"], "category": "feature"}
+{"src": "권한 관련 삭제", "action": ["remove"], "translation": "update permission", "keywords": ["update", "permission", "code", "commit", "change"], "category": "chore"}
+{"src": "성능 및 의존성 최적화", "action": ["optimize"], "translation": "optimize performance dependencies", "keywords": ["optimize", "performance", "dependencies"], "category": "test"}
+{"src": "테스트 관련 해결", "action": ["add"], "translation": "add test", "keywords": ["add", "test", "code", "commit", "change"], "category": "chore"}
+{"src": "버그 쿼리 추가", "action": ["fix", "add"], "translation": "fix bug query", "keywords": ["fix", "bug", "query"], "category": "feature"}
+{"src": "성능 리팩토링로 서버 개선", "action": ["refactor", "optimize"], "translation": "refactor performance server", "keywords": ["refactor", "performance", "server"], "category": "refactor"}
+{"src": "로그인 및 코드 업데이트", "action": ["update"], "translation": "update login code log", "keywords": ["update", "login", "code", "log"], "category": "refactor"}
+{"src": "테스트 관련 삭제", "action": ["add", "remove"], "translation": "add test", "keywords": ["add", "test", "code", "commit", "change"], "category": "bugfix"}
+{"src": "테스트 개선로 회원가입 개선", "action": ["add"], "translation": "add signup test", "keywords": ["add", "signup", "test"], "category": "test"}
+{"src": "회원가입 인증 개선", "action": ["update"], "translation": "update signup auth", "keywords": ["update", "signup", "auth"], "category": "test"}
+{"src": "성능 최적화로 의존성 개선", "action": ["optimize"], "translation": "optimize performance dependencies", "keywords": ["optimize", "performance", "dependencies"], "category": "test"}
+{"src": "UI 수정로 문서 개선", "action": ["update"], "translation": "update docs UI", "keywords": ["update", "docs", "UI"], "category": "feature"}
+{"src": "오류 관련 수정", "action": ["fix"], "translation": "fix error", "keywords": ["fix", "error", "code", "commit", "change"], "category": "chore"}
+{"src": "응답 해결", "action": ["revert"], "translation": "update response", "keywords": ["update", "response", "code", "commit", "change"], "category": "style"}
+{"src": "버그 추가로 회원가입 개선", "action": ["fix", "add"], "translation": "fix bug signup", "keywords": ["fix", "bug", "signup"], "category": "refactor"}
+{"src": "오류 삭제로 배포 개선", "action": ["fix", "remove"], "translation": "fix error deploy", "keywords": ["fix", "error", "deploy"], "category": "refactor"}
+{"src": "오류 관련 리팩토링", "action": ["refactor", "fix"], "translation": "fix error", "keywords": ["fix", "error", "code", "commit", "change"], "category": "chore"}
+{"src": "배포 성능 최적화", "action": ["optimize"], "translation": "optimize performance deploy", "keywords": ["optimize", "performance", "deploy"], "category": "feature"}
+{"src": "인증 및 캐시 개선", "action": ["refactor"], "translation": "refactor cache auth", "keywords": ["refactor", "cache", "auth"], "category": "refactor"}
+{"src": "버그 개선", "action": ["fix"], "translation": "fix bug", "keywords": ["fix", "bug", "code", "commit", "change"], "category": "chore"}
+{"src": "문서 관련 개선", "action": ["update"], "translation": "update docs", "keywords": ["update", "docs", "code", "commit", "change"], "category": "feature"}
+{"src": "UI 관련 최적화", "action": ["optimize"], "translation": "optimize UI", "keywords": ["optimize", "UI", "code", "commit", "change"], "category": "docs"}
+{"src": "테스트 관련 최적화", "action": ["add", "optimize"], "translation": "add test", "keywords": ["add", "test", "code", "commit", "change"], "category": "docs"}
+{"src": "성능 로그 업데이트", "action": ["optimize"], "translation": "optimize performance log", "keywords": ["optimize", "performance", "log"], "category": "test"}
+{"src": "문서 배포 삭제", "action": ["remove", "update"], "translation": "update docs deploy", "keywords": ["update", "docs", "deploy"], "category": "style"}
+{"src": "의존성 추가로 버그 개선", "action": ["fix", "add"], "translation": "fix bug dependencies", "keywords": ["fix", "bug", "dependencies"], "category": "test"}
+{"src": "문서 수정", "action": ["update"], "translation": "update docs", "keywords": ["update", "docs", "code", "commit", "change"], "category": "feature"}
+{"src": "캐시 업데이트로 배포 개선", "action": ["implement"], "translation": "implement deploy cache", "keywords": ["implement", "deploy", "cache"], "category": "build"}
+{"src": "회원가입 최적화로 로그 개선", "action": ["optimize"], "translation": "optimize signup log", "keywords": ["optimize", "signup", "log"], "category": "test"}
+{"src": "캐시 버그 삭제", "action": ["fix", "remove"], "translation": "fix bug cache", "keywords": ["fix", "bug", "cache"], "category": "ci"}
+{"src": "캐시 추가", "action": ["add"], "translation": "add cache", "keywords": ["add", "cache", "code", "commit", "change"], "category": "chore"}
+{"src": "의존성 리팩토링로 회원가입 개선", "action": ["refactor"], "translation": "refactor signup dependencies", "keywords": ["refactor", "signup", "dependencies"], "category": "ci"}
+{"src": "캐시 및 의존성 구현", "action": ["implement"], "translation": "implement dependencies cache", "keywords": ["implement", "dependencies", "cache"], "category": "test"}
+{"src": "API 구현로 성능 개선", "action": ["implement", "optimize"], "translation": "optimize API performance", "keywords": ["optimize", "API", "performance"], "category": "style"}
+{"src": "테스트 구현", "action": ["implement", "add"], "translation": "add test", "keywords": ["add", "test", "code", "commit", "change"], "category": "ci"}
+{"src": "테스트 테스트 최적화", "action": ["add", "optimize"], "translation": "add test", "keywords": ["add", "test", "code", "commit", "change"], "category": "style"}
+{"src": "의존성 해결로 쿼리 개선", "action": ["resolve"], "translation": "update dependencies query", "keywords": ["update", "dependencies", "query"], "category": "docs"}
+{"src": "UI 추가로 응답 개선", "action": ["add"], "translation": "add response UI", "keywords": ["add", "response", "UI"], "category": "test"}
+{"src": "의존성 최적화로 로그인 개선", "action": ["optimize"], "translation": "optimize login dependencies log", "keywords": ["optimize", "login", "dependencies", "log"], "category": "test"}
+{"src": "API 수정", "action": ["fix"], "translation": "fix API", "keywords": ["fix", "API", "code", "commit", "change"], "category": "docs"}
+{"src": "쿼리 관련 구현", "action": ["implement"], "translation": "implement query", "keywords": ["implement", "query", "code", "commit", "change"], "category": "build"}
+{"src": "UI 구현", "action": ["implement"], "translation": "implement UI", "keywords": ["implement", "UI", "code", "commit", "change"], "category": "docs"}
+{"src": "회원가입 구현", "action": ["implement"], "translation": "implement signup", "keywords": ["implement", "signup", "code", "commit", "change"], "category": "docs"}
+{"src": "쿼리 수정", "action": ["revert"], "translation": "update query", "keywords": ["update", "query", "code", "commit", "change"], "category": "docs"}
+{"src": "쿼리 API 해결", "action": ["revert"], "translation": "update API query", "keywords": ["update", "API", "query"], "category": "ci"}
+{"src": "의존성 삭제로 쿼리 개선", "action": ["remove"], "translation": "update dependencies query", "keywords": ["update", "dependencies", "query"], "category": "style"}
+{"src": "쿼리 해결로 응답 개선", "action": ["resolve"], "translation": "update response query", "keywords": ["update", "response", "query"], "category": "test"}
+{"src": "서버 해결", "action": ["refactor"], "translation": "refactor server", "keywords": ["refactor", "server", "code", "commit", "change"], "category": "test"}
+{"src": "테스트 관련 최적화", "action": ["add", "optimize"], "translation": "add test", "keywords": ["add", "test", "code", "commit", "change"], "category": "test"}
+{"src": "의존성 및 인증 추가", "action": ["add"], "translation": "add dependencies auth", "keywords": ["add", "dependencies", "auth"], "category": "refactor"}
+{"src": "로그 개선", "action": ["refactor"], "translation": "refactor log", "keywords": ["refactor", "log", "code", "commit", "change"], "category": "feature"}
+{"src": "의존성 관련 삭제", "action": ["remove"], "translation": "update dependencies", "keywords": ["update", "dependencies", "code", "commit", "change"], "category": "perf"}
+{"src": "성능 관련 구현", "action": ["implement", "optimize"], "translation": "optimize performance", "keywords": ["optimize", "performance", "code", "commit", "change"], "category": "style"}
+{"src": "버그 구현로 권한 개선", "action": ["implement", "fix"], "translation": "fix bug permission", "keywords": ["fix", "bug", "permission"], "category": "perf"}
+{"src": "배포 테스트 구현", "action": ["implement", "add"], "translation": "add test deploy", "keywords": ["add", "test", "deploy"], "category": "style"}
+{"src": "인증 해결로 코드 개선", "action": ["refactor"], "translation": "refactor code auth", "keywords": ["refactor", "code", "auth"], "category": "test"}
+{"src": "버그 관련 구현", "action": ["implement", "fix"], "translation": "fix bug", "keywords": ["fix", "bug", "code", "commit", "change"], "category": "chore"}
+{"src": "쿼리 관련 개선", "action": ["optimize"], "translation": "optimize query", "keywords": ["optimize", "query", "code", "commit", "change"], "category": "ci"}
+{"src": "로그 권한 수정", "action": ["add"], "translation": "add log permission", "keywords": ["add", "log", "permission"], "category": "style"}
+{"src": "응답 수정", "action": ["update"], "translation": "update response", "keywords": ["update", "response", "code", "commit", "change"], "category": "style"}
+{"src": "성능 및 쿼리 업데이트", "action": ["optimize"], "translation": "optimize performance query", "keywords": ["optimize", "performance", "query"], "category": "chore"}
+{"src": "캐시 관련 리팩토링", "action": ["refactor"], "translation": "refactor cache", "keywords": ["refactor", "cache", "code", "commit", "change"], "category": "feature"}
+{"src": "인증 관련 수정", "action": ["improve"], "translation": "update auth", "keywords": ["update", "auth", "code", "commit", "change"], "category": "docs"}
+{"src": "오류 버그 최적화", "action": ["fix", "optimize"], "translation": "fix bug error", "keywords": ["fix", "bug", "error"], "category": "docs"}
+{"src": "API 코드 개선", "action": ["resolve"], "translation": "update API code", "keywords": ["update", "API", "code"], "category": "feature"}
+{"src": "성능 리팩토링로 쿼리 개선", "action": ["refactor", "optimize"], "translation": "refactor performance query", "keywords": ["refactor", "performance", "query"], "category": "chore"}
+{"src": "응답 리팩토링", "action": ["refactor"], "translation": "refactor response", "keywords": ["refactor", "response", "code", "commit", "change"], "category": "feature"}
+{"src": "버그 구현로 테스트 개선", "action": ["implement", "fix", "add"], "translation": "fix bug test", "keywords": ["fix", "bug", "test"], "category": "style"}
+{"src": "권한 최적화", "action": ["optimize"], "translation": "optimize permission", "keywords": ["optimize", "permission", "code", "commit", "change"], "category": "feature"}
+{"src": "회원가입 및 권한 수정", "action": ["improve"], "translation": "update signup permission", "keywords": ["update", "signup", "permission"], "category": "ci"}
+{"src": "로그인 관련 삭제", "action": ["remove"], "translation": "update login log", "keywords": ["update", "login", "log"], "category": "chore"}
+{"src": "캐시 UI 추가", "action": ["add"], "translation": "add cache UI", "keywords": ["add", "cache", "UI"], "category": "style"}
+{"src": "쿼리 및 API 구현", "action": ["implement"], "translation": "implement API query", "keywords": ["implement", "API", "query"], "category": "refactor"}
+{"src": "문서 해결로 인증 개선", "action": ["update"], "translation": "update docs auth", "keywords": ["update", "docs", "auth"], "category": "perf"}
+{"src": "문서 관련 업데이트", "action": ["update"], "translation": "update docs", "keywords": ["update", "docs", "code", "commit", "change"], "category": "docs"}
+{"src": "문서 쿼리 최적화", "action": ["optimize", "update"], "translation": "optimize docs query", "keywords": ["optimize", "docs", "query"], "category": "perf"}
+{"src": "로그 수정로 의존성 개선", "action": ["resolve"], "translation": "update dependencies log", "keywords": ["update", "dependencies", "log"], "category": "chore"}
+{"src": "성능 업데이트", "action": ["optimize"], "translation": "optimize performance", "keywords": ["optimize", "performance", "code", "commit", "change"], "category": "test"}
+{"src": "문서 및 문서 삭제", "action": ["remove", "update"], "translation": "update docs", "keywords": ["update", "docs", "code", "commit", "change"], "category": "bugfix"}
+{"src": "성능 최적화로 로그인 개선", "action": ["optimize"], "translation": "optimize login performance log", "keywords": ["optimize", "login", "performance", "log"], "category": "style"}
+{"src": "코드 관련 해결", "action": ["resolve"], "translation": "update code", "keywords": ["update", "code", "code", "commit", "change"], "category": "perf"}
+{"src": "로그인 테스트 최적화", "action": ["add", "optimize"], "translation": "add login test log", "keywords": ["add", "login", "test", "log"], "category": "style"}
+{"src": "권한 업데이트", "action": ["resolve"], "translation": "update permission", "keywords": ["update", "permission", "code", "commit", "change"], "category": "ci"}
+{"src": "배포 삭제로 캐시 개선", "action": ["remove"], "translation": "update deploy cache", "keywords": ["update", "deploy", "cache"], "category": "chore"}
+{"src": "쿼리 및 문서 리팩토링", "action": ["refactor", "update"], "translation": "refactor docs query", "keywords": ["refactor", "docs", "query"], "category": "test"}
+{"src": "성능 업데이트", "action": ["optimize"], "translation": "optimize performance", "keywords": ["optimize", "performance", "code", "commit", "change"], "category": "feature"}
+{"src": "응답 최적화로 성능 개선", "action": ["optimize"], "translation": "optimize response performance", "keywords": ["optimize", "response", "performance"], "category": "perf"}
+{"src": "권한 및 서버 리팩토링", "action": ["refactor"], "translation": "refactor server permission", "keywords": ["refactor", "server", "permission"], "category": "feature"}
+{"src": "코드 업데이트", "action": ["remove"], "translation": "update code", "keywords": ["update", "code", "code", "commit", "change"], "category": "test"}
+{"src": "인증 API 리팩토링", "action": ["refactor"], "translation": "refactor API auth", "keywords": ["refactor", "API", "auth"], "category": "bugfix"}
+{"src": "인증 테스트 개선", "action": ["add"], "translation": "add test auth", "keywords": ["add", "test", "auth"], "category": "perf"}
+{"src": "버그 권한 리팩토링", "action": ["refactor", "fix"], "translation": "fix bug permission", "keywords": ["fix", "bug", "permission"], "category": "perf"}
+{"src": "의존성 관련 개선", "action": ["fix"], "translation": "fix dependencies", "keywords": ["fix", "dependencies", "code", "commit", "change"], "category": "test"}
+{"src": "로그인 관련 구현", "action": ["implement"], "translation": "implement login log", "keywords": ["implement", "login", "log"], "category": "perf"}
+{"src": "권한 오류 개선", "action": ["fix"], "translation": "fix error permission", "keywords": ["fix", "error", "permission"], "category": "refactor"}
+{"src": "테스트 최적화로 로그인 개선", "action": ["add", "optimize"], "translation": "add login test log", "keywords": ["add", "login", "test", "log"], "category": "feature"}
+{"src": "캐시 삭제로 코드 개선", "action": ["remove"], "translation": "update code cache", "keywords": ["update", "code", "cache"], "category": "style"}
+{"src": "테스트 관련 구현", "action": ["implement", "add"], "translation": "add test", "keywords": ["add", "test", "code", "commit", "change"], "category": "test"}
+{"src": "오류 최적화로 회원가입 개선", "action": ["fix", "optimize"], "translation": "fix error signup", "keywords": ["fix", "error", "signup"], "category": "docs"}
+{"src": "로그인 및 응답 최적화", "action": ["optimize"], "translation": "optimize login response log", "keywords": ["optimize", "login", "response", "log"], "category": "refactor"}
+{"src": "로그인 수정로 응답 개선", "action": ["implement"], "translation": "implement login response log", "keywords": ["implement", "login", "response", "log"], "category": "perf"}
+{"src": "UI 수정로 테스트 개선", "action": ["add"], "translation": "add test UI", "keywords": ["add", "test", "UI"], "category": "docs"}
+{"src": "테스트 및 쿼리 추가", "action": ["add"], "translation": "add test query", "keywords": ["add", "test", "query"], "category": "docs"}
+{"src": "권한 및 성능 구현", "action": ["implement", "optimize"], "translation": "optimize performance permission", "keywords": ["optimize", "performance", "permission"], "category": "feature"}
+{"src": "코드 리팩토링로 API 개선", "action": ["refactor"], "translation": "refactor API code", "keywords": ["refactor", "API", "code"], "category": "refactor"}
+{"src": "오류 응답 리팩토링", "action": ["refactor", "fix"], "translation": "fix error response", "keywords": ["fix", "error", "response"], "category": "build"}
+{"src": "테스트 추가로 쿼리 개선", "action": ["add"], "translation": "add test query", "keywords": ["add", "test", "query"], "category": "perf"}
+{"src": "로그 및 문서 삭제", "action": ["remove", "update"], "translation": "update docs log", "keywords": ["update", "docs", "log"], "category": "ci"}
+{"src": "로그인 관련 수정", "action": ["implement"], "translation": "implement login log", "keywords": ["implement", "login", "log"], "category": "chore"}
+{"src": "문서 추가로 버그 개선", "action": ["fix", "add", "update"], "translation": "fix bug docs", "keywords": ["fix", "bug", "docs"], "category": "docs"}
+{"src": "권한 리팩토링로 버그 개선", "action": ["refactor", "fix"], "translation": "fix bug permission", "keywords": ["fix", "bug", "permission"], "category": "build"}
+{"src": "응답 UI 삭제", "action": ["remove"], "translation": "update response UI", "keywords": ["update", "response", "UI"], "category": "perf"}
+{"src": "응답 및 권한 구현", "action": ["implement"], "translation": "implement response permission", "keywords": ["implement", "response", "permission"], "category": "perf"}
+{"src": "UI 배포 구현", "action": ["implement"], "translation": "implement deploy UI", "keywords": ["implement", "deploy", "UI"], "category": "chore"}
+{"src": "회원가입 및 응답 업데이트", "action": ["implement"], "translation": "implement signup response", "keywords": ["implement", "signup", "response"], "category": "perf"}
+{"src": "로그 및 인증 수정", "action": ["resolve"], "translation": "update log auth", "keywords": ["update", "log", "auth"], "category": "feature"}
+{"src": "문서 및 의존성 추가", "action": ["add", "update"], "translation": "add docs dependencies", "keywords": ["add", "docs", "dependencies"], "category": "style"}
+{"src": "버그 해결로 인증 개선", "action": ["fix"], "translation": "fix bug auth", "keywords": ["fix", "bug", "auth"], "category": "style"}
+{"src": "성능 서버 업데이트", "action": ["optimize"], "translation": "optimize performance server", "keywords": ["optimize", "performance", "server"], "category": "build"}
+{"src": "오류 관련 최적화", "action": ["fix", "optimize"], "translation": "fix error", "keywords": ["fix", "error", "code", "commit", "change"], "category": "test"}
+{"src": "API 해결로 테스트 개선", "action": ["add"], "translation": "add API test", "keywords": ["add", "API", "test"], "category": "perf"}
+{"src": "버그 코드 개선", "action": ["fix"], "translation": "fix bug code", "keywords": ["fix", "bug", "code"], "category": "test"}
+{"src": "버그 구현로 인증 개선", "action": ["implement", "fix"], "translation": "fix bug auth", "keywords": ["fix", "bug", "auth"], "category": "feature"}
+{"src": "쿼리 추가", "action": ["add"], "translation": "add query", "keywords": ["add", "query", "code", "commit", "change"], "category": "refactor"}
+{"src": "서버 관련 리팩토링", "action": ["refactor"], "translation": "refactor server", "keywords": ["refactor", "server", "code", "commit", "change"], "category": "style"}
+{"src": "코드 관련 해결", "action": ["revert"], "translation": "update code", "keywords": ["update", "code", "code", "commit", "change"], "category": "refactor"}
+{"src": "서버 관련 개선", "action": ["add"], "translation": "add server", "keywords": ["add", "server", "code", "commit", "change"], "category": "test"}
+{"src": "서버 관련 리팩토링", "action": ["refactor"], "translation": "refactor server", "keywords": ["refactor", "server", "code", "commit", "change"], "category": "bugfix"}
+{"src": "테스트 및 권한 해결", "action": ["add"], "translation": "add test permission", "keywords": ["add", "test", "permission"], "category": "refactor"}
+{"src": "UI 관련 업데이트", "action": ["improve"], "translation": "update UI", "keywords": ["update", "UI", "code", "commit", "change"], "category": "ci"}
+{"src": "로그 업데이트로 쿼리 개선", "action": ["refactor"], "translation": "refactor log query", "keywords": ["refactor", "log", "query"], "category": "docs"}
+{"src": "로그 구현로 코드 개선", "action": ["implement"], "translation": "implement code log", "keywords": ["implement", "code", "log"], "category": "bugfix"}
+{"src": "UI 및 로그 구현", "action": ["implement"], "translation": "implement log UI", "keywords": ["implement", "log", "UI"], "category": "refactor"}
+{"src": "API 관련 삭제", "action": ["remove"], "translation": "update API", "keywords": ["update", "API", "code", "commit", "change"], "category": "build"}
+{"src": "회원가입 및 쿼리 추가", "action": ["add"], "translation": "add signup query", "keywords": ["add", "signup", "query"], "category": "ci"}
+{"src": "API 관련 구현", "action": ["implement"], "translation": "implement API", "keywords": ["implement", "API", "code", "commit", "change"], "category": "refactor"}
+{"src": "UI 문서 업데이트", "action": ["update"], "translation": "update docs UI", "keywords": ["update", "docs", "UI"], "category": "build"}
+{"src": "의존성 관련 삭제", "action": ["remove"], "translation": "update dependencies", "keywords": ["update", "dependencies", "code", "commit", "change"], "category": "style"}
+{"src": "UI 및 인증 수정", "action": ["optimize"], "translation": "optimize UI auth", "keywords": ["optimize", "UI", "auth"], "category": "feature"}
+{"src": "코드 추가", "action": ["add"], "translation": "add code", "keywords": ["add", "code", "code", "commit", "change"], "category": "style"}
+{"src": "회원가입 쿼리 개선", "action": ["update"], "translation": "update signup query", "keywords": ["update", "signup", "query"], "category": "bugfix"}
+{"src": "의존성 오류 리팩토링", "action": ["refactor", "fix"], "translation": "fix error dependencies", "keywords": ["fix", "error", "dependencies"], "category": "chore"}
+{"src": "캐시 및 API 최적화", "action": ["optimize"], "translation": "optimize API cache", "keywords": ["optimize", "API", "cache"], "category": "ci"}
+{"src": "응답 관련 개선", "action": ["remove"], "translation": "update response", "keywords": ["update", "response", "code", "commit", "change"], "category": "feature"}
+{"src": "로그 해결로 코드 개선", "action": ["optimize"], "translation": "optimize code log", "keywords": ["optimize", "code", "log"], "category": "refactor"}
+{"src": "문서 해결", "action": ["update"], "translation": "update docs", "keywords": ["update", "docs", "code", "commit", "change"], "category": "test"}
+{"src": "쿼리 테스트 삭제", "action": ["add", "remove"], "translation": "add test query", "keywords": ["add", "test", "query"], "category": "refactor"}
+{"src": "쿼리 배포 리팩토링", "action": ["refactor"], "translation": "refactor deploy query", "keywords": ["refactor", "deploy", "query"], "category": "style"}
+{"src": "쿼리 및 테스트 최적화", "action": ["add", "optimize"], "translation": "add test query", "keywords": ["add", "test", "query"], "category": "style"}
+{"src": "코드 관련 구현", "action": ["implement"], "translation": "implement code", "keywords": ["implement", "code", "code", "commit", "change"], "category": "build"}
+{"src": "권한 및 테스트 리팩토링", "action": ["refactor", "add"], "translation": "add test permission", "keywords": ["add", "test", "permission"], "category": "bugfix"}
+{"src": "버그 관련 수정", "action": ["fix"], "translation": "fix bug", "keywords": ["fix", "bug", "code", "commit", "change"], "category": "build"}
+{"src": "코드 관련 업데이트", "action": ["refactor"], "translation": "refactor code", "keywords": ["refactor", "code", "code", "commit", "change"], "category": "docs"}
+{"src": "문서 추가로 API 개선", "action": ["add", "update"], "translation": "add API docs", "keywords": ["add", "API", "docs"], "category": "bugfix"}
+{"src": "쿼리 및 오류 업데이트", "action": ["fix"], "translation": "fix error query", "keywords": ["fix", "error", "query"], "category": "refactor"}
+{"src": "테스트 의존성 구현", "action": ["implement", "add"], "translation": "add test dependencies", "keywords": ["add", "test", "dependencies"], "category": "refactor"}
+{"src": "인증 업데이트", "action": ["revert"], "translation": "update auth", "keywords": ["update", "auth", "code", "commit", "change"], "category": "ci"}
+{"src": "응답 및 문서 해결", "action": ["update"], "translation": "update response docs", "keywords": ["update", "response", "docs"], "category": "test"}
+{"src": "회원가입 및 쿼리 추가", "action": ["add"], "translation": "add signup query", "keywords": ["add", "signup", "query"], "category": "refactor"}
+{"src": "인증 업데이트", "action": ["add"], "translation": "add auth", "keywords": ["add", "auth", "code", "commit", "change"], "category": "style"}
+{"src": "문서 인증 추가", "action": ["add", "update"], "translation": "add docs auth", "keywords": ["add", "docs", "auth"], "category": "perf"}
+{"src": "문서 및 권한 구현", "action": ["implement", "update"], "translation": "update docs permission", "keywords": ["update", "docs", "permission"], "category": "chore"}
+{"src": "코드 UI 수정", "action": ["optimize"], "translation": "optimize code UI", "keywords": ["optimize", "code", "UI"], "category": "ci"}
+{"src": "코드 및 로그인 해결", "action": ["update"], "translation": "update login code log", "keywords": ["update", "login", "code", "log"], "category": "style"}
+{"src": "API 오류 수정", "action": ["fix"], "translation": "fix error API", "keywords": ["fix", "error", "API"], "category": "test"}
+{"src": "회원가입 관련 최적화", "action": ["optimize"], "translation": "optimize signup", "keywords": ["optimize", "signup", "code", "commit", "change"], "category": "ci"}
+{"src": "쿼리 업데이트", "action": ["revert"], "translation": "update query", "keywords": ["update", "query", "code", "commit", "change"], "category": "style"}
+{"src": "API 추가로 캐시 개선", "action": ["add"], "translation": "add API cache", "keywords": ["add", "API", "cache"], "category": "perf"}
+{"src": "캐시 수정로 문서 개선", "action": ["update"], "translation": "update docs cache", "keywords": ["update", "docs", "cache"], "category": "chore"}
+{"src": "쿼리 최적화", "action": ["optimize"], "translation": "optimize query", "keywords": ["optimize", "query", "code", "commit", "change"], "category": "chore"}
+{"src": "배포 인증 업데이트", "action": ["fix"], "translation": "fix deploy auth", "keywords": ["fix", "deploy", "auth"], "category": "style"}
+{"src": "성능 및 회원가입 해결", "action": ["optimize"], "translation": "optimize signup performance", "keywords": ["optimize", "signup", "performance"], "category": "feature"}
+{"src": "오류 업데이트", "action": ["fix"], "translation": "fix error", "keywords": ["fix", "error", "code", "commit", "change"], "category": "docs"}
+{"src": "성능 추가", "action": ["add", "optimize"], "translation": "add performance", "keywords": ["add", "performance", "code", "commit", "change"], "category": "ci"}
+{"src": "성능 최적화", "action": ["optimize"], "translation": "optimize performance", "keywords": ["optimize", "performance", "code", "commit", "change"], "category": "chore"}
+{"src": "문서 개선", "action": ["update"], "translation": "update docs", "keywords": ["update", "docs", "code", "commit", "change"], "category": "refactor"}
+{"src": "문서 추가로 응답 개선", "action": ["add", "update"], "translation": "add response docs", "keywords": ["add", "response", "docs"], "category": "bugfix"}
+{"src": "배포 최적화", "action": ["optimize"], "translation": "optimize deploy", "keywords": ["optimize", "deploy", "code", "commit", "change"], "category": "build"}
+{"src": "버그 및 응답 리팩토링", "action": ["refactor", "fix"], "translation": "fix bug response", "keywords": ["fix", "bug", "response"], "category": "bugfix"}
+{"src": "서버 추가", "action": ["add"], "translation": "add server", "keywords": ["add", "server", "code", "commit", "change"], "category": "feature"}
+{"src": "배포 관련 삭제", "action": ["remove"], "translation": "update deploy", "keywords": ["update", "deploy", "code", "commit", "change"], "category": "build"}
+{"src": "쿼리 서버 최적화", "action": ["optimize"], "translation": "optimize query server", "keywords": ["optimize", "query", "server"], "category": "build"}
+{"src": "서버 테스트 해결", "action": ["add"], "translation": "add test server", "keywords": ["add", "test", "server"], "category": "bugfix"}
+{"src": "UI 로그 구현", "action": ["implement"], "translation": "implement log UI", "keywords": ["implement", "log", "UI"], "category": "feature"}
+{"src": "로그인 관련 추가", "action": ["add"], "translation": "add login log", "keywords": ["add", "login", "log"], "category": "chore"}
+{"src": "API 개선로 로그인 개선", "action": ["update"], "translation": "update login API log", "keywords": ["update", "login", "API", "log"], "category": "build"}
+{"src": "인증 구현로 의존성 개선", "action": ["implement"], "translation": "implement dependencies auth", "keywords": ["implement", "dependencies", "auth"], "category": "build"}
+{"src": "테스트 삭제로 쿼리 개선", "action": ["add", "remove"], "translation": "add test query", "keywords": ["add", "test", "query"], "category": "build"}
+{"src": "회원가입 관련 삭제", "action": ["remove"], "translation": "update signup", "keywords": ["update", "signup", "code", "commit", "change"], "category": "docs"}
+{"src": "코드 관련 구현", "action": ["implement"], "translation": "implement code", "keywords": ["implement", "code", "code", "commit", "change"], "category": "chore"}
+{"src": "캐시 관련 추가", "action": ["add"], "translation": "add cache", "keywords": ["add", "cache", "code", "commit", "change"], "category": "chore"}
+{"src": "문서 관련 업데이트", "action": ["update"], "translation": "update docs", "keywords": ["update", "docs", "code", "commit", "change"], "category": "refactor"}
+{"src": "로그인 관련 추가", "action": ["add"], "translation": "add login log", "keywords": ["add", "login", "log"], "category": "feature"}
+{"src": "배포 관련 개선", "action": ["revert"], "translation": "update deploy", "keywords": ["update", "deploy", "code", "commit", "change"], "category": "bugfix"}
+{"src": "인증 업데이트로 인증 개선", "action": ["add"], "translation": "add auth", "keywords": ["add", "auth", "code", "commit", "change"], "category": "style"}
+{"src": "캐시 및 오류 리팩토링", "action": ["refactor", "fix"], "translation": "fix error cache", "keywords": ["fix", "error", "cache"], "category": "build"}
+{"src": "배포 및 회원가입 삭제", "action": ["remove"], "translation": "update signup deploy", "keywords": ["update", "signup", "deploy"], "category": "docs"}
+{"src": "코드 추가", "action": ["add"], "translation": "add code", "keywords": ["add", "code", "code", "commit", "change"], "category": "chore"}
+{"src": "배포 리팩토링로 회원가입 개선", "action": ["refactor"], "translation": "refactor signup deploy", "keywords": ["refactor", "signup", "deploy"], "category": "build"}
+{"src": "인증 삭제", "action": ["remove"], "translation": "update auth", "keywords": ["update", "auth", "code", "commit", "change"], "category": "bugfix"}
+{"src": "문서 개선로 버그 개선", "action": ["fix", "update"], "translation": "fix bug docs", "keywords": ["fix", "bug", "docs"], "category": "test"}
+{"src": "의존성 및 배포 수정", "action": ["remove"], "translation": "update dependencies deploy", "keywords": ["update", "dependencies", "deploy"], "category": "refactor"}
+{"src": "로그 개선로 로그인 개선", "action": ["fix"], "translation": "fix login log", "keywords": ["fix", "login", "log"], "category": "feature"}
+{"src": "성능 구현로 로그 개선", "action": ["implement", "optimize"], "translation": "optimize performance log", "keywords": ["optimize", "performance", "log"], "category": "perf"}
+{"src": "응답 및 배포 리팩토링", "action": ["refactor"], "translation": "refactor response deploy", "keywords": ["refactor", "response", "deploy"], "category": "chore"}
+{"src": "로그인 개선로 오류 개선", "action": ["fix"], "translation": "fix error login log", "keywords": ["fix", "error", "login", "log"], "category": "refactor"}
+{"src": "오류 리팩토링로 로그인 개선", "action": ["refactor", "fix"], "translation": "fix error login log", "keywords": ["fix", "error", "login", "log"], "category": "perf"}
+{"src": "쿼리 관련 구현", "action": ["implement"], "translation": "implement query", "keywords": ["implement", "query", "code", "commit", "change"], "category": "test"}
+{"src": "회원가입 업데이트", "action": ["implement"], "translation": "implement signup", "keywords": ["implement", "signup", "code", "commit", "change"], "category": "feature"}
+{"src": "권한 및 UI 삭제", "action": ["remove"], "translation": "update UI permission", "keywords": ["update", "UI", "permission"], "category": "test"}
+{"src": "코드 로그 수정", "action": ["fix"], "translation": "fix code log", "keywords": ["fix", "code", "log"], "category": "docs"}
+{"src": "성능 및 API 리팩토링", "action": ["refactor", "optimize"], "translation": "refactor API performance", "keywords": ["refactor", "API", "performance"], "category": "test"}
+{"src": "회원가입 및 버그 해결", "action": ["fix"], "translation": "fix bug signup", "keywords": ["fix", "bug", "signup"], "category": "style"}
+{"src": "로그 삭제", "action": ["remove"], "translation": "update log", "keywords": ["update", "log", "code", "commit", "change"], "category": "docs"}
+{"src": "인증 추가로 배포 개선", "action": ["add"], "translation": "add deploy auth", "keywords": ["add", "deploy", "auth"], "category": "style"}
+{"src": "캐시 버그 해결", "action": ["fix"], "translation": "fix bug cache", "keywords": ["fix", "bug", "cache"], "category": "feature"}
+{"src": "권한 및 캐시 구현", "action": ["implement"], "translation": "implement cache permission", "keywords": ["implement", "cache", "permission"], "category": "style"}
+{"src": "회원가입 및 로그 수정", "action": ["improve"], "translation": "update signup log", "keywords": ["update", "signup", "log"], "category": "refactor"}
+{"src": "쿼리 추가로 배포 개선", "action": ["add"], "translation": "add deploy query", "keywords": ["add", "deploy", "query"], "category": "style"}
+{"src": "코드 캐시 구현", "action": ["implement"], "translation": "implement code cache", "keywords": ["implement", "code", "cache"], "category": "ci"}
+{"src": "로그 테스트 업데이트", "action": ["add"], "translation": "add test log", "keywords": ["add", "test", "log"], "category": "docs"}
+{"src": "응답 및 로그인 삭제", "action": ["remove"], "translation": "update login response log", "keywords": ["update", "login", "response", "log"], "category": "feature"}
+{"src": "서버 업데이트로 성능 개선", "action": ["optimize"], "translation": "optimize performance server", "keywords": ["optimize", "performance", "server"], "category": "chore"}
+{"src": "회원가입 개선", "action": ["update"], "translation": "update signup", "keywords": ["update", "signup", "code", "commit", "change"], "category": "docs"}
+{"src": "로그인 개선", "action": ["resolve"], "translation": "update login log", "keywords": ["update", "login", "log"], "category": "perf"}
+{"src": "권한 업데이트로 쿼리 개선", "action": ["improve"], "translation": "update query permission", "keywords": ["update", "query", "permission"], "category": "refactor"}
+{"src": "UI 관련 해결", "action": ["update"], "translation": "update UI", "keywords": ["update", "UI", "code", "commit", "change"], "category": "test"}
+{"src": "오류 삭제로 배포 개선", "action": ["fix", "remove"], "translation": "fix error deploy", "keywords": ["fix", "error", "deploy"], "category": "feature"}
+{"src": "쿼리 및 쿼리 수정", "action": ["fix"], "translation": "fix query", "keywords": ["fix", "query", "code", "commit", "change"], "category": "chore"}
+{"src": "로그인 및 로그인 삭제", "action": ["remove"], "translation": "update login log", "keywords": ["update", "login", "log"], "category": "style"}
+{"src": "인증 관련 수정", "action": ["resolve"], "translation": "update auth", "keywords": ["update", "auth", "code", "commit", "change"], "category": "build"}
+{"src": "UI 삭제", "action": ["remove"], "translation": "update UI", "keywords": ["update", "UI", "code", "commit", "change"], "category": "refactor"}
+{"src": "쿼리 회원가입 업데이트", "action": ["add"], "translation": "add signup query", "keywords": ["add", "signup", "query"], "category": "ci"}
+{"src": "코드 해결", "action": ["resolve"], "translation": "update code", "keywords": ["update", "code", "code", "commit", "change"], "category": "ci"}
+{"src": "응답 업데이트로 배포 개선", "action": ["update"], "translation": "update response deploy", "keywords": ["update", "response", "deploy"], "category": "style"}
+{"src": "오류 관련 업데이트", "action": ["fix"], "translation": "fix error", "keywords": ["fix", "error", "code", "commit", "change"], "category": "feature"}
+{"src": "회원가입 및 인증 구현", "action": ["implement"], "translation": "implement signup auth", "keywords": ["implement", "signup", "auth"], "category": "test"}
+{"src": "API 및 의존성 추가", "action": ["add"], "translation": "add API dependencies", "keywords": ["add", "API", "dependencies"], "category": "build"}
+{"src": "테스트 구현", "action": ["implement", "add"], "translation": "add test", "keywords": ["add", "test", "code", "commit", "change"], "category": "refactor"}
+{"src": "로그인 삭제로 테스트 개선", "action": ["add", "remove"], "translation": "add login test log", "keywords": ["add", "login", "test", "log"], "category": "style"}
+{"src": "API 및 서버 추가", "action": ["add"], "translation": "add API server", "keywords": ["add", "API", "server"], "category": "style"}
+{"src": "배포 업데이트로 버그 개선", "action": ["fix"], "translation": "fix bug deploy", "keywords": ["fix", "bug", "deploy"], "category": "test"}
+{"src": "의존성 해결", "action": ["refactor"], "translation": "refactor dependencies", "keywords": ["refactor", "dependencies", "code", "commit", "change"], "category": "docs"}
+{"src": "로그인 리팩토링", "action": ["refactor"], "translation": "refactor login log", "keywords": ["refactor", "login", "log"], "category": "feature"}
+{"src": "인증 수정로 서버 개선", "action": ["improve"], "translation": "update server auth", "keywords": ["update", "server", "auth"], "category": "build"}
+{"src": "API 개선", "action": ["remove"], "translation": "update API", "keywords": ["update", "API", "code", "commit", "change"], "category": "build"}
+{"src": "오류 구현", "action": ["implement", "fix"], "translation": "fix error", "keywords": ["fix", "error", "code", "commit", "change"], "category": "chore"}
+{"src": "테스트 해결", "action": ["add"], "translation": "add test", "keywords": ["add", "test", "code", "commit", "change"], "category": "docs"}
+{"src": "코드 해결로 테스트 개선", "action": ["add"], "translation": "add code test", "keywords": ["add", "code", "test"], "category": "docs"}
+{"src": "권한 및 쿼리 해결", "action": ["update"], "translation": "update query permission", "keywords": ["update", "query", "permission"], "category": "style"}
+{"src": "서버 개선로 캐시 개선", "action": ["refactor"], "translation": "refactor cache server", "keywords": ["refactor", "cache", "server"], "category": "build"}
+{"src": "오류 해결", "action": ["fix"], "translation": "fix error", "keywords": ["fix", "error", "code", "commit", "change"], "category": "chore"}
+{"src": "회원가입 추가로 서버 개선", "action": ["add"], "translation": "add signup server", "keywords": ["add", "signup", "server"], "category": "test"}
+{"src": "응답 문서 해결", "action": ["update"], "translation": "update response docs", "keywords": ["update", "response", "docs"], "category": "ci"}
+{"src": "로그인 최적화", "action": ["optimize"], "translation": "optimize login log", "keywords": ["optimize", "login", "log"], "category": "perf"}
+{"src": "버그 및 캐시 수정", "action": ["fix"], "translation": "fix bug cache", "keywords": ["fix", "bug", "cache"], "category": "style"}
+{"src": "배포 구현로 코드 개선", "action": ["implement"], "translation": "implement code deploy", "keywords": ["implement", "code", "deploy"], "category": "feature"}
+{"src": "코드 및 버그 업데이트", "action": ["fix"], "translation": "fix bug code", "keywords": ["fix", "bug", "code"], "category": "feature"}
+{"src": "API 및 API 수정", "action": ["update"], "translation": "update API", "keywords": ["update", "API", "code", "commit", "change"], "category": "perf"}
+{"src": "쿼리 수정", "action": ["add"], "translation": "add query", "keywords": ["add", "query", "code", "commit", "change"], "category": "bugfix"}
+{"src": "성능 및 API 삭제", "action": ["remove", "optimize"], "translation": "optimize API performance", "keywords": ["optimize", "API", "performance"], "category": "build"}
+{"src": "캐시 리팩토링로 회원가입 개선", "action": ["refactor"], "translation": "refactor signup cache", "keywords": ["refactor", "signup", "cache"], "category": "docs"}
+{"src": "회원가입 및 오류 최적화", "action": ["fix", "optimize"], "translation": "fix error signup", "keywords": ["fix", "error", "signup"], "category": "style"}
+{"src": "쿼리 추가로 로그인 개선", "action": ["add"], "translation": "add login log query", "keywords": ["add", "login", "log", "query"], "category": "perf"}
+{"src": "인증 삭제로 버그 개선", "action": ["fix", "remove"], "translation": "fix bug auth", "keywords": ["fix", "bug", "auth"], "category": "build"}
+{"src": "테스트 구현", "action": ["implement", "add"], "translation": "add test", "keywords": ["add", "test", "code", "commit", "change"], "category": "bugfix"}
+{"src": "배포 구현로 코드 개선", "action": ["implement"], "translation": "implement code deploy", "keywords": ["implement", "code", "deploy"], "category": "refactor"}
+{"src": "서버 배포 추가", "action": ["add"], "translation": "add deploy server", "keywords": ["add", "deploy", "server"], "category": "ci"}
+{"src": "서버 삭제로 서버 개선", "action": ["remove"], "translation": "update server", "keywords": ["update", "server", "code", "commit", "change"], "category": "bugfix"}
+{"src": "오류 관련 구현", "action": ["implement", "fix"], "translation": "fix error", "keywords": ["fix", "error", "code", "commit", "change"], "category": "chore"}
+{"src": "버그 및 배포 추가", "action": ["fix", "add"], "translation": "fix bug deploy", "keywords": ["fix", "bug", "deploy"], "category": "chore"}
+{"src": "권한 업데이트", "action": ["remove"], "translation": "update permission", "keywords": ["update", "permission", "code", "commit", "change"], "category": "bugfix"}
+{"src": "인증 및 의존성 개선", "action": ["resolve"], "translation": "update dependencies auth", "keywords": ["update", "dependencies", "auth"], "category": "perf"}
+{"src": "로그인 해결", "action": ["fix"], "translation": "fix login log", "keywords": ["fix", "login", "log"], "category": "test"}
+{"src": "성능 수정", "action": ["optimize"], "translation": "optimize performance", "keywords": ["optimize", "performance", "code", "commit", "change"], "category": "chore"}
+{"src": "서버 및 로그 삭제", "action": ["remove"], "translation": "update log server", "keywords": ["update", "log", "server"], "category": "perf"}
+{"src": "오류 및 성능 리팩토링", "action": ["refactor", "fix", "optimize"], "translation": "fix error performance", "keywords": ["fix", "error", "performance"], "category": "chore"}
+{"src": "의존성 문서 추가", "action": ["add", "update"], "translation": "add docs dependencies", "keywords": ["add", "docs", "dependencies"], "category": "chore"}
+{"src": "쿼리 관련 구현", "action": ["implement"], "translation": "implement query", "keywords": ["implement", "query", "code", "commit", "change"], "category": "chore"}
+{"src": "UI 업데이트", "action": ["revert"], "translation": "update UI", "keywords": ["update", "UI", "code", "commit", "change"], "category": "test"}
+{"src": "캐시 로그인 구현", "action": ["implement"], "translation": "implement login log cache", "keywords": ["implement", "login", "log", "cache"], "category": "build"}
+{"src": "테스트 업데이트", "action": ["add"], "translation": "add test", "keywords": ["add", "test", "code", "commit", "change"], "category": "feature"}
+{"src": "의존성 테스트 리팩토링", "action": ["refactor", "add"], "translation": "add test dependencies", "keywords": ["add", "test", "dependencies"], "category": "perf"}
+{"src": "캐시 해결로 응답 개선", "action": ["improve"], "translation": "update response cache", "keywords": ["update", "response", "cache"], "category": "perf"}
+{"src": "배포 캐시 리팩토링", "action": ["refactor"], "translation": "refactor deploy cache", "keywords": ["refactor", "deploy", "cache"], "category": "bugfix"}
+{"src": "로그 배포 삭제", "action": ["remove"], "translation": "update deploy log", "keywords": ["update", "deploy", "log"], "category": "refactor"}
+{"src": "API 쿼리 수정", "action": ["remove"], "translation": "update API query", "keywords": ["update", "API", "query"], "category": "feature"}
+{"src": "배포 구현", "action": ["implement"], "translation": "implement deploy", "keywords": ["implement", "deploy", "code", "commit", "change"], "category": "build"}
+{"src": "API 쿼리 업데이트", "action": ["improve"], "translation": "update API query", "keywords": ["update", "API", "query"], "category": "perf"}
+{"src": "권한 API 삭제", "action": ["remove"], "translation": "update API permission", "keywords": ["update", "API", "permission"], "category": "chore"}
+{"src": "문서 관련 최적화", "action": ["optimize", "update"], "translation": "optimize docs", "keywords": ["optimize", "docs", "code", "commit", "change"], "category": "feature"}
+{"src": "응답 UI 삭제", "action": ["remove"], "translation": "update response UI", "keywords": ["update", "response", "UI"], "category": "style"}
+{"src": "회원가입 리팩토링로 문서 개선", "action": ["refactor", "update"], "translation": "refactor signup docs", "keywords": ["refactor", "signup", "docs"], "category": "perf"}
+{"src": "UI 최적화", "action": ["optimize"], "translation": "optimize UI", "keywords": ["optimize", "UI", "code", "commit", "change"], "category": "feature"}
+{"src": "쿼리 개선", "action": ["resolve"], "translation": "update query", "keywords": ["update", "query", "code", "commit", "change"], "category": "feature"}
+{"src": "배포 및 로그인 삭제", "action": ["remove"], "translation": "update login deploy log", "keywords": ["update", "login", "deploy", "log"], "category": "ci"}
+{"src": "테스트 및 응답 개선", "action": ["add"], "translation": "add response test", "keywords": ["add", "response", "test"], "category": "chore"}
+{"src": "코드 최적화로 회원가입 개선", "action": ["optimize"], "translation": "optimize signup code", "keywords": ["optimize", "signup", "code"], "category": "refactor"}
+{"src": "버그 업데이트", "action": ["fix"], "translation": "fix bug", "keywords": ["fix", "bug", "code", "commit", "change"], "category": "ci"}
+{"src": "배포 삭제로 쿼리 개선", "action": ["remove"], "translation": "update deploy query", "keywords": ["update", "deploy", "query"], "category": "refactor"}
+{"src": "로그인 리팩토링로 로그인 개선", "action": ["refactor"], "translation": "refactor login log", "keywords": ["refactor", "login", "log"], "category": "style"}
+{"src": "캐시 관련 구현", "action": ["implement"], "translation": "implement cache", "keywords": ["implement", "cache", "code", "commit", "change"], "category": "build"}
+{"src": "API 의존성 추가", "action": ["add"], "translation": "add API dependencies", "keywords": ["add", "API", "dependencies"], "category": "perf"}
+{"src": "배포 관련 개선", "action": ["revert"], "translation": "update deploy", "keywords": ["update", "deploy", "code", "commit", "change"], "category": "build"}
+{"src": "캐시 삭제", "action": ["remove"], "translation": "update cache", "keywords": ["update", "cache", "code", "commit", "change"], "category": "bugfix"}
+{"src": "서버 API 리팩토링", "action": ["refactor"], "translation": "refactor API server", "keywords": ["refactor", "API", "server"], "category": "refactor"}
+{"src": "코드 업데이트", "action": ["revert"], "translation": "update code", "keywords": ["update", "code", "code", "commit", "change"], "category": "test"}
+{"src": "문서 성능 삭제", "action": ["remove", "optimize", "update"], "translation": "optimize performance docs", "keywords": ["optimize", "performance", "docs"], "category": "test"}
+{"src": "인증 추가", "action": ["add"], "translation": "add auth", "keywords": ["add", "auth", "code", "commit", "change"], "category": "ci"}
+{"src": "권한 개선", "action": ["remove"], "translation": "update permission", "keywords": ["update", "permission", "code", "commit", "change"], "category": "build"}
+{"src": "의존성 수정로 권한 개선", "action": ["fix"], "translation": "fix dependencies permission", "keywords": ["fix", "dependencies", "permission"], "category": "feature"}
+{"src": "권한 문서 최적화", "action": ["optimize", "update"], "translation": "optimize docs permission", "keywords": ["optimize", "docs", "permission"], "category": "build"}
+{"src": "UI 관련 삭제", "action": ["remove"], "translation": "update UI", "keywords": ["update", "UI", "code", "commit", "change"], "category": "test"}
+{"src": "UI 및 코드 구현", "action": ["implement"], "translation": "implement code UI", "keywords": ["implement", "code", "UI"], "category": "test"}
+{"src": "오류 관련 개선", "action": ["fix"], "translation": "fix error", "keywords": ["fix", "error", "code", "commit", "change"], "category": "perf"}
+{"src": "쿼리 관련 최적화", "action": ["optimize"], "translation": "optimize query", "keywords": ["optimize", "query", "code", "commit", "change"], "category": "chore"}
+{"src": "API 업데이트로 의존성 개선", "action": ["improve"], "translation": "update API dependencies", "keywords": ["update", "API", "dependencies"], "category": "style"}
+{"src": "서버 삭제", "action": ["remove"], "translation": "update server", "keywords": ["update", "server", "code", "commit", "change"], "category": "feature"}
+{"src": "코드 및 쿼리 추가", "action": ["add"], "translation": "add code query", "keywords": ["add", "code", "query"], "category": "test"}
+{"src": "API 관련 추가", "action": ["add"], "translation": "add API", "keywords": ["add", "API", "code", "commit", "change"], "category": "bugfix"}
+{"src": "로그 및 캐시 최적화", "action": ["optimize"], "translation": "optimize log cache", "keywords": ["optimize", "log", "cache"], "category": "refactor"}
+{"src": "권한 및 의존성 최적화", "action": ["optimize"], "translation": "optimize dependencies permission", "keywords": ["optimize", "dependencies", "permission"], "category": "refactor"}
+{"src": "쿼리 관련 해결", "action": ["update"], "translation": "update query", "keywords": ["update", "query", "code", "commit", "change"], "category": "perf"}
+{"src": "로그인 로그 삭제", "action": ["remove"], "translation": "update login log", "keywords": ["update", "login", "log"], "category": "perf"}
+{"src": "권한 업데이트", "action": ["fix"], "translation": "fix permission", "keywords": ["fix", "permission", "code", "commit", "change"], "category": "bugfix"}
+{"src": "UI 및 UI 리팩토링", "action": ["refactor"], "translation": "refactor UI", "keywords": ["refactor", "UI", "code", "commit", "change"], "category": "ci"}
+{"src": "회원가입 캐시 개선", "action": ["update"], "translation": "update signup cache", "keywords": ["update", "signup", "cache"], "category": "chore"}
+{"src": "오류 관련 구현", "action": ["implement", "fix"], "translation": "fix error", "keywords": ["fix", "error", "code", "commit", "change"], "category": "bugfix"}
+{"src": "인증 업데이트로 성능 개선", "action": ["optimize"], "translation": "optimize performance auth", "keywords": ["optimize", "performance", "auth"], "category": "ci"}
+{"src": "로그인 및 로그 삭제", "action": ["remove"], "translation": "update login log", "keywords": ["update", "login", "log"], "category": "perf"}
+{"src": "문서 개선로 회원가입 개선", "action": ["update"], "translation": "update signup docs", "keywords": ["update", "signup", "docs"], "category": "feature"}
+{"src": "의존성 관련 삭제", "action": ["remove"], "translation": "update dependencies", "keywords": ["update", "dependencies", "code", "commit", "change"], "category": "chore"}
+{"src": "서버 구현", "action": ["implement"], "translation": "implement server", "keywords": ["implement", "server", "code", "commit", "change"], "category": "ci"}
+{"src": "오류 오류 개선", "action": ["fix"], "translation": "fix error", "keywords": ["fix", "error", "code", "commit", "change"], "category": "chore"}
+{"src": "쿼리 관련 개선", "action": ["optimize"], "translation": "optimize query", "keywords": ["optimize", "query", "code", "commit", "change"], "category": "ci"}
+{"src": "의존성 개선", "action": ["implement"], "translation": "implement dependencies", "keywords": ["implement", "dependencies", "code", "commit", "change"], "category": "build"}
+{"src": "권한 및 의존성 삭제", "action": ["remove"], "translation": "update dependencies permission", "keywords": ["update", "dependencies", "permission"], "category": "ci"}
+{"src": "UI 리팩토링로 권한 개선", "action": ["refactor"], "translation": "refactor UI permission", "keywords": ["refactor", "UI", "permission"], "category": "perf"}
+{"src": "배포 의존성 추가", "action": ["add"], "translation": "add dependencies deploy", "keywords": ["add", "dependencies", "deploy"], "category": "style"}
+{"src": "테스트 해결로 버그 개선", "action": ["fix", "add"], "translation": "fix bug test", "keywords": ["fix", "bug", "test"], "category": "test"}
+{"src": "권한 수정로 코드 개선", "action": ["optimize"], "translation": "optimize code permission", "keywords": ["optimize", "code", "permission"], "category": "perf"}
+{"src": "로그 개선", "action": ["refactor"], "translation": "refactor log", "keywords": ["refactor", "log", "code", "commit", "change"], "category": "bugfix"}
+{"src": "회원가입 수정로 성능 개선", "action": ["optimize"], "translation": "optimize signup performance", "keywords": ["optimize", "signup", "performance"], "category": "perf"}
+{"src": "캐시 및 API 구현", "action": ["implement"], "translation": "implement API cache", "keywords": ["implement", "API", "cache"], "category": "docs"}
+{"src": "UI 관련 수정", "action": ["remove"], "translation": "update UI", "keywords": ["update", "UI", "code", "commit", "change"], "category": "ci"}
+{"src": "의존성 해결", "action": ["revert"], "translation": "update dependencies", "keywords": ["update", "dependencies", "code", "commit", "change"], "category": "style"}
+{"src": "응답 및 쿼리 삭제", "action": ["remove"], "translation": "update response query", "keywords": ["update", "response", "query"], "category": "chore"}
+{"src": "배포 해결로 문서 개선", "action": ["update"], "translation": "update docs deploy", "keywords": ["update", "docs", "deploy"], "category": "docs"}
+{"src": "인증 리팩토링", "action": ["refactor"], "translation": "refactor auth", "keywords": ["refactor", "auth", "code", "commit", "change"], "category": "docs"}
+{"src": "테스트 및 성능 해결", "action": ["add", "optimize"], "translation": "add performance test", "keywords": ["add", "performance", "test"], "category": "chore"}
+{"src": "인증 관련 리팩토링", "action": ["refactor"], "translation": "refactor auth", "keywords": ["refactor", "auth", "code", "commit", "change"], "category": "test"}
+{"src": "권한 인증 구현", "action": ["implement"], "translation": "implement auth permission", "keywords": ["implement", "auth", "permission"], "category": "style"}
+{"src": "API 및 테스트 수정", "action": ["add"], "translation": "add API test", "keywords": ["add", "API", "test"], "category": "test"}
+{"src": "배포 쿼리 리팩토링", "action": ["refactor"], "translation": "refactor deploy query", "keywords": ["refactor", "deploy", "query"], "category": "perf"}
+{"src": "인증 리팩토링", "action": ["refactor"], "translation": "refactor auth", "keywords": ["refactor", "auth", "code", "commit", "change"], "category": "ci"}
+{"src": "API 및 회원가입 최적화", "action": ["optimize"], "translation": "optimize signup API", "keywords": ["optimize", "signup", "API"], "category": "docs"}
+{"src": "서버 코드 최적화", "action": ["optimize"], "translation": "optimize code server", "keywords": ["optimize", "code", "server"], "category": "bugfix"}
+{"src": "캐시 의존성 해결", "action": ["add"], "translation": "add dependencies cache", "keywords": ["add", "dependencies", "cache"], "category": "refactor"}
+{"src": "인증 응답 구현", "action": ["implement"], "translation": "implement response auth", "keywords": ["implement", "response", "auth"], "category": "perf"}
+{"src": "테스트 관련 업데이트", "action": ["add"], "translation": "add test", "keywords": ["add", "test", "code", "commit", "change"], "category": "test"}
+{"src": "로그인 권한 최적화", "action": ["optimize"], "translation": "optimize login log permission", "keywords": ["optimize", "login", "log", "permission"], "category": "ci"}
+{"src": "응답 캐시 개선", "action": ["fix"], "translation": "fix response cache", "keywords": ["fix", "response", "cache"], "category": "style"}
+{"src": "테스트 관련 수정", "action": ["add"], "translation": "add test", "keywords": ["add", "test", "code", "commit", "change"], "category": "bugfix"}
+{"src": "권한 및 회원가입 업데이트", "action": ["update"], "translation": "update signup permission", "keywords": ["update", "signup", "permission"], "category": "perf"}
+{"src": "서버 개선로 UI 개선", "action": ["revert"], "translation": "update UI server", "keywords": ["update", "UI", "server"], "category": "perf"}
+{"src": "성능 및 회원가입 업데이트", "action": ["optimize"], "translation": "optimize signup performance", "keywords": ["optimize", "signup", "performance"], "category": "refactor"}
+{"src": "응답 관련 수정", "action": ["improve"], "translation": "update response", "keywords": ["update", "response", "code", "commit", "change"], "category": "test"}
+{"src": "성능 구현로 응답 개선", "action": ["implement", "optimize"], "translation": "optimize response performance", "keywords": ["optimize", "response", "performance"], "category": "style"}
+{"src": "의존성 구현로 로그인 개선", "action": ["implement"], "translation": "implement login dependencies log", "keywords": ["implement", "login", "dependencies", "log"], "category": "feature"}
+{"src": "UI 업데이트", "action": ["refactor"], "translation": "refactor UI", "keywords": ["refactor", "UI", "code", "commit", "change"], "category": "bugfix"}
+{"src": "로그 및 코드 해결", "action": ["update"], "translation": "update code log", "keywords": ["update", "code", "log"], "category": "chore"}
+{"src": "권한 및 권한 수정", "action": ["update"], "translation": "update permission", "keywords": ["update", "permission", "code", "commit", "change"], "category": "chore"}
+{"src": "회원가입 해결", "action": ["update"], "translation": "update signup", "keywords": ["update", "signup", "code", "commit", "change"], "category": "refactor"}
+{"src": "테스트 관련 추가", "action": ["add"], "translation": "add test", "keywords": ["add", "test", "code", "commit", "change"], "category": "test"}
+{"src": "코드 및 코드 개선", "action": ["resolve"], "translation": "update code", "keywords": ["update", "code", "code", "commit", "change"], "category": "refactor"}
+{"src": "캐시 관련 삭제", "action": ["remove"], "translation": "update cache", "keywords": ["update", "cache", "code", "commit", "change"], "category": "perf"}
+{"src": "성능 추가로 코드 개선", "action": ["add", "optimize"], "translation": "add performance code", "keywords": ["add", "performance", "code"], "category": "ci"}
+{"src": "배포 관련 추가", "action": ["add"], "translation": "add deploy", "keywords": ["add", "deploy", "code", "commit", "change"], "category": "build"}
+{"src": "오류 인증 삭제", "action": ["fix", "remove"], "translation": "fix error auth", "keywords": ["fix", "error", "auth"], "category": "docs"}
+{"src": "인증 개선로 API 개선", "action": ["improve"], "translation": "update API auth", "keywords": ["update", "API", "auth"], "category": "ci"}
+{"src": "성능 관련 해결", "action": ["optimize"], "translation": "optimize performance", "keywords": ["optimize", "performance", "code", "commit", "change"], "category": "feature"}
+{"src": "쿼리 해결로 오류 개선", "action": ["fix"], "translation": "fix error query", "keywords": ["fix", "error", "query"], "category": "refactor"}
+{"src": "캐시 수정로 쿼리 개선", "action": ["revert"], "translation": "update cache query", "keywords": ["update", "cache", "query"], "category": "perf"}
+{"src": "버그 및 로그 리팩토링", "action": ["refactor", "fix"], "translation": "fix bug log", "keywords": ["fix", "bug", "log"], "category": "bugfix"}
+{"src": "로그인 수정", "action": ["implement"], "translation": "implement login log", "keywords": ["implement", "login", "log"], "category": "chore"}
+{"src": "인증 오류 추가", "action": ["fix", "add"], "translation": "fix error auth", "keywords": ["fix", "error", "auth"], "category": "perf"}
+{"src": "테스트 캐시 개선", "action": ["add"], "translation": "add test cache", "keywords": ["add", "test", "cache"], "category": "refactor"}
+{"src": "로그 관련 해결", "action": ["implement"], "translation": "implement log", "keywords": ["implement", "log", "code", "commit", "change"], "category": "style"}
+{"src": "인증 API 업데이트", "action": ["add"], "translation": "add API auth", "keywords": ["add", "API", "auth"], "category": "refactor"}
+{"src": "로그 개선로 서버 개선", "action": ["refactor"], "translation": "refactor log server", "keywords": ["refactor", "log", "server"], "category": "bugfix"}
+{"src": "테스트 쿼리 삭제", "action": ["add", "remove"], "translation": "add test query", "keywords": ["add", "test", "query"], "category": "style"}
+{"src": "로그 최적화로 코드 개선", "action": ["optimize"], "translation": "optimize code log", "keywords": ["optimize", "code", "log"], "category": "perf"}
+{"src": "API 및 문서 최적화", "action": ["optimize", "update"], "translation": "optimize API docs", "keywords": ["optimize", "API", "docs"], "category": "feature"}
+{"src": "캐시 버그 최적화", "action": ["fix", "optimize"], "translation": "fix bug cache", "keywords": ["fix", "bug", "cache"], "category": "docs"}
+{"src": "회원가입 오류 해결", "action": ["fix"], "translation": "fix error signup", "keywords": ["fix", "error", "signup"], "category": "build"}
+{"src": "코드 오류 구현", "action": ["implement", "fix"], "translation": "fix error code", "keywords": ["fix", "error", "code"], "category": "perf"}
+{"src": "성능 수정", "action": ["optimize"], "translation": "optimize performance", "keywords": ["optimize", "performance", "code", "commit", "change"], "category": "refactor"}
+{"src": "테스트 업데이트로 코드 개선", "action": ["add"], "translation": "add code test", "keywords": ["add", "code", "test"], "category": "build"}
+{"src": "의존성 리팩토링로 코드 개선", "action": ["refactor"], "translation": "refactor code dependencies", "keywords": ["refactor", "code", "dependencies"], "category": "refactor"}
+{"src": "코드 리팩토링로 캐시 개선", "action": ["refactor"], "translation": "refactor code cache", "keywords": ["refactor", "code", "cache"], "category": "test"}
+{"src": "인증 권한 개선", "action": ["implement"], "translation": "implement auth permission", "keywords": ["implement", "auth", "permission"], "category": "ci"}
+{"src": "배포 관련 구현", "action": ["implement"], "translation": "implement deploy", "keywords": ["implement", "deploy", "code", "commit", "change"], "category": "ci"}
+{"src": "캐시 및 캐시 개선", "action": ["update"], "translation": "update cache", "keywords": ["update", "cache", "code", "commit", "change"], "category": "style"}
+{"src": "UI 최적화", "action": ["optimize"], "translation": "optimize UI", "keywords": ["optimize", "UI", "code", "commit", "change"], "category": "docs"}
+{"src": "API 및 쿼리 수정", "action": ["revert"], "translation": "update API query", "keywords": ["update", "API", "query"], "category": "style"}
+{"src": "서버 관련 개선", "action": ["implement"], "translation": "implement server", "keywords": ["implement", "server", "code", "commit", "change"], "category": "docs"}
+{"src": "성능 및 의존성 추가", "action": ["add", "optimize"], "translation": "add performance dependencies", "keywords": ["add", "performance", "dependencies"], "category": "perf"}
+{"src": "로그인 및 인증 최적화", "action": ["optimize"], "translation": "optimize login log auth", "keywords": ["optimize", "login", "log", "auth"], "category": "bugfix"}
+{"src": "로그 및 오류 추가", "action": ["fix", "add"], "translation": "fix error log", "keywords": ["fix", "error", "log"], "category": "docs"}
+{"src": "인증 해결로 성능 개선", "action": ["optimize"], "translation": "optimize performance auth", "keywords": ["optimize", "performance", "auth"], "category": "docs"}
+{"src": "테스트 및 버그 최적화", "action": ["fix", "add", "optimize"], "translation": "fix bug test", "keywords": ["fix", "bug", "test"], "category": "docs"}
+{"src": "UI 코드 최적화", "action": ["optimize"], "translation": "optimize code UI", "keywords": ["optimize", "code", "UI"], "category": "style"}
+{"src": "의존성 리팩토링", "action": ["refactor"], "translation": "refactor dependencies", "keywords": ["refactor", "dependencies", "code", "commit", "change"], "category": "style"}
+{"src": "배포 관련 리팩토링", "action": ["refactor"], "translation": "refactor deploy", "keywords": ["refactor", "deploy", "code", "commit", "change"], "category": "test"}
+{"src": "서버 및 UI 해결", "action": ["add"], "translation": "add UI server", "keywords": ["add", "UI", "server"], "category": "perf"}
+{"src": "성능 및 배포 업데이트", "action": ["optimize"], "translation": "optimize performance deploy", "keywords": ["optimize", "performance", "deploy"], "category": "style"}
+{"src": "권한 코드 개선", "action": ["fix"], "translation": "fix code permission", "keywords": ["fix", "code", "permission"], "category": "test"}
+{"src": "권한 구현로 권한 개선", "action": ["implement"], "translation": "implement permission", "keywords": ["implement", "permission", "code", "commit", "change"], "category": "test"}
+{"src": "의존성 최적화", "action": ["optimize"], "translation": "optimize dependencies", "keywords": ["optimize", "dependencies", "code", "commit", "change"], "category": "style"}
+{"src": "코드 삭제로 UI 개선", "action": ["remove"], "translation": "update code UI", "keywords": ["update", "code", "UI"], "category": "chore"}
+{"src": "UI 및 UI 해결", "action": ["remove"], "translation": "update UI", "keywords": ["update", "UI", "code", "commit", "change"], "category": "chore"}
+{"src": "인증 해결", "action": ["remove"], "translation": "update auth", "keywords": ["update", "auth", "code", "commit", "change"], "category": "ci"}
+{"src": "서버 오류 추가", "action": ["fix", "add"], "translation": "fix error server", "keywords": ["fix", "error", "server"], "category": "bugfix"}
+{"src": "캐시 API 최적화", "action": ["optimize"], "translation": "optimize API cache", "keywords": ["optimize", "API", "cache"], "category": "feature"}
+{"src": "성능 삭제", "action": ["remove", "optimize"], "translation": "optimize performance", "keywords": ["optimize", "performance", "code", "commit", "change"], "category": "perf"}
+{"src": "오류 및 UI 해결", "action": ["fix"], "translation": "fix error UI", "keywords": ["fix", "error", "UI"], "category": "bugfix"}
+{"src": "인증 인증 구현", "action": ["implement"], "translation": "implement auth", "keywords": ["implement", "auth", "code", "commit", "change"], "category": "bugfix"}
+{"src": "서버 문서 삭제", "action": ["remove", "update"], "translation": "update docs server", "keywords": ["update", "docs", "server"], "category": "test"}
+{"src": "서버 캐시 개선", "action": ["add"], "translation": "add cache server", "keywords": ["add", "cache", "server"], "category": "feature"}
+{"src": "API 최적화로 코드 개선", "action": ["optimize"], "translation": "optimize API code", "keywords": ["optimize", "API", "code"], "category": "build"}
+{"src": "문서 리팩토링로 배포 개선", "action": ["refactor", "update"], "translation": "refactor docs deploy", "keywords": ["refactor", "docs", "deploy"], "category": "style"}
+{"src": "배포 로그 해결", "action": ["optimize"], "translation": "optimize deploy log", "keywords": ["optimize", "deploy", "log"], "category": "docs"}
+{"src": "로그인 수정", "action": ["add"], "translation": "add login log", "keywords": ["add", "login", "log"], "category": "style"}
+{"src": "인증 관련 해결", "action": ["fix"], "translation": "fix auth", "keywords": ["fix", "auth", "code", "commit", "change"], "category": "bugfix"}
+{"src": "UI 구현", "action": ["implement"], "translation": "implement UI", "keywords": ["implement", "UI", "code", "commit", "change"], "category": "chore"}
+{"src": "회원가입 수정로 서버 개선", "action": ["refactor"], "translation": "refactor signup server", "keywords": ["refactor", "signup", "server"], "category": "docs"}
+{"src": "UI 수정로 문서 개선", "action": ["update"], "translation": "update docs UI", "keywords": ["update", "docs", "UI"], "category": "feature"}
+{"src": "인증 및 권한 수정", "action": ["remove"], "translation": "update auth permission", "keywords": ["update", "auth", "permission"], "category": "chore"}
+{"src": "성능 권한 개선", "action": ["optimize"], "translation": "optimize performance permission", "keywords": ["optimize", "performance", "permission"], "category": "style"}
+{"src": "테스트 응답 최적화", "action": ["add", "optimize"], "translation": "add response test", "keywords": ["add", "response", "test"], "category": "build"}
+{"src": "의존성 관련 구현", "action": ["implement"], "translation": "implement dependencies", "keywords": ["implement", "dependencies", "code", "commit", "change"], "category": "refactor"}
+{"src": "서버 배포 수정", "action": ["add"], "translation": "add deploy server", "keywords": ["add", "deploy", "server"], "category": "style"}
+{"src": "의존성 구현", "action": ["implement"], "translation": "implement dependencies", "keywords": ["implement", "dependencies", "code", "commit", "change"], "category": "chore"}
+{"src": "문서 쿼리 해결", "action": ["update"], "translation": "update docs query", "keywords": ["update", "docs", "query"], "category": "docs"}
+{"src": "인증 및 로그 구현", "action": ["implement"], "translation": "implement log auth", "keywords": ["implement", "log", "auth"], "category": "refactor"}
+{"src": "로그 리팩토링로 로그인 개선", "action": ["refactor"], "translation": "refactor login log", "keywords": ["refactor", "login", "log"], "category": "docs"}
+{"src": "로그인 문서 개선", "action": ["update"], "translation": "update login docs log", "keywords": ["update", "login", "docs", "log"], "category": "style"}
+{"src": "의존성 업데이트", "action": ["add"], "translation": "add dependencies", "keywords": ["add", "dependencies", "code", "commit", "change"], "category": "feature"}
+{"src": "테스트 쿼리 업데이트", "action": ["add"], "translation": "add test query", "keywords": ["add", "test", "query"], "category": "test"}
+{"src": "API 로그인 개선", "action": ["implement"], "translation": "implement login API log", "keywords": ["implement", "login", "API", "log"], "category": "perf"}
+{"src": "인증 구현로 서버 개선", "action": ["implement"], "translation": "implement server auth", "keywords": ["implement", "server", "auth"], "category": "feature"}
+{"src": "로그인 배포 삭제", "action": ["remove"], "translation": "update login deploy log", "keywords": ["update", "login", "deploy", "log"], "category": "feature"}
+{"src": "의존성 수정로 로그 개선", "action": ["update"], "translation": "update dependencies log", "keywords": ["update", "dependencies", "log"], "category": "style"}
+{"src": "인증 관련 최적화", "action": ["optimize"], "translation": "optimize auth", "keywords": ["optimize", "auth", "code", "commit", "change"], "category": "build"}
+{"src": "응답 개선로 로그 개선", "action": ["remove"], "translation": "update response log", "keywords": ["update", "response", "log"], "category": "test"}
+{"src": "문서 및 UI 개선", "action": ["update"], "translation": "update docs UI", "keywords": ["update", "docs", "UI"], "category": "feature"}
+{"src": "문서 구현", "action": ["implement", "update"], "translation": "update docs", "keywords": ["update", "docs", "code", "commit", "change"], "category": "test"}
+{"src": "배포 관련 리팩토링", "action": ["refactor"], "translation": "refactor deploy", "keywords": ["refactor", "deploy", "code", "commit", "change"], "category": "docs"}
+{"src": "쿼리 관련 추가", "action": ["add"], "translation": "add query", "keywords": ["add", "query", "code", "commit", "change"], "category": "refactor"}
+{"src": "버그 및 로그 업데이트", "action": ["fix"], "translation": "fix bug log", "keywords": ["fix", "bug", "log"], "category": "build"}
+{"src": "쿼리 관련 업데이트", "action": ["implement"], "translation": "implement query", "keywords": ["implement", "query", "code", "commit", "change"], "category": "build"}
+{"src": "의존성 최적화", "action": ["optimize"], "translation": "optimize dependencies", "keywords": ["optimize", "dependencies", "code", "commit", "change"], "category": "perf"}
+{"src": "응답 및 로그 업데이트", "action": ["update"], "translation": "update response log", "keywords": ["update", "response", "log"], "category": "perf"}
+{"src": "코드 구현로 의존성 개선", "action": ["implement"], "translation": "implement code dependencies", "keywords": ["implement", "code", "dependencies"], "category": "test"}
+{"src": "회원가입 관련 최적화", "action": ["optimize"], "translation": "optimize signup", "keywords": ["optimize", "signup", "code", "commit", "change"], "category": "build"}
+{"src": "응답 수정로 인증 개선", "action": ["resolve"], "translation": "update response auth", "keywords": ["update", "response", "auth"], "category": "docs"}
+{"src": "로그인 관련 구현", "action": ["implement"], "translation": "implement login log", "keywords": ["implement", "login", "log"], "category": "perf"}
+{"src": "코드 리팩토링", "action": ["refactor"], "translation": "refactor code", "keywords": ["refactor", "code", "code", "commit", "change"], "category": "refactor"}
+{"src": "로그인 관련 해결", "action": ["optimize"], "translation": "optimize login log", "keywords": ["optimize", "login", "log"], "category": "perf"}
+{"src": "로그 삭제로 인증 개선", "action": ["remove"], "translation": "update log auth", "keywords": ["update", "log", "auth"], "category": "style"}
+{"src": "오류 삭제로 배포 개선", "action": ["fix", "remove"], "translation": "fix error deploy", "keywords": ["fix", "error", "deploy"], "category": "build"}
+{"src": "회원가입 코드 업데이트", "action": ["remove"], "translation": "update signup code", "keywords": ["update", "signup", "code"], "category": "build"}
+{"src": "권한 로그 업데이트", "action": ["implement"], "translation": "implement log permission", "keywords": ["implement", "log", "permission"], "category": "feature"}
+{"src": "회원가입 문서 최적화", "action": ["optimize", "update"], "translation": "optimize signup docs", "keywords": ["optimize", "signup", "docs"], "category": "ci"}
+{"src": "인증 최적화로 권한 개선", "action": ["optimize"], "translation": "optimize auth permission", "keywords": ["optimize", "auth", "permission"], "category": "perf"}
+{"src": "로그 및 쿼리 삭제", "action": ["remove"], "translation": "update log query", "keywords": ["update", "log", "query"], "category": "refactor"}
+{"src": "버그 및 UI 추가", "action": ["fix", "add"], "translation": "fix bug UI", "keywords": ["fix", "bug", "UI"], "category": "test"}
+{"src": "회원가입 관련 개선", "action": ["improve"], "translation": "update signup", "keywords": ["update", "signup", "code", "commit", "change"], "category": "test"}
+{"src": "쿼리 및 성능 삭제", "action": ["remove", "optimize"], "translation": "optimize performance query", "keywords": ["optimize", "performance", "query"], "category": "perf"}
+{"src": "UI 및 회원가입 해결", "action": ["resolve"], "translation": "update signup UI", "keywords": ["update", "signup", "UI"], "category": "chore"}
+{"src": "테스트 오류 추가", "action": ["fix", "add"], "translation": "fix error test", "keywords": ["fix", "error", "test"], "category": "bugfix"}
+{"src": "회원가입 및 응답 최적화", "action": ["optimize"], "translation": "optimize signup response", "keywords": ["optimize", "signup", "response"], "category": "ci"}
+{"src": "응답 업데이트", "action": ["revert"], "translation": "update response", "keywords": ["update", "response", "code", "commit", "change"], "category": "style"}
+{"src": "로그 관련 개선", "action": ["remove"], "translation": "update log", "keywords": ["update", "log", "code", "commit", "change"], "category": "style"}
+{"src": "성능 관련 해결", "action": ["optimize"], "translation": "optimize performance", "keywords": ["optimize", "performance", "code", "commit", "change"], "category": "build"}
+{"src": "버그 관련 최적화", "action": ["fix", "optimize"], "translation": "fix bug", "keywords": ["fix", "bug", "code", "commit", "change"], "category": "docs"}
+{"src": "로그인 및 권한 추가", "action": ["add"], "translation": "add login log permission", "keywords": ["add", "login", "log", "permission"], "category": "ci"}
+{"src": "의존성 최적화", "action": ["optimize"], "translation": "optimize dependencies", "keywords": ["optimize", "dependencies", "code", "commit", "change"], "category": "perf"}
+{"src": "문서 UI 삭제", "action": ["remove", "update"], "translation": "update docs UI", "keywords": ["update", "docs", "UI"], "category": "chore"}
+{"src": "로그 추가로 로그 개선", "action": ["add"], "translation": "add log", "keywords": ["add", "log", "code", "commit", "change"], "category": "chore"}
+{"src": "쿼리 및 응답 리팩토링", "action": ["refactor"], "translation": "refactor response query", "keywords": ["refactor", "response", "query"], "category": "build"}
+{"src": "로그인 업데이트로 API 개선", "action": ["add"], "translation": "add login API log", "keywords": ["add", "login", "API", "log"], "category": "docs"}
+{"src": "회원가입 및 응답 업데이트", "action": ["remove"], "translation": "update signup response", "keywords": ["update", "signup", "response"], "category": "ci"}
+{"src": "API 관련 구현", "action": ["implement"], "translation": "implement API", "keywords": ["implement", "API", "code", "commit", "change"], "category": "style"}
+{"src": "인증 개선", "action": ["revert"], "translation": "update auth", "keywords": ["update", "auth", "code", "commit", "change"], "category": "refactor"}
+{"src": "API 관련 개선", "action": ["improve"], "translation": "update API", "keywords": ["update", "API", "code", "commit", "change"], "category": "perf"}
+{"src": "오류 수정로 배포 개선", "action": ["fix"], "translation": "fix error deploy", "keywords": ["fix", "error", "deploy"], "category": "perf"}
+{"src": "로그 삭제", "action": ["remove"], "translation": "update log", "keywords": ["update", "log", "code", "commit", "change"], "category": "ci"}
+{"src": "UI 관련 구현", "action": ["implement"], "translation": "implement UI", "keywords": ["implement", "UI", "code", "commit", "change"], "category": "perf"}
+{"src": "로그인 관련 수정", "action": ["refactor"], "translation": "refactor login log", "keywords": ["refactor", "login", "log"], "category": "test"}
+{"src": "문서 코드 삭제", "action": ["remove", "update"], "translation": "update code docs", "keywords": ["update", "code", "docs"], "category": "test"}
+{"src": "권한 해결", "action": ["revert"], "translation": "update permission", "keywords": ["update", "permission", "code", "commit", "change"], "category": "ci"}
+{"src": "권한 회원가입 리팩토링", "action": ["refactor"], "translation": "refactor signup permission", "keywords": ["refactor", "signup", "permission"], "category": "ci"}
+{"src": "인증 및 오류 해결", "action": ["fix"], "translation": "fix error auth", "keywords": ["fix", "error", "auth"], "category": "ci"}
+{"src": "회원가입 최적화", "action": ["optimize"], "translation": "optimize signup", "keywords": ["optimize", "signup", "code", "commit", "change"], "category": "test"}
+{"src": "쿼리 문서 업데이트", "action": ["update"], "translation": "update docs query", "keywords": ["update", "docs", "query"], "category": "feature"}
+{"src": "코드 관련 최적화", "action": ["optimize"], "translation": "optimize code", "keywords": ["optimize", "code", "code", "commit", "change"], "category": "build"}
+{"src": "캐시 및 응답 개선", "action": ["refactor"], "translation": "refactor response cache", "keywords": ["refactor", "response", "cache"], "category": "docs"}
+{"src": "권한 배포 삭제", "action": ["remove"], "translation": "update deploy permission", "keywords": ["update", "deploy", "permission"], "category": "test"}
+{"src": "인증 업데이트로 응답 개선", "action": ["update"], "translation": "update response auth", "keywords": ["update", "response", "auth"], "category": "test"}
+{"src": "문서 추가로 서버 개선", "action": ["add", "update"], "translation": "add docs server", "keywords": ["add", "docs", "server"], "category": "refactor"}
+{"src": "문서 관련 개선", "action": ["update"], "translation": "update docs", "keywords": ["update", "docs", "code", "commit", "change"], "category": "refactor"}
+{"src": "의존성 최적화", "action": ["optimize"], "translation": "optimize dependencies", "keywords": ["optimize", "dependencies", "code", "commit", "change"], "category": "style"}
+{"src": "권한 관련 리팩토링", "action": ["refactor"], "translation": "refactor permission", "keywords": ["refactor", "permission", "code", "commit", "change"], "category": "style"}
+{"src": "로그인 관련 추가", "action": ["add"], "translation": "add login log", "keywords": ["add", "login", "log"], "category": "style"}
+{"src": "문서 해결로 배포 개선", "action": ["update"], "translation": "update docs deploy", "keywords": ["update", "docs", "deploy"], "category": "perf"}
+{"src": "권한 및 버그 추가", "action": ["fix", "add"], "translation": "fix bug permission", "keywords": ["fix", "bug", "permission"], "category": "perf"}
+{"src": "로그인 및 인증 구현", "action": ["implement"], "translation": "implement login log auth", "keywords": ["implement", "login", "log", "auth"], "category": "docs"}
+{"src": "UI 관련 리팩토링", "action": ["refactor"], "translation": "refactor UI", "keywords": ["refactor", "UI", "code", "commit", "change"], "category": "chore"}
+{"src": "의존성 및 인증 개선", "action": ["optimize"], "translation": "optimize dependencies auth", "keywords": ["optimize", "dependencies", "auth"], "category": "perf"}
+{"src": "오류 및 오류 추가", "action": ["fix", "add"], "translation": "fix error", "keywords": ["fix", "error", "code", "commit", "change"], "category": "perf"}
+{"src": "회원가입 응답 해결", "action": ["resolve"], "translation": "update signup response", "keywords": ["update", "signup", "response"], "category": "bugfix"}
+{"src": "API 관련 리팩토링", "action": ["refactor"], "translation": "refactor API", "keywords": ["refactor", "API", "code", "commit", "change"], "category": "refactor"}
+{"src": "로그인 및 배포 리팩토링", "action": ["refactor"], "translation": "refactor login deploy log", "keywords": ["refactor", "login", "deploy", "log"], "category": "feature"}
+{"src": "응답 및 오류 구현", "action": ["implement", "fix"], "translation": "fix error response", "keywords": ["fix", "error", "response"], "category": "test"}
+{"src": "로그인 추가", "action": ["add"], "translation": "add login log", "keywords": ["add", "login", "log"], "category": "bugfix"}
+{"src": "로그인 개선", "action": ["optimize"], "translation": "optimize login log", "keywords": ["optimize", "login", "log"], "category": "docs"}
+{"src": "쿼리 수정로 버그 개선", "action": ["fix"], "translation": "fix bug query", "keywords": ["fix", "bug", "query"], "category": "chore"}
+{"src": "캐시 API 해결", "action": ["add"], "translation": "add API cache", "keywords": ["add", "API", "cache"], "category": "docs"}
+{"src": "회원가입 관련 추가", "action": ["add"], "translation": "add signup", "keywords": ["add", "signup", "code", "commit", "change"], "category": "chore"}
+{"src": "테스트 및 API 구현", "action": ["implement", "add"], "translation": "add API test", "keywords": ["add", "API", "test"], "category": "refactor"}
+{"src": "서버 수정", "action": ["optimize"], "translation": "optimize server", "keywords": ["optimize", "server", "code", "commit", "change"], "category": "refactor"}
+{"src": "성능 관련 개선", "action": ["optimize"], "translation": "optimize performance", "keywords": ["optimize", "performance", "code", "commit", "change"], "category": "style"}
+{"src": "쿼리 추가로 성능 개선", "action": ["add", "optimize"], "translation": "add performance query", "keywords": ["add", "performance", "query"], "category": "feature"}
+{"src": "권한 구현", "action": ["implement"], "translation": "implement permission", "keywords": ["implement", "permission", "code", "commit", "change"], "category": "chore"}
+{"src": "API 관련 최적화", "action": ["optimize"], "translation": "optimize API", "keywords": ["optimize", "API", "code", "commit", "change"], "category": "test"}
+{"src": "코드 인증 리팩토링", "action": ["refactor"], "translation": "refactor code auth", "keywords": ["refactor", "code", "auth"], "category": "bugfix"}
+{"src": "성능 및 서버 삭제", "action": ["remove", "optimize"], "translation": "optimize performance server", "keywords": ["optimize", "performance", "server"], "category": "docs"}
+{"src": "오류 관련 최적화", "action": ["fix", "optimize"], "translation": "fix error", "keywords": ["fix", "error", "code", "commit", "change"], "category": "perf"}
+{"src": "코드 관련 해결", "action": ["optimize"], "translation": "optimize code", "keywords": ["optimize", "code", "code", "commit", "change"], "category": "feature"}
+{"src": "버그 업데이트로 배포 개선", "action": ["fix"], "translation": "fix bug deploy", "keywords": ["fix", "bug", "deploy"], "category": "refactor"}
+{"src": "캐시 관련 업데이트", "action": ["revert"], "translation": "update cache", "keywords": ["update", "cache", "code", "commit", "change"], "category": "refactor"}
+{"src": "버그 관련 추가", "action": ["fix", "add"], "translation": "fix bug", "keywords": ["fix", "bug", "code", "commit", "change"], "category": "bugfix"}
+{"src": "성능 및 오류 수정", "action": ["fix", "optimize"], "translation": "fix error performance", "keywords": ["fix", "error", "performance"], "category": "style"}
+{"src": "테스트 구현로 서버 개선", "action": ["implement", "add"], "translation": "add test server", "keywords": ["add", "test", "server"], "category": "style"}
+{"src": "인증 관련 삭제", "action": ["remove"], "translation": "update auth", "keywords": ["update", "auth", "code", "commit", "change"], "category": "build"}
+{"src": "로그인 리팩토링", "action": ["refactor"], "translation": "refactor login log", "keywords": ["refactor", "login", "log"], "category": "feature"}
+{"src": "성능 삭제로 API 개선", "action": ["remove", "optimize"], "translation": "optimize API performance", "keywords": ["optimize", "API", "performance"], "category": "chore"}
+{"src": "로그인 관련 리팩토링", "action": ["refactor"], "translation": "refactor login log", "keywords": ["refactor", "login", "log"], "category": "style"}
+{"src": "코드 추가", "action": ["add"], "translation": "add code", "keywords": ["add", "code", "code", "commit", "change"], "category": "style"}
+{"src": "쿼리 오류 리팩토링", "action": ["refactor", "fix"], "translation": "fix error query", "keywords": ["fix", "error", "query"], "category": "refactor"}
+{"src": "버그 API 수정", "action": ["fix"], "translation": "fix bug API", "keywords": ["fix", "bug", "API"], "category": "refactor"}
+{"src": "서버 관련 삭제", "action": ["remove"], "translation": "update server", "keywords": ["update", "server", "code", "commit", "change"], "category": "test"}
+{"src": "API 리팩토링", "action": ["refactor"], "translation": "refactor API", "keywords": ["refactor", "API", "code", "commit", "change"], "category": "feature"}
+{"src": "의존성 캐시 리팩토링", "action": ["refactor"], "translation": "refactor dependencies cache", "keywords": ["refactor", "dependencies", "cache"], "category": "ci"}
+{"src": "문서 권한 추가", "action": ["add", "update"], "translation": "add docs permission", "keywords": ["add", "docs", "permission"], "category": "perf"}
+{"src": "배포 관련 수정", "action": ["resolve"], "translation": "update deploy", "keywords": ["update", "deploy", "code", "commit", "change"], "category": "build"}
+{"src": "응답 리팩토링", "action": ["refactor"], "translation": "refactor response", "keywords": ["refactor", "response", "code", "commit", "change"], "category": "feature"}
+{"src": "회원가입 삭제로 코드 개선", "action": ["remove"], "translation": "update signup code", "keywords": ["update", "signup", "code"], "category": "bugfix"}
+{"src": "버그 코드 수정", "action": ["fix"], "translation": "fix bug code", "keywords": ["fix", "bug", "code"], "category": "perf"}
+{"src": "로그 및 API 개선", "action": ["fix"], "translation": "fix API log", "keywords": ["fix", "API", "log"], "category": "ci"}
+{"src": "의존성 관련 최적화", "action": ["optimize"], "translation": "optimize dependencies", "keywords": ["optimize", "dependencies", "code", "commit", "change"], "category": "style"}
+{"src": "문서 및 로그인 업데이트", "action": ["update"], "translation": "update login docs log", "keywords": ["update", "login", "docs", "log"], "category": "feature"}
+{"src": "오류 최적화로 응답 개선", "action": ["fix", "optimize"], "translation": "fix error response", "keywords": ["fix", "error", "response"], "category": "ci"}
+{"src": "로그 로그인 해결", "action": ["update"], "translation": "update login log", "keywords": ["update", "login", "log"], "category": "test"}
+{"src": "로그인 및 인증 해결", "action": ["fix"], "translation": "fix login log auth", "keywords": ["fix", "login", "log", "auth"], "category": "chore"}
+{"src": "권한 리팩토링", "action": ["refactor"], "translation": "refactor permission", "keywords": ["refactor", "permission", "code", "commit", "change"], "category": "build"}
+{"src": "배포 해결", "action": ["refactor"], "translation": "refactor deploy", "keywords": ["refactor", "deploy", "code", "commit", "change"], "category": "ci"}
+{"src": "버그 구현", "action": ["implement", "fix"], "translation": "fix bug", "keywords": ["fix", "bug", "code", "commit", "change"], "category": "bugfix"}
+{"src": "배포 수정", "action": ["improve"], "translation": "update deploy", "keywords": ["update", "deploy", "code", "commit", "change"], "category": "bugfix"}
+{"src": "회원가입 관련 최적화", "action": ["optimize"], "translation": "optimize signup", "keywords": ["optimize", "signup", "code", "commit", "change"], "category": "ci"}
+{"src": "UI 수정", "action": ["remove"], "translation": "update UI", "keywords": ["update", "UI", "code", "commit", "change"], "category": "test"}
+{"src": "오류 코드 삭제", "action": ["fix", "remove"], "translation": "fix error code", "keywords": ["fix", "error", "code"], "category": "style"}
+{"src": "쿼리 및 로그인 추가", "action": ["add"], "translation": "add login log query", "keywords": ["add", "login", "log", "query"], "category": "ci"}
+{"src": "로그인 수정", "action": ["implement"], "translation": "implement login log", "keywords": ["implement", "login", "log"], "category": "refactor"}
+{"src": "문서 업데이트", "action": ["update"], "translation": "update docs", "keywords": ["update", "docs", "code", "commit", "change"], "category": "style"}
+{"src": "의존성 및 쿼리 리팩토링", "action": ["refactor"], "translation": "refactor dependencies query", "keywords": ["refactor", "dependencies", "query"], "category": "docs"}
+{"src": "성능 API 추가", "action": ["add", "optimize"], "translation": "add API performance", "keywords": ["add", "API", "performance"], "category": "refactor"}
+{"src": "응답 쿼리 해결", "action": ["improve"], "translation": "update response query", "keywords": ["update", "response", "query"], "category": "style"}
+{"src": "인증 배포 최적화", "action": ["optimize"], "translation": "optimize deploy auth", "keywords": ["optimize", "deploy", "auth"], "category": "perf"}
+{"src": "쿼리 및 문서 추가", "action": ["add", "update"], "translation": "add docs query", "keywords": ["add", "docs", "query"], "category": "feature"}
+{"src": "오류 최적화", "action": ["fix", "optimize"], "translation": "fix error", "keywords": ["fix", "error", "code", "commit", "change"], "category": "chore"}
+{"src": "코드 업데이트", "action": ["implement"], "translation": "implement code", "keywords": ["implement", "code", "code", "commit", "change"], "category": "ci"}
+{"src": "테스트 문서 개선", "action": ["add", "update"], "translation": "add docs test", "keywords": ["add", "docs", "test"], "category": "bugfix"}
+{"src": "인증 관련 삭제", "action": ["remove"], "translation": "update auth", "keywords": ["update", "auth", "code", "commit", "change"], "category": "docs"}
+{"src": "쿼리 회원가입 개선", "action": ["add"], "translation": "add signup query", "keywords": ["add", "signup", "query"], "category": "bugfix"}
+{"src": "코드 API 최적화", "action": ["optimize"], "translation": "optimize API code", "keywords": ["optimize", "API", "code"], "category": "style"}
+{"src": "로그인 및 권한 리팩토링", "action": ["refactor"], "translation": "refactor login log permission", "keywords": ["refactor", "login", "log", "permission"], "category": "feature"}
+{"src": "로그인 성능 해결", "action": ["optimize"], "translation": "optimize login performance log", "keywords": ["optimize", "login", "performance", "log"], "category": "refactor"}
+{"src": "의존성 회원가입 수정", "action": ["resolve"], "translation": "update signup dependencies", "keywords": ["update", "signup", "dependencies"], "category": "bugfix"}
+{"src": "캐시 구현", "action": ["implement"], "translation": "implement cache", "keywords": ["implement", "cache", "code", "commit", "change"], "category": "perf"}
+{"src": "로그 캐시 개선", "action": ["improve"], "translation": "update log cache", "keywords": ["update", "log", "cache"], "category": "docs"}
+{"src": "문서 해결", "action": ["update"], "translation": "update docs", "keywords": ["update", "docs", "code", "commit", "change"], "category": "refactor"}
+{"src": "코드 테스트 해결", "action": ["add"], "translation": "add code test", "keywords": ["add", "code", "test"], "category": "style"}
+{"src": "UI 추가로 오류 개선", "action": ["fix", "add"], "translation": "fix error UI", "keywords": ["fix", "error", "UI"], "category": "test"}
+{"src": "캐시 관련 최적화", "action": ["optimize"], "translation": "optimize cache", "keywords": ["optimize", "cache", "code", "commit", "change"], "category": "ci"}
+{"src": "버그 구현", "action": ["implement", "fix"], "translation": "fix bug", "keywords": ["fix", "bug", "code", "commit", "change"], "category": "chore"}
+{"src": "UI 관련 업데이트", "action": ["optimize"], "translation": "optimize UI", "keywords": ["optimize", "UI", "code", "commit", "change"], "category": "ci"}
+{"src": "로그 및 문서 개선", "action": ["update"], "translation": "update docs log", "keywords": ["update", "docs", "log"], "category": "bugfix"}
+{"src": "코드 및 버그 리팩토링", "action": ["refactor", "fix"], "translation": "fix bug code", "keywords": ["fix", "bug", "code"], "category": "bugfix"}
+{"src": "배포 관련 최적화", "action": ["optimize"], "translation": "optimize deploy", "keywords": ["optimize", "deploy", "code", "commit", "change"], "category": "refactor"}
+{"src": "코드 코드 리팩토링", "action": ["refactor"], "translation": "refactor code", "keywords": ["refactor", "code", "code", "commit", "change"], "category": "ci"}
+{"src": "코드 권한 구현", "action": ["implement"], "translation": "implement code permission", "keywords": ["implement", "code", "permission"], "category": "chore"}
+{"src": "코드 업데이트", "action": ["improve"], "translation": "update code", "keywords": ["update", "code", "code", "commit", "change"], "category": "build"}
+{"src": "배포 권한 개선", "action": ["optimize"], "translation": "optimize deploy permission", "keywords": ["optimize", "deploy", "permission"], "category": "docs"}
+{"src": "테스트 관련 개선", "action": ["add"], "translation": "add test", "keywords": ["add", "test", "code", "commit", "change"], "category": "perf"}
+{"src": "로그인 오류 최적화", "action": ["fix", "optimize"], "translation": "fix error login log", "keywords": ["fix", "error", "login", "log"], "category": "build"}
+{"src": "서버 해결", "action": ["fix"], "translation": "fix server", "keywords": ["fix", "server", "code", "commit", "change"], "category": "chore"}
+{"src": "성능 업데이트로 API 개선", "action": ["optimize"], "translation": "optimize API performance", "keywords": ["optimize", "API", "performance"], "category": "refactor"}
+{"src": "오류 및 버그 개선", "action": ["fix"], "translation": "fix bug error", "keywords": ["fix", "bug", "error"], "category": "build"}
+{"src": "서버 업데이트", "action": ["add"], "translation": "add server", "keywords": ["add", "server", "code", "commit", "change"], "category": "chore"}
+{"src": "회원가입 관련 업데이트", "action": ["update"], "translation": "update signup", "keywords": ["update", "signup", "code", "commit", "change"], "category": "chore"}
+{"src": "캐시 해결", "action": ["improve"], "translation": "update cache", "keywords": ["update", "cache", "code", "commit", "change"], "category": "refactor"}
+{"src": "배포 개선로 코드 개선", "action": ["implement"], "translation": "implement code deploy", "keywords": ["implement", "code", "deploy"], "category": "test"}
+{"src": "API 및 응답 수정", "action": ["optimize"], "translation": "optimize API response", "keywords": ["optimize", "API", "response"], "category": "style"}
+{"src": "오류 업데이트로 응답 개선", "action": ["fix"], "translation": "fix error response", "keywords": ["fix", "error", "response"], "category": "build"}
+{"src": "회원가입 해결", "action": ["remove"], "translation": "update signup", "keywords": ["update", "signup", "code", "commit", "change"], "category": "chore"}
+{"src": "코드 배포 업데이트", "action": ["remove"], "translation": "update code deploy", "keywords": ["update", "code", "deploy"], "category": "feature"}
+{"src": "쿼리 및 버그 리팩토링", "action": ["refactor", "fix"], "translation": "fix bug query", "keywords": ["fix", "bug", "query"], "category": "docs"}
+{"src": "배포 리팩토링", "action": ["refactor"], "translation": "refactor deploy", "keywords": ["refactor", "deploy", "code", "commit", "change"], "category": "feature"}
+{"src": "오류 로그 해결", "action": ["fix"], "translation": "fix error log", "keywords": ["fix", "error", "log"], "category": "style"}
+{"src": "UI 구현", "action": ["implement"], "translation": "implement UI", "keywords": ["implement", "UI", "code", "commit", "change"], "category": "chore"}
+{"src": "로그 해결로 회원가입 개선", "action": ["optimize"], "translation": "optimize signup log", "keywords": ["optimize", "signup", "log"], "category": "docs"}
+{"src": "로그인 수정", "action": ["update"], "translation": "update login log", "keywords": ["update", "login", "log"], "category": "bugfix"}
+{"src": "문서 및 회원가입 추가", "action": ["add", "update"], "translation": "add signup docs", "keywords": ["add", "signup", "docs"], "category": "chore"}
+{"src": "응답 추가", "action": ["add"], "translation": "add response", "keywords": ["add", "response", "code", "commit", "change"], "category": "ci"}
+{"src": "의존성 UI 수정", "action": ["implement"], "translation": "implement dependencies UI", "keywords": ["implement", "dependencies", "UI"], "category": "refactor"}
+{"src": "캐시 수정로 응답 개선", "action": ["add"], "translation": "add response cache", "keywords": ["add", "response", "cache"], "category": "chore"}
+{"src": "캐시 삭제", "action": ["remove"], "translation": "update cache", "keywords": ["update", "cache", "code", "commit", "change"], "category": "ci"}
+{"src": "테스트 및 테스트 최적화", "action": ["add", "optimize"], "translation": "add test", "keywords": ["add", "test", "code", "commit", "change"], "category": "feature"}
+{"src": "로그 권한 삭제", "action": ["remove"], "translation": "update log permission", "keywords": ["update", "log", "permission"], "category": "perf"}
+{"src": "배포 수정", "action": ["implement"], "translation": "implement deploy", "keywords": ["implement", "deploy", "code", "commit", "change"], "category": "feature"}
+{"src": "UI 및 성능 추가", "action": ["add", "optimize"], "translation": "add performance UI", "keywords": ["add", "performance", "UI"], "category": "bugfix"}
+{"src": "테스트 추가", "action": ["add"], "translation": "add test", "keywords": ["add", "test", "code", "commit", "change"], "category": "perf"}
+{"src": "테스트 로그 해결", "action": ["add"], "translation": "add test log", "keywords": ["add", "test", "log"], "category": "perf"}
+{"src": "로그인 및 인증 구현", "action": ["implement"], "translation": "implement login log auth", "keywords": ["implement", "login", "log", "auth"], "category": "refactor"}
+{"src": "로그 및 배포 개선", "action": ["resolve"], "translation": "update deploy log", "keywords": ["update", "deploy", "log"], "category": "bugfix"}
+{"src": "쿼리 및 쿼리 리팩토링", "action": ["refactor"], "translation": "refactor query", "keywords": ["refactor", "query", "code", "commit", "change"], "category": "docs"}
+{"src": "권한 및 오류 개선", "action": ["fix"], "translation": "fix error permission", "keywords": ["fix", "error", "permission"], "category": "feature"}
+{"src": "배포 인증 구현", "action": ["implement"], "translation": "implement deploy auth", "keywords": ["implement", "deploy", "auth"], "category": "build"}
+{"src": "오류 구현", "action": ["implement", "fix"], "translation": "fix error", "keywords": ["fix", "error", "code", "commit", "change"], "category": "ci"}
+{"src": "UI 관련 최적화", "action": ["optimize"], "translation": "optimize UI", "keywords": ["optimize", "UI", "code", "commit", "change"], "category": "perf"}
+{"src": "로그인 및 로그 수정", "action": ["revert"], "translation": "update login log", "keywords": ["update", "login", "log"], "category": "build"}
+{"src": "권한 추가로 API 개선", "action": ["add"], "translation": "add API permission", "keywords": ["add", "API", "permission"], "category": "perf"}
+{"src": "성능 최적화", "action": ["optimize"], "translation": "optimize performance", "keywords": ["optimize", "performance", "code", "commit", "change"], "category": "refactor"}
+{"src": "캐시 로그인 구현", "action": ["implement"], "translation": "implement login log cache", "keywords": ["implement", "login", "log", "cache"], "category": "docs"}
+{"src": "의존성 추가", "action": ["add"], "translation": "add dependencies", "keywords": ["add", "dependencies", "code", "commit", "change"], "category": "feature"}
+{"src": "로그 관련 삭제", "action": ["remove"], "translation": "update log", "keywords": ["update", "log", "code", "commit", "change"], "category": "chore"}
+{"src": "서버 및 쿼리 수정", "action": ["optimize"], "translation": "optimize query server", "keywords": ["optimize", "query", "server"], "category": "build"}
+{"src": "캐시 구현로 회원가입 개선", "action": ["implement"], "translation": "implement signup cache", "keywords": ["implement", "signup", "cache"], "category": "refactor"}
+{"src": "권한 추가", "action": ["add"], "translation": "add permission", "keywords": ["add", "permission", "code", "commit", "change"], "category": "feature"}
+{"src": "회원가입 삭제로 테스트 개선", "action": ["add", "remove"], "translation": "add signup test", "keywords": ["add", "signup", "test"], "category": "chore"}
+{"src": "로그 관련 해결", "action": ["optimize"], "translation": "optimize log", "keywords": ["optimize", "log", "code", "commit", "change"], "category": "build"}
+{"src": "응답 관련 리팩토링", "action": ["refactor"], "translation": "refactor response", "keywords": ["refactor", "response", "code", "commit", "change"], "category": "style"}
+{"src": "오류 구현", "action": ["implement", "fix"], "translation": "fix error", "keywords": ["fix", "error", "code", "commit", "change"], "category": "chore"}
+{"src": "UI 리팩토링", "action": ["refactor"], "translation": "refactor UI", "keywords": ["refactor", "UI", "code", "commit", "change"], "category": "chore"}
+{"src": "의존성 테스트 리팩토링", "action": ["refactor", "add"], "translation": "add test dependencies", "keywords": ["add", "test", "dependencies"], "category": "test"}
+{"src": "코드 관련 개선", "action": ["update"], "translation": "update code", "keywords": ["update", "code", "code", "commit", "change"], "category": "perf"}
+{"src": "문서 및 캐시 추가", "action": ["add", "update"], "translation": "add docs cache", "keywords": ["add", "docs", "cache"], "category": "docs"}
+{"src": "캐시 관련 해결", "action": ["revert"], "translation": "update cache", "keywords": ["update", "cache", "code", "commit", "change"], "category": "chore"}
+{"src": "서버 응답 추가", "action": ["add"], "translation": "add response server", "keywords": ["add", "response", "server"], "category": "test"}
+{"src": "로그 삭제로 API 개선", "action": ["remove"], "translation": "update API log", "keywords": ["update", "API", "log"], "category": "build"}
+{"src": "응답 성능 최적화", "action": ["optimize"], "translation": "optimize response performance", "keywords": ["optimize", "response", "performance"], "category": "bugfix"}
+{"src": "쿼리 수정", "action": ["improve"], "translation": "update query", "keywords": ["update", "query", "code", "commit", "change"], "category": "docs"}
+{"src": "배포 및 쿼리 삭제", "action": ["remove"], "translation": "update deploy query", "keywords": ["update", "deploy", "query"], "category": "style"}
+{"src": "버그 코드 업데이트", "action": ["fix"], "translation": "fix bug code", "keywords": ["fix", "bug", "code"], "category": "perf"}
+{"src": "쿼리 해결로 응답 개선", "action": ["optimize"], "translation": "optimize response query", "keywords": ["optimize", "response", "query"], "category": "ci"}
+{"src": "배포 및 응답 리팩토링", "action": ["refactor"], "translation": "refactor response deploy", "keywords": ["refactor", "response", "deploy"], "category": "feature"}
+{"src": "버그 및 로그 수정", "action": ["fix"], "translation": "fix bug log", "keywords": ["fix", "bug", "log"], "category": "refactor"}
+{"src": "성능 최적화로 코드 개선", "action": ["optimize"], "translation": "optimize performance code", "keywords": ["optimize", "performance", "code"], "category": "docs"}
+{"src": "캐시 및 서버 수정", "action": ["fix"], "translation": "fix cache server", "keywords": ["fix", "cache", "server"], "category": "perf"}
+{"src": "버그 최적화", "action": ["fix", "optimize"], "translation": "fix bug", "keywords": ["fix", "bug", "code", "commit", "change"], "category": "test"}
+{"src": "테스트 구현로 문서 개선", "action": ["implement", "add", "update"], "translation": "add docs test", "keywords": ["add", "docs", "test"], "category": "style"}
+{"src": "쿼리 및 문서 최적화", "action": ["optimize", "update"], "translation": "optimize docs query", "keywords": ["optimize", "docs", "query"], "category": "perf"}
+{"src": "서버 및 로그 추가", "action": ["add"], "translation": "add log server", "keywords": ["add", "log", "server"], "category": "bugfix"}
+{"src": "배포 리팩토링로 인증 개선", "action": ["refactor"], "translation": "refactor deploy auth", "keywords": ["refactor", "deploy", "auth"], "category": "test"}
+{"src": "UI 로그인 업데이트", "action": ["update"], "translation": "update login log UI", "keywords": ["update", "login", "log", "UI"], "category": "chore"}
+{"src": "문서 및 테스트 최적화", "action": ["add", "optimize", "update"], "translation": "add docs test", "keywords": ["add", "docs", "test"], "category": "refactor"}
+{"src": "코드 구현로 오류 개선", "action": ["implement", "fix"], "translation": "fix error code", "keywords": ["fix", "error", "code"], "category": "chore"}
+{"src": "UI 리팩토링", "action": ["refactor"], "translation": "refactor UI", "keywords": ["refactor", "UI", "code", "commit", "change"], "category": "test"}
+{"src": "로그 관련 수정", "action": ["optimize"], "translation": "optimize log", "keywords": ["optimize", "log", "code", "commit", "change"], "category": "build"}
+{"src": "코드 삭제", "action": ["remove"], "translation": "update code", "keywords": ["update", "code", "code", "commit", "change"], "category": "perf"}
+{"src": "서버 및 테스트 개선", "action": ["add"], "translation": "add test server", "keywords": ["add", "test", "server"], "category": "ci"}
+{"src": "회원가입 해결", "action": ["remove"], "translation": "update signup", "keywords": ["update", "signup", "code", "commit", "change"], "category": "test"}
+{"src": "응답 추가로 의존성 개선", "action": ["add"], "translation": "add response dependencies", "keywords": ["add", "response", "dependencies"], "category": "docs"}
+{"src": "코드 및 테스트 구현", "action": ["implement", "add"], "translation": "add code test", "keywords": ["add", "code", "test"], "category": "chore"}
+{"src": "문서 및 권한 리팩토링", "action": ["refactor", "update"], "translation": "refactor docs permission", "keywords": ["refactor", "docs", "permission"], "category": "perf"}
+{"src": "UI 오류 추가", "action": ["fix", "add"], "translation": "fix error UI", "keywords": ["fix", "error", "UI"], "category": "perf"}
+{"src": "회원가입 구현", "action": ["implement"], "translation": "implement signup", "keywords": ["implement", "signup", "code", "commit", "change"], "category": "ci"}
+{"src": "캐시 및 오류 개선", "action": ["fix"], "translation": "fix error cache", "keywords": ["fix", "error", "cache"], "category": "refactor"}
+{"src": "캐시 해결", "action": ["remove"], "translation": "update cache", "keywords": ["update", "cache", "code", "commit", "change"], "category": "chore"}
+{"src": "UI 업데이트", "action": ["remove"], "translation": "update UI", "keywords": ["update", "UI", "code", "commit", "change"], "category": "chore"}
+{"src": "버그 쿼리 리팩토링", "action": ["refactor", "fix"], "translation": "fix bug query", "keywords": ["fix", "bug", "query"], "category": "docs"}
+{"src": "응답 해결", "action": ["add"], "translation": "add response", "keywords": ["add", "response", "code", "commit", "change"], "category": "refactor"}
+{"src": "캐시 구현로 캐시 개선", "action": ["implement"], "translation": "implement cache", "keywords": ["implement", "cache", "code", "commit", "change"], "category": "style"}
+{"src": "버그 관련 수정", "action": ["fix"], "translation": "fix bug", "keywords": ["fix", "bug", "code", "commit", "change"], "category": "ci"}
+{"src": "버그 업데이트", "action": ["fix"], "translation": "fix bug", "keywords": ["fix", "bug", "code", "commit", "change"], "category": "ci"}
+{"src": "버그 최적화", "action": ["fix", "optimize"], "translation": "fix bug", "keywords": ["fix", "bug", "code", "commit", "change"], "category": "docs"}
+{"src": "테스트 및 API 추가", "action": ["add"], "translation": "add API test", "keywords": ["add", "API", "test"], "category": "style"}
+{"src": "권한 개선로 테스트 개선", "action": ["add"], "translation": "add test permission", "keywords": ["add", "test", "permission"], "category": "feature"}
+{"src": "테스트 테스트 해결", "action": ["add"], "translation": "add test", "keywords": ["add", "test", "code", "commit", "change"], "category": "ci"}
+{"src": "서버 구현로 의존성 개선", "action": ["implement"], "translation": "implement dependencies server", "keywords": ["implement", "dependencies", "server"], "category": "refactor"}
+{"src": "UI 및 배포 최적화", "action": ["optimize"], "translation": "optimize deploy UI", "keywords": ["optimize", "deploy", "UI"], "category": "refactor"}
+{"src": "코드 관련 최적화", "action": ["optimize"], "translation": "optimize code", "keywords": ["optimize", "code", "code", "commit", "change"], "category": "refactor"}
+{"src": "권한 삭제", "action": ["remove"], "translation": "update permission", "keywords": ["update", "permission", "code", "commit", "change"], "category": "refactor"}
+{"src": "배포 오류 구현", "action": ["implement", "fix"], "translation": "fix error deploy", "keywords": ["fix", "error", "deploy"], "category": "test"}
+{"src": "오류 추가로 오류 개선", "action": ["fix", "add"], "translation": "fix error", "keywords": ["fix", "error", "code", "commit", "change"], "category": "bugfix"}
+{"src": "회원가입 캐시 해결", "action": ["implement"], "translation": "implement signup cache", "keywords": ["implement", "signup", "cache"], "category": "feature"}
+{"src": "문서 개선로 UI 개선", "action": ["update"], "translation": "update docs UI", "keywords": ["update", "docs", "UI"], "category": "docs"}
+{"src": "테스트 캐시 추가", "action": ["add"], "translation": "add test cache", "keywords": ["add", "test", "cache"], "category": "ci"}
+{"src": "API 및 캐시 추가", "action": ["add"], "translation": "add API cache", "keywords": ["add", "API", "cache"], "category": "ci"}
+{"src": "회원가입 추가로 테스트 개선", "action": ["add"], "translation": "add signup test", "keywords": ["add", "signup", "test"], "category": "feature"}
+{"src": "성능 관련 리팩토링", "action": ["refactor", "optimize"], "translation": "refactor performance", "keywords": ["refactor", "performance", "code", "commit", "change"], "category": "ci"}
+{"src": "캐시 리팩토링", "action": ["refactor"], "translation": "refactor cache", "keywords": ["refactor", "cache", "code", "commit", "change"], "category": "refactor"}
+{"src": "인증 UI 최적화", "action": ["optimize"], "translation": "optimize UI auth", "keywords": ["optimize", "UI", "auth"], "category": "perf"}
+{"src": "코드 및 버그 수정", "action": ["fix"], "translation": "fix bug code", "keywords": ["fix", "bug", "code"], "category": "feature"}
+{"src": "권한 UI 개선", "action": ["add"], "translation": "add UI permission", "keywords": ["add", "UI", "permission"], "category": "ci"}
+{"src": "회원가입 문서 최적화", "action": ["optimize", "update"], "translation": "optimize signup docs", "keywords": ["optimize", "signup", "docs"], "category": "perf"}
+{"src": "문서 및 쿼리 수정", "action": ["update"], "translation": "update docs query", "keywords": ["update", "docs", "query"], "category": "feature"}
+{"src": "테스트 업데이트", "action": ["add"], "translation": "add test", "keywords": ["add", "test", "code", "commit", "change"], "category": "chore"}
+{"src": "회원가입 관련 수정", "action": ["fix"], "translation": "fix signup", "keywords": ["fix", "signup", "code", "commit", "change"], "category": "refactor"}
+{"src": "배포 해결", "action": ["optimize"], "translation": "optimize deploy", "keywords": ["optimize", "deploy", "code", "commit", "change"], "category": "test"}
+{"src": "배포 의존성 개선", "action": ["add"], "translation": "add dependencies deploy", "keywords": ["add", "dependencies", "deploy"], "category": "style"}
+{"src": "문서 관련 구현", "action": ["implement", "update"], "translation": "update docs", "keywords": ["update", "docs", "code", "commit", "change"], "category": "perf"}
+{"src": "회원가입 관련 개선", "action": ["fix"], "translation": "fix signup", "keywords": ["fix", "signup", "code", "commit", "change"], "category": "refactor"}
+{"src": "캐시 권한 해결", "action": ["optimize"], "translation": "optimize cache permission", "keywords": ["optimize", "cache", "permission"], "category": "perf"}
+{"src": "배포 수정", "action": ["remove"], "translation": "update deploy", "keywords": ["update", "deploy", "code", "commit", "change"], "category": "perf"}
+{"src": "캐시 관련 해결", "action": ["fix"], "translation": "fix cache", "keywords": ["fix", "cache", "code", "commit", "change"], "category": "feature"}
+{"src": "의존성 및 버그 삭제", "action": ["fix", "remove"], "translation": "fix bug dependencies", "keywords": ["fix", "bug", "dependencies"], "category": "build"}
+{"src": "코드 삭제로 의존성 개선", "action": ["remove"], "translation": "update code dependencies", "keywords": ["update", "code", "dependencies"], "category": "ci"}
+{"src": "회원가입 최적화로 캐시 개선", "action": ["optimize"], "translation": "optimize signup cache", "keywords": ["optimize", "signup", "cache"], "category": "perf"}
+{"src": "로그 및 API 삭제", "action": ["remove"], "translation": "update API log", "keywords": ["update", "API", "log"], "category": "build"}
+{"src": "버그 응답 삭제", "action": ["fix", "remove"], "translation": "fix bug response", "keywords": ["fix", "bug", "response"], "category": "perf"}
+{"src": "로그인 관련 해결", "action": ["improve"], "translation": "update login log", "keywords": ["update", "login", "log"], "category": "docs"}
+{"src": "문서 및 오류 삭제", "action": ["fix", "remove", "update"], "translation": "fix error docs", "keywords": ["fix", "error", "docs"], "category": "docs"}
+{"src": "로그 최적화로 로그 개선", "action": ["optimize"], "translation": "optimize log", "keywords": ["optimize", "log", "code", "commit", "change"], "category": "feature"}
+{"src": "권한 관련 해결", "action": ["add"], "translation": "add permission", "keywords": ["add", "permission", "code", "commit", "change"], "category": "perf"}
+{"src": "회원가입 관련 해결", "action": ["fix"], "translation": "fix signup", "keywords": ["fix", "signup", "code", "commit", "change"], "category": "feature"}
+{"src": "오류 관련 삭제", "action": ["fix", "remove"], "translation": "fix error", "keywords": ["fix", "error", "code", "commit", "change"], "category": "ci"}
+{"src": "로그인 테스트 삭제", "action": ["add", "remove"], "translation": "add login test log", "keywords": ["add", "login", "test", "log"], "category": "ci"}
+{"src": "의존성 업데이트", "action": ["fix"], "translation": "fix dependencies", "keywords": ["fix", "dependencies", "code", "commit", "change"], "category": "docs"}
+{"src": "인증 관련 해결", "action": ["improve"], "translation": "update auth", "keywords": ["update", "auth", "code", "commit", "change"], "category": "perf"}
+{"src": "회원가입 코드 수정", "action": ["improve"], "translation": "update signup code", "keywords": ["update", "signup", "code"], "category": "chore"}
+{"src": "인증 및 서버 업데이트", "action": ["add"], "translation": "add server auth", "keywords": ["add", "server", "auth"], "category": "bugfix"}
+{"src": "API 구현", "action": ["implement"], "translation": "implement API", "keywords": ["implement", "API", "code", "commit", "change"], "category": "feature"}
+{"src": "성능 및 성능 추가", "action": ["add", "optimize"], "translation": "add performance", "keywords": ["add", "performance", "code", "commit", "change"], "category": "style"}
+{"src": "성능 업데이트", "action": ["optimize"], "translation": "optimize performance", "keywords": ["optimize", "performance", "code", "commit", "change"], "category": "feature"}
+{"src": "권한 관련 추가", "action": ["add"], "translation": "add permission", "keywords": ["add", "permission", "code", "commit", "change"], "category": "perf"}
+{"src": "서버 관련 개선", "action": ["resolve"], "translation": "update server", "keywords": ["update", "server", "code", "commit", "change"], "category": "bugfix"}
+{"src": "오류 구현로 인증 개선", "action": ["implement", "fix"], "translation": "fix error auth", "keywords": ["fix", "error", "auth"], "category": "build"}
+{"src": "응답 관련 개선", "action": ["remove"], "translation": "update response", "keywords": ["update", "response", "code", "commit", "change"], "category": "feature"}
+{"src": "서버 관련 구현", "action": ["implement"], "translation": "implement server", "keywords": ["implement", "server", "code", "commit", "change"], "category": "style"}
+{"src": "코드 구현로 문서 개선", "action": ["implement", "update"], "translation": "update code docs", "keywords": ["update", "code", "docs"], "category": "chore"}
+{"src": "쿼리 및 API 개선", "action": ["implement"], "translation": "implement API query", "keywords": ["implement", "API", "query"], "category": "build"}
+{"src": "테스트 업데이트로 인증 개선", "action": ["add"], "translation": "add test auth", "keywords": ["add", "test", "auth"], "category": "ci"}
+{"src": "성능 리팩토링", "action": ["refactor", "optimize"], "translation": "refactor performance", "keywords": ["refactor", "performance", "code", "commit", "change"], "category": "chore"}
+{"src": "서버 삭제", "action": ["remove"], "translation": "update server", "keywords": ["update", "server", "code", "commit", "change"], "category": "chore"}
+{"src": "배포 인증 해결", "action": ["optimize"], "translation": "optimize deploy auth", "keywords": ["optimize", "deploy", "auth"], "category": "build"}
+{"src": "테스트 관련 구현", "action": ["implement", "add"], "translation": "add test", "keywords": ["add", "test", "code", "commit", "change"], "category": "bugfix"}
+{"src": "회원가입 구현로 버그 개선", "action": ["implement", "fix"], "translation": "fix bug signup", "keywords": ["fix", "bug", "signup"], "category": "refactor"}
+{"src": "오류 성능 리팩토링", "action": ["refactor", "fix", "optimize"], "translation": "fix error performance", "keywords": ["fix", "error", "performance"], "category": "refactor"}
+{"src": "문서 및 API 수정", "action": ["update"], "translation": "update API docs", "keywords": ["update", "API", "docs"], "category": "test"}
+{"src": "오류 업데이트", "action": ["fix"], "translation": "fix error", "keywords": ["fix", "error", "code", "commit", "change"], "category": "perf"}
+{"src": "인증 코드 삭제", "action": ["remove"], "translation": "update code auth", "keywords": ["update", "code", "auth"], "category": "style"}
+{"src": "테스트 수정", "action": ["add"], "translation": "add test", "keywords": ["add", "test", "code", "commit", "change"], "category": "style"}
+{"src": "의존성 관련 삭제", "action": ["remove"], "translation": "update dependencies", "keywords": ["update", "dependencies", "code", "commit", "change"], "category": "bugfix"}
+{"src": "문서 성능 해결", "action": ["optimize", "update"], "translation": "optimize performance docs", "keywords": ["optimize", "performance", "docs"], "category": "docs"}
+{"src": "권한 및 인증 최적화", "action": ["optimize"], "translation": "optimize auth permission", "keywords": ["optimize", "auth", "permission"], "category": "docs"}
+{"src": "쿼리 및 응답 추가", "action": ["add"], "translation": "add response query", "keywords": ["add", "response", "query"], "category": "refactor"}
+{"src": "회원가입 구현", "action": ["implement"], "translation": "implement signup", "keywords": ["implement", "signup", "code", "commit", "change"], "category": "bugfix"}
+{"src": "인증 관련 리팩토링", "action": ["refactor"], "translation": "refactor auth", "keywords": ["refactor", "auth", "code", "commit", "change"], "category": "refactor"}
+{"src": "문서 수정", "action": ["update"], "translation": "update docs", "keywords": ["update", "docs", "code", "commit", "change"], "category": "chore"}
+{"src": "오류 관련 개선", "action": ["fix"], "translation": "fix error", "keywords": ["fix", "error", "code", "commit", "change"], "category": "chore"}
+{"src": "오류 해결로 테스트 개선", "action": ["fix", "add"], "translation": "fix error test", "keywords": ["fix", "error", "test"], "category": "build"}
+{"src": "배포 업데이트로 로그인 개선", "action": ["revert"], "translation": "update login deploy log", "keywords": ["update", "login", "deploy", "log"], "category": "docs"}
+{"src": "로그인 삭제", "action": ["remove"], "translation": "update login log", "keywords": ["update", "login", "log"], "category": "refactor"}
+{"src": "인증 관련 구현", "action": ["implement"], "translation": "implement auth", "keywords": ["implement", "auth", "code", "commit", "change"], "category": "feature"}
+{"src": "코드 및 성능 업데이트", "action": ["optimize"], "translation": "optimize performance code", "keywords": ["optimize", "performance", "code"], "category": "chore"}
+{"src": "테스트 및 성능 삭제", "action": ["remove", "add", "optimize"], "translation": "add performance test", "keywords": ["add", "performance", "test"], "category": "perf"}
+{"src": "버그 업데이트로 회원가입 개선", "action": ["fix"], "translation": "fix bug signup", "keywords": ["fix", "bug", "signup"], "category": "perf"}
+{"src": "오류 업데이트", "action": ["fix"], "translation": "fix error", "keywords": ["fix", "error", "code", "commit", "change"], "category": "style"}
+{"src": "로그 문서 삭제", "action": ["remove", "update"], "translation": "update docs log", "keywords": ["update", "docs", "log"], "category": "test"}
+{"src": "서버 배포 삭제", "action": ["remove"], "translation": "update deploy server", "keywords": ["update", "deploy", "server"], "category": "ci"}
+{"src": "오류 관련 리팩토링", "action": ["refactor", "fix"], "translation": "fix error", "keywords": ["fix", "error", "code", "commit", "change"], "category": "docs"}
+{"src": "서버 및 로그인 추가", "action": ["add"], "translation": "add login log server", "keywords": ["add", "login", "log", "server"], "category": "refactor"}
+{"src": "인증 추가로 버그 개선", "action": ["fix", "add"], "translation": "fix bug auth", "keywords": ["fix", "bug", "auth"], "category": "docs"}
+{"src": "회원가입 최적화", "action": ["optimize"], "translation": "optimize signup", "keywords": ["optimize", "signup", "code", "commit", "change"], "category": "ci"}
+{"src": "API 관련 수정", "action": ["resolve"], "translation": "update API", "keywords": ["update", "API", "code", "commit", "change"], "category": "chore"}
+{"src": "로그인 로그인 수정", "action": ["remove"], "translation": "update login log", "keywords": ["update", "login", "log"], "category": "test"}
+{"src": "로그인 최적화로 권한 개선", "action": ["optimize"], "translation": "optimize login log permission", "keywords": ["optimize", "login", "log", "permission"], "category": "test"}
+{"src": "쿼리 관련 구현", "action": ["implement"], "translation": "implement query", "keywords": ["implement", "query", "code", "commit", "change"], "category": "style"}
+{"src": "버그 및 로그 추가", "action": ["fix", "add"], "translation": "fix bug log", "keywords": ["fix", "bug", "log"], "category": "ci"}
+{"src": "로그인 권한 수정", "action": ["add"], "translation": "add login log permission", "keywords": ["add", "login", "log", "permission"], "category": "chore"}
+{"src": "회원가입 리팩토링로 테스트 개선", "action": ["refactor", "add"], "translation": "add signup test", "keywords": ["add", "signup", "test"], "category": "build"}
+{"src": "테스트 쿼리 구현", "action": ["implement", "add"], "translation": "add test query", "keywords": ["add", "test", "query"], "category": "style"}
+{"src": "UI 응답 삭제", "action": ["remove"], "translation": "update response UI", "keywords": ["update", "response", "UI"], "category": "docs"}
+{"src": "인증 리팩토링", "action": ["refactor"], "translation": "refactor auth", "keywords": ["refactor", "auth", "code", "commit", "change"], "category": "refactor"}
+{"src": "배포 및 버그 삭제", "action": ["fix", "remove"], "translation": "fix bug deploy", "keywords": ["fix", "bug", "deploy"], "category": "ci"}
+{"src": "오류 수정", "action": ["fix"], "translation": "fix error", "keywords": ["fix", "error", "code", "commit", "change"], "category": "build"}
+{"src": "로그 삭제로 인증 개선", "action": ["remove"], "translation": "update log auth", "keywords": ["update", "log", "auth"], "category": "feature"}
+{"src": "성능 및 배포 최적화", "action": ["optimize"], "translation": "optimize performance deploy", "keywords": ["optimize", "performance", "deploy"], "category": "style"}
+{"src": "API 개선로 응답 개선", "action": ["refactor"], "translation": "refactor API response", "keywords": ["refactor", "API", "response"], "category": "build"}
+{"src": "성능 및 회원가입 개선", "action": ["optimize"], "translation": "optimize signup performance", "keywords": ["optimize", "signup", "performance"], "category": "build"}
+{"src": "인증 쿼리 삭제", "action": ["remove"], "translation": "update query auth", "keywords": ["update", "query", "auth"], "category": "feature"}
+{"src": "로그인 및 문서 추가", "action": ["add", "update"], "translation": "add login docs log", "keywords": ["add", "login", "docs", "log"], "category": "docs"}
+{"src": "UI 업데이트로 의존성 개선", "action": ["remove"], "translation": "update dependencies UI", "keywords": ["update", "dependencies", "UI"], "category": "docs"}
+{"src": "테스트 로그인 최적화", "action": ["add", "optimize"], "translation": "add login test log", "keywords": ["add", "login", "test", "log"], "category": "chore"}
+{"src": "의존성 관련 리팩토링", "action": ["refactor"], "translation": "refactor dependencies", "keywords": ["refactor", "dependencies", "code", "commit", "change"], "category": "build"}
+{"src": "권한 업데이트", "action": ["improve"], "translation": "update permission", "keywords": ["update", "permission", "code", "commit", "change"], "category": "style"}
+{"src": "의존성 최적화", "action": ["optimize"], "translation": "optimize dependencies", "keywords": ["optimize", "dependencies", "code", "commit", "change"], "category": "docs"}
+{"src": "배포 관련 개선", "action": ["improve"], "translation": "update deploy", "keywords": ["update", "deploy", "code", "commit", "change"], "category": "perf"}
+{"src": "배포 관련 리팩토링", "action": ["refactor"], "translation": "refactor deploy", "keywords": ["refactor", "deploy", "code", "commit", "change"], "category": "perf"}
+{"src": "회원가입 추가로 응답 개선", "action": ["add"], "translation": "add signup response", "keywords": ["add", "signup", "response"], "category": "test"}
+{"src": "성능 리팩토링", "action": ["refactor", "optimize"], "translation": "refactor performance", "keywords": ["refactor", "performance", "code", "commit", "change"], "category": "feature"}
+{"src": "버그 서버 수정", "action": ["fix"], "translation": "fix bug server", "keywords": ["fix", "bug", "server"], "category": "build"}
+{"src": "로그 최적화로 권한 개선", "action": ["optimize"], "translation": "optimize log permission", "keywords": ["optimize", "log", "permission"], "category": "bugfix"}
+{"src": "문서 삭제로 인증 개선", "action": ["remove", "update"], "translation": "update docs auth", "keywords": ["update", "docs", "auth"], "category": "perf"}
+{"src": "로그 최적화", "action": ["optimize"], "translation": "optimize log", "keywords": ["optimize", "log", "code", "commit", "change"], "category": "build"}
+{"src": "API 및 쿼리 삭제", "action": ["remove"], "translation": "update API query", "keywords": ["update", "API", "query"], "category": "ci"}
+{"src": "로그 배포 삭제", "action": ["remove"], "translation": "update deploy log", "keywords": ["update", "deploy", "log"], "category": "bugfix"}
+{"src": "서버 개선", "action": ["resolve"], "translation": "update server", "keywords": ["update", "server", "code", "commit", "change"], "category": "refactor"}
+{"src": "권한 개선", "action": ["resolve"], "translation": "update permission", "keywords": ["update", "permission", "code", "commit", "change"], "category": "chore"}
+{"src": "코드 UI 최적화", "action": ["optimize"], "translation": "optimize code UI", "keywords": ["optimize", "code", "UI"], "category": "feature"}
+{"src": "배포 및 코드 수정", "action": ["refactor"], "translation": "refactor code deploy", "keywords": ["refactor", "code", "deploy"], "category": "ci"}
+{"src": "로그 및 UI 해결", "action": ["fix"], "translation": "fix log UI", "keywords": ["fix", "log", "UI"], "category": "bugfix"}
+{"src": "회원가입 및 서버 리팩토링", "action": ["refactor"], "translation": "refactor signup server", "keywords": ["refactor", "signup", "server"], "category": "test"}
+{"src": "인증 개선로 권한 개선", "action": ["implement"], "translation": "implement auth permission", "keywords": ["implement", "auth", "permission"], "category": "style"}
+{"src": "권한 및 로그인 삭제", "action": ["remove"], "translation": "update login log permission", "keywords": ["update", "login", "log", "permission"], "category": "test"}
+{"src": "서버 관련 구현", "action": ["implement"], "translation": "implement server", "keywords": ["implement", "server", "code", "commit", "change"], "category": "chore"}
+{"src": "UI 및 UI 수정", "action": ["revert"], "translation": "update UI", "keywords": ["update", "UI", "code", "commit", "change"], "category": "refactor"}
+{"src": "코드 관련 추가", "action": ["add"], "translation": "add code", "keywords": ["add", "code", "code", "commit", "change"], "category": "ci"}
+{"src": "성능 및 API 개선", "action": ["optimize"], "translation": "optimize API performance", "keywords": ["optimize", "API", "performance"], "category": "refactor"}
+{"src": "회원가입 및 코드 구현", "action": ["implement"], "translation": "implement signup code", "keywords": ["implement", "signup", "code"], "category": "chore"}
+{"src": "UI UI 해결", "action": ["refactor"], "translation": "refactor UI", "keywords": ["refactor", "UI", "code", "commit", "change"], "category": "build"}
+{"src": "버그 최적화", "action": ["fix", "optimize"], "translation": "fix bug", "keywords": ["fix", "bug", "code", "commit", "change"], "category": "bugfix"}
+{"src": "권한 개선", "action": ["remove"], "translation": "update permission", "keywords": ["update", "permission", "code", "commit", "change"], "category": "ci"}
+{"src": "권한 API 수정", "action": ["remove"], "translation": "update API permission", "keywords": ["update", "API", "permission"], "category": "test"}
+{"src": "로그 수정", "action": ["update"], "translation": "update log", "keywords": ["update", "log", "code", "commit", "change"], "category": "feature"}
+{"src": "UI 해결", "action": ["remove"], "translation": "update UI", "keywords": ["update", "UI", "code", "commit", "change"], "category": "docs"}
+{"src": "권한 관련 개선", "action": ["optimize"], "translation": "optimize permission", "keywords": ["optimize", "permission", "code", "commit", "change"], "category": "ci"}
+{"src": "응답 및 의존성 해결", "action": ["optimize"], "translation": "optimize response dependencies", "keywords": ["optimize", "response", "dependencies"], "category": "build"}
+{"src": "코드 로그 구현", "action": ["implement"], "translation": "implement code log", "keywords": ["implement", "code", "log"], "category": "refactor"}
+{"src": "버그 성능 삭제", "action": ["remove", "fix", "optimize"], "translation": "fix bug performance", "keywords": ["fix", "bug", "performance"], "category": "ci"}
+{"src": "회원가입 관련 개선", "action": ["resolve"], "translation": "update signup", "keywords": ["update", "signup", "code", "commit", "change"], "category": "build"}
+{"src": "오류 삭제로 인증 개선", "action": ["fix", "remove"], "translation": "fix error auth", "keywords": ["fix", "error", "auth"], "category": "feature"}
+{"src": "UI API 삭제", "action": ["remove"], "translation": "update API UI", "keywords": ["update", "API", "UI"], "category": "bugfix"}
+{"src": "캐시 관련 업데이트", "action": ["fix"], "translation": "fix cache", "keywords": ["fix", "cache", "code", "commit", "change"], "category": "ci"}
+{"src": "UI 관련 구현", "action": ["implement"], "translation": "implement UI", "keywords": ["implement", "UI", "code", "commit", "change"], "category": "chore"}
+{"src": "권한 구현로 회원가입 개선", "action": ["implement"], "translation": "implement signup permission", "keywords": ["implement", "signup", "permission"], "category": "refactor"}
+{"src": "UI 및 코드 추가", "action": ["add"], "translation": "add code UI", "keywords": ["add", "code", "UI"], "category": "test"}
+{"src": "인증 리팩토링로 캐시 개선", "action": ["refactor"], "translation": "refactor cache auth", "keywords": ["refactor", "cache", "auth"], "category": "docs"}
+{"src": "버그 권한 삭제", "action": ["fix", "remove"], "translation": "fix bug permission", "keywords": ["fix", "bug", "permission"], "category": "feature"}
+{"src": "버그 최적화로 로그 개선", "action": ["fix", "optimize"], "translation": "fix bug log", "keywords": ["fix", "bug", "log"], "category": "chore"}
+{"src": "회원가입 관련 개선", "action": ["implement"], "translation": "implement signup", "keywords": ["implement", "signup", "code", "commit", "change"], "category": "build"}
+{"src": "문서 및 인증 구현", "action": ["implement", "update"], "translation": "update docs auth", "keywords": ["update", "docs", "auth"], "category": "build"}
+{"src": "문서 및 로그 최적화", "action": ["optimize", "update"], "translation": "optimize docs log", "keywords": ["optimize", "docs", "log"], "category": "style"}
+{"src": "인증 개선로 UI 개선", "action": ["improve"], "translation": "update UI auth", "keywords": ["update", "UI", "auth"], "category": "ci"}
+{"src": "UI 리팩토링로 문서 개선", "action": ["refactor", "update"], "translation": "refactor docs UI", "keywords": ["refactor", "docs", "UI"], "category": "build"}
+{"src": "로그 및 API 추가", "action": ["add"], "translation": "add API log", "keywords": ["add", "API", "log"], "category": "docs"}
+{"src": "회원가입 관련 최적화", "action": ["optimize"], "translation": "optimize signup", "keywords": ["optimize", "signup", "code", "commit", "change"], "category": "ci"}
+{"src": "인증 관련 수정", "action": ["remove"], "translation": "update auth", "keywords": ["update", "auth", "code", "commit", "change"], "category": "style"}
+{"src": "로그인 API 해결", "action": ["optimize"], "translation": "optimize login API log", "keywords": ["optimize", "login", "API", "log"], "category": "style"}
+{"src": "로그인 문서 최적화", "action": ["optimize", "update"], "translation": "optimize login docs log", "keywords": ["optimize", "login", "docs", "log"], "category": "chore"}
+{"src": "오류 로그 구현", "action": ["implement", "fix"], "translation": "fix error log", "keywords": ["fix", "error", "log"], "category": "build"}
+{"src": "테스트 개선로 오류 개선", "action": ["fix", "add"], "translation": "fix error test", "keywords": ["fix", "error", "test"], "category": "perf"}
+{"src": "성능 관련 삭제", "action": ["remove", "optimize"], "translation": "optimize performance", "keywords": ["optimize", "performance", "code", "commit", "change"], "category": "test"}
+{"src": "서버 삭제", "action": ["remove"], "translation": "update server", "keywords": ["update", "server", "code", "commit", "change"], "category": "docs"}
+{"src": "응답 업데이트로 오류 개선", "action": ["fix"], "translation": "fix error response", "keywords": ["fix", "error", "response"], "category": "docs"}
+{"src": "응답 로그인 리팩토링", "action": ["refactor"], "translation": "refactor login response log", "keywords": ["refactor", "login", "response", "log"], "category": "style"}
+{"src": "로그 및 로그 최적화", "action": ["optimize"], "translation": "optimize log", "keywords": ["optimize", "log", "code", "commit", "change"], "category": "ci"}
+{"src": "로그인 로그인 삭제", "action": ["remove"], "translation": "update login log", "keywords": ["update", "login", "log"], "category": "test"}
+{"src": "권한 업데이트로 배포 개선", "action": ["update"], "translation": "update deploy permission", "keywords": ["update", "deploy", "permission"], "category": "docs"}
+{"src": "성능 구현로 쿼리 개선", "action": ["implement", "optimize"], "translation": "optimize performance query", "keywords": ["optimize", "performance", "query"], "category": "build"}
+{"src": "문서 응답 구현", "action": ["implement", "update"], "translation": "update response docs", "keywords": ["update", "response", "docs"], "category": "ci"}
+{"src": "인증 로그인 삭제", "action": ["remove"], "translation": "update login log auth", "keywords": ["update", "login", "log", "auth"], "category": "test"}
+{"src": "회원가입 및 서버 리팩토링", "action": ["refactor"], "translation": "refactor signup server", "keywords": ["refactor", "signup", "server"], "category": "ci"}
+{"src": "문서 구현로 쿼리 개선", "action": ["implement", "update"], "translation": "update docs query", "keywords": ["update", "docs", "query"], "category": "build"}
+{"src": "의존성 관련 해결", "action": ["resolve"], "translation": "update dependencies", "keywords": ["update", "dependencies", "code", "commit", "change"], "category": "build"}
+{"src": "UI 회원가입 리팩토링", "action": ["refactor"], "translation": "refactor signup UI", "keywords": ["refactor", "signup", "UI"], "category": "feature"}
+{"src": "코드 관련 업데이트", "action": ["implement"], "translation": "implement code", "keywords": ["implement", "code", "code", "commit", "change"], "category": "chore"}
+{"src": "인증 리팩토링로 버그 개선", "action": ["refactor", "fix"], "translation": "fix bug auth", "keywords": ["fix", "bug", "auth"], "category": "docs"}
+{"src": "로그인 및 로그 업데이트", "action": ["add"], "translation": "add login log", "keywords": ["add", "login", "log"], "category": "ci"}
+{"src": "의존성 업데이트", "action": ["refactor"], "translation": "refactor dependencies", "keywords": ["refactor", "dependencies", "code", "commit", "change"], "category": "build"}
+{"src": "응답 및 성능 해결", "action": ["optimize"], "translation": "optimize response performance", "keywords": ["optimize", "response", "performance"], "category": "docs"}
+{"src": "문서 최적화", "action": ["optimize", "update"], "translation": "optimize docs", "keywords": ["optimize", "docs", "code", "commit", "change"], "category": "docs"}
+{"src": "배포 개선", "action": ["add"], "translation": "add deploy", "keywords": ["add", "deploy", "code", "commit", "change"], "category": "feature"}
+{"src": "UI 버그 삭제", "action": ["fix", "remove"], "translation": "fix bug UI", "keywords": ["fix", "bug", "UI"], "category": "bugfix"}
+{"src": "의존성 관련 해결", "action": ["optimize"], "translation": "optimize dependencies", "keywords": ["optimize", "dependencies", "code", "commit", "change"], "category": "test"}
+{"src": "서버 관련 리팩토링", "action": ["refactor"], "translation": "refactor server", "keywords": ["refactor", "server", "code", "commit", "change"], "category": "style"}
+{"src": "API 수정", "action": ["revert"], "translation": "update API", "keywords": ["update", "API", "code", "commit", "change"], "category": "style"}
+{"src": "오류 관련 삭제", "action": ["fix", "remove"], "translation": "fix error", "keywords": ["fix", "error", "code", "commit", "change"], "category": "chore"}
+{"src": "쿼리 관련 추가", "action": ["add"], "translation": "add query", "keywords": ["add", "query", "code", "commit", "change"], "category": "ci"}
+{"src": "버그 관련 수정", "action": ["fix"], "translation": "fix bug", "keywords": ["fix", "bug", "code", "commit", "change"], "category": "docs"}
+{"src": "회원가입 관련 업데이트", "action": ["improve"], "translation": "update signup", "keywords": ["update", "signup", "code", "commit", "change"], "category": "build"}
+{"src": "응답 및 인증 리팩토링", "action": ["refactor"], "translation": "refactor response auth", "keywords": ["refactor", "response", "auth"], "category": "docs"}
+{"src": "UI 및 의존성 업데이트", "action": ["remove"], "translation": "update dependencies UI", "keywords": ["update", "dependencies", "UI"], "category": "perf"}
+{"src": "캐시 관련 업데이트", "action": ["improve"], "translation": "update cache", "keywords": ["update", "cache", "code", "commit", "change"], "category": "style"}
+{"src": "쿼리 및 응답 개선", "action": ["optimize"], "translation": "optimize response query", "keywords": ["optimize", "response", "query"], "category": "docs"}
+{"src": "문서 코드 삭제", "action": ["remove", "update"], "translation": "update code docs", "keywords": ["update", "code", "docs"], "category": "style"}
+{"src": "API 관련 개선", "action": ["resolve"], "translation": "update API", "keywords": ["update", "API", "code", "commit", "change"], "category": "bugfix"}
+{"src": "UI 개선", "action": ["revert"], "translation": "update UI", "keywords": ["update", "UI", "code", "commit", "change"], "category": "ci"}
+{"src": "UI 및 테스트 리팩토링", "action": ["refactor", "add"], "translation": "add test UI", "keywords": ["add", "test", "UI"], "category": "ci"}
+{"src": "오류 추가로 로그 개선", "action": ["fix", "add"], "translation": "fix error log", "keywords": ["fix", "error", "log"], "category": "refactor"}
+{"src": "성능 문서 해결", "action": ["optimize", "update"], "translation": "optimize performance docs", "keywords": ["optimize", "performance", "docs"], "category": "feature"}
+{"src": "문서 관련 업데이트", "action": ["update"], "translation": "update docs", "keywords": ["update", "docs", "code", "commit", "change"], "category": "chore"}
+{"src": "인증 업데이트로 문서 개선", "action": ["update"], "translation": "update docs auth", "keywords": ["update", "docs", "auth"], "category": "bugfix"}
+{"src": "배포 관련 최적화", "action": ["optimize"], "translation": "optimize deploy", "keywords": ["optimize", "deploy", "code", "commit", "change"], "category": "build"}
+{"src": "인증 리팩토링로 응답 개선", "action": ["refactor"], "translation": "refactor response auth", "keywords": ["refactor", "response", "auth"], "category": "chore"}
+{"src": "서버 및 UI 해결", "action": ["add"], "translation": "add UI server", "keywords": ["add", "UI", "server"], "category": "style"}
+{"src": "테스트 개선로 쿼리 개선", "action": ["add"], "translation": "add test query", "keywords": ["add", "test", "query"], "category": "refactor"}
+{"src": "캐시 및 권한 구현", "action": ["implement"], "translation": "implement cache permission", "keywords": ["implement", "cache", "permission"], "category": "feature"}
+{"src": "응답 의존성 최적화", "action": ["optimize"], "translation": "optimize response dependencies", "keywords": ["optimize", "response", "dependencies"], "category": "chore"}
+{"src": "테스트 및 문서 구현", "action": ["implement", "add", "update"], "translation": "add docs test", "keywords": ["add", "docs", "test"], "category": "test"}
+{"src": "권한 관련 삭제", "action": ["remove"], "translation": "update permission", "keywords": ["update", "permission", "code", "commit", "change"], "category": "perf"}
+{"src": "응답 관련 수정", "action": ["remove"], "translation": "update response", "keywords": ["update", "response", "code", "commit", "change"], "category": "docs"}
+{"src": "로그인 및 성능 개선", "action": ["optimize"], "translation": "optimize login performance log", "keywords": ["optimize", "login", "performance", "log"], "category": "style"}
+{"src": "회원가입 로그인 해결", "action": ["revert"], "translation": "update login signup log", "keywords": ["update", "login", "signup", "log"], "category": "bugfix"}
+{"src": "로그 서버 추가", "action": ["add"], "translation": "add log server", "keywords": ["add", "log", "server"], "category": "feature"}
+{"src": "API 및 로그인 구현", "action": ["implement"], "translation": "implement login API log", "keywords": ["implement", "login", "API", "log"], "category": "test"}
+{"src": "테스트 해결", "action": ["add"], "translation": "add test", "keywords": ["add", "test", "code", "commit", "change"], "category": "refactor"}
+{"src": "응답 수정", "action": ["fix"], "translation": "fix response", "keywords": ["fix", "response", "code", "commit", "change"], "category": "chore"}
+{"src": "UI 및 쿼리 삭제", "action": ["remove"], "translation": "update query UI", "keywords": ["update", "query", "UI"], "category": "test"}
+{"src": "쿼리 삭제로 API 개선", "action": ["remove"], "translation": "update API query", "keywords": ["update", "API", "query"], "category": "refactor"}
+{"src": "쿼리 구현로 권한 개선", "action": ["implement"], "translation": "implement query permission", "keywords": ["implement", "query", "permission"], "category": "ci"}
+{"src": "테스트 해결로 배포 개선", "action": ["add"], "translation": "add test deploy", "keywords": ["add", "test", "deploy"], "category": "ci"}
+{"src": "쿼리 리팩토링", "action": ["refactor"], "translation": "refactor query", "keywords": ["refactor", "query", "code", "commit", "change"], "category": "chore"}
+{"src": "API 관련 리팩토링", "action": ["refactor"], "translation": "refactor API", "keywords": ["refactor", "API", "code", "commit", "change"], "category": "bugfix"}
+{"src": "서버 API 업데이트", "action": ["update"], "translation": "update API server", "keywords": ["update", "API", "server"], "category": "perf"}
+{"src": "버그 해결로 UI 개선", "action": ["fix"], "translation": "fix bug UI", "keywords": ["fix", "bug", "UI"], "category": "test"}
+{"src": "캐시 테스트 최적화", "action": ["add", "optimize"], "translation": "add test cache", "keywords": ["add", "test", "cache"], "category": "bugfix"}
+{"src": "배포 구현로 성능 개선", "action": ["implement", "optimize"], "translation": "optimize performance deploy", "keywords": ["optimize", "performance", "deploy"], "category": "ci"}
+{"src": "코드 관련 개선", "action": ["implement"], "translation": "implement code", "keywords": ["implement", "code", "code", "commit", "change"], "category": "style"}
+{"src": "로그인 구현", "action": ["implement"], "translation": "implement login log", "keywords": ["implement", "login", "log"], "category": "docs"}
+{"src": "문서 삭제로 테스트 개선", "action": ["add", "remove", "update"], "translation": "add docs test", "keywords": ["add", "docs", "test"], "category": "test"}
+{"src": "로그인 관련 개선", "action": ["remove"], "translation": "update login log", "keywords": ["update", "login", "log"], "category": "test"}
+{"src": "쿼리 쿼리 리팩토링", "action": ["refactor"], "translation": "refactor query", "keywords": ["refactor", "query", "code", "commit", "change"], "category": "build"}
+{"src": "의존성 관련 수정", "action": ["remove"], "translation": "update dependencies", "keywords": ["update", "dependencies", "code", "commit", "change"], "category": "bugfix"}
+{"src": "버그 추가로 응답 개선", "action": ["fix", "add"], "translation": "fix bug response", "keywords": ["fix", "bug", "response"], "category": "test"}
+{"src": "API 및 쿼리 수정", "action": ["refactor"], "translation": "refactor API query", "keywords": ["refactor", "API", "query"], "category": "feature"}
+{"src": "UI 최적화", "action": ["optimize"], "translation": "optimize UI", "keywords": ["optimize", "UI", "code", "commit", "change"], "category": "chore"}
+{"src": "UI 관련 업데이트", "action": ["resolve"], "translation": "update UI", "keywords": ["update", "UI", "code", "commit", "change"], "category": "bugfix"}
+{"src": "로그인 및 API 수정", "action": ["update"], "translation": "update login API log", "keywords": ["update", "login", "API", "log"], "category": "style"}
+{"src": "인증 UI 개선", "action": ["refactor"], "translation": "refactor UI auth", "keywords": ["refactor", "UI", "auth"], "category": "test"}
+{"src": "회원가입 관련 최적화", "action": ["optimize"], "translation": "optimize signup", "keywords": ["optimize", "signup", "code", "commit", "change"], "category": "style"}
+{"src": "오류 관련 최적화", "action": ["fix", "optimize"], "translation": "fix error", "keywords": ["fix", "error", "code", "commit", "change"], "category": "perf"}

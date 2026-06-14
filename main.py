@@ -3,354 +3,263 @@ import torch.nn as nn
 import torch.optim as optim
 import math
 
-
+# -------------------------------
+# 1. Positional Encoding
+# -------------------------------
 class PositionalEncoding(nn.Module):
     def __init__(self, d_model, max_len=100):
         super().__init__()
-        # ------------------------------------------------
-        # 1. pe: 위치 인코딩을 저장할 빈 행렬 생성
-        #    shape: (max_len, d_model) = (최대 문장 길이, 임베딩 차원)
-        #    여기에 미리 계산한 위치 신호를 채워넣을 예정
-        #     -  실제 입력은 5개 단어밖에 없는데, 100개 위치 정보 저장되어 있는 상태입니다.
-        # ------------------------------------------------
         pe = torch.zeros(max_len, d_model)
-
-        # ------------------------------------------------
-        # 2. position: 문장 내 각 단어의 위치 번호
-        #    torch.arange(0, max_len) → [0, 1, 2, ..., max_len-1]
-        #    .unsqueeze(1) → 열 벡터로 변환: shape (max_len, 1)
-        #    예) max_len=4 → [[0],[1],[2],[3]]
-        # ------------------------------------------------
         position = torch.arange(0, max_len).unsqueeze(1)
-
-        # ------------------------------------------------
-        # 3. div_term: 위치에 곱해질 주파수 역수(파장)
-        #    torch.arange(0, d_model, 2) → [0, 2, 4, ...] (짝수 인덱스)
-        #    (-math.log(10000.0) / d_model) = 음수 상수
-        #    exp()를 씌워서 주파수 감쇠 상수를 만듦
-        #    결과 shape: (d_model/2,)
-        #    이 값들은 차원이 커질수록 작아져서
-        #    → 높은 차원에서는 느리게, 낮은 차원에서는 빠르게 진동하는 sin/cos 주파수 결정
-        # ------------------------------------------------
-        div_term = torch.exp(
-            torch.arange(0, d_model, 2) * (-math.log(10000.0) / d_model)
-        )
-
-        # ------------------------------------------------
-        # 4. 짝수 차원(0,2,4,...) → sin 함수로 채움
-        #    position * div_term: (max_len,1) * (1, d_model/2) → (max_len, d_model/2)
-        #    sin() 적용 후 pe의 짝수 열에 할당
-        # ------------------------------------------------
+        div_term = torch.exp(torch.arange(0, d_model, 2) * (-math.log(10000.0) / d_model))
         pe[:, 0::2] = torch.sin(position * div_term)
-
-        # ------------------------------------------------
-        # 5. 홀수 차원(1,3,5,...) → cos 함수로 채움
-        #    같은 position * div_term 사용, cos 적용
-        # ------------------------------------------------
         pe[:, 1::2] = torch.cos(position * div_term)
-
-        # ------------------------------------------------
-        # 6. 배치 차원 추가
-        #    pe shape: (max_len, d_model) → unsqueeze(0) → (1, max_len, d_model)
-        #    이렇게 하면 forward()에서 x (batch, seq_len, d_model)과
-        #    바로 broadcasting 덧셈이 가능해짐
-        # ------------------------------------------------
         self.pe = pe.unsqueeze(0)
 
-    # pos_encoder(x) 를 실행한 순간,
     def forward(self, x):
-        # print("PositionalEncoding forward 호출")
-        # x: (batch, seq_len, d_model)
         seq_len = x.size(1)
-        # self.pe[:, :seq_len, :]  → (1, seq_len, d_model)
-        # x + ...  → batch 방향으로 알아서 broadcasting
         return x + self.pe[:, :seq_len, :]
 
 
-class CommitBot(nn.Module):
-    def __init__(self):
+# -------------------------------
+# 2. 인코더 (Encoder)
+# -------------------------------
+class Encoder(nn.Module):
+    def __init__(self, src_vocab_size, d_model=8, nhead=2):
         super().__init__()
+        self.embedding = nn.Embedding(src_vocab_size, d_model, padding_idx=0)
+        self.pos_enc = PositionalEncoding(d_model)
+        self.self_attn = nn.MultiheadAttention(d_model, nhead, batch_first=True)
 
-        self.pos_enc = PositionalEncoding(d_model=8)  # Positional Encoding 초기화
+    def forward(self, src_ids):
+        emb = self.embedding(src_ids)
+        emb = self.pos_enc(emb)
+        memory, _ = self.self_attn(emb, emb, emb)
+        return memory
 
-        # 입력 단어 (한글)
-        self.src_vocab = ['<pad>', '버그', '수정', '코드', '리팩토링']
-        self.src_stoi = {w: i for i, w in enumerate(self.src_vocab)}
 
-        # 출력 단어 (영어)
-        self.tgt_vocab = ['<pad>', 'bug', 'fix', 'code', 'refactor']
-        self.tgt_stoi = {w: i for i, w in enumerate(self.tgt_vocab)}
-        self.tgt_itos = {i: w for i, w in enumerate(self.tgt_vocab)}
+# -------------------------------
+# 3. 디코더 (Decoder)
+# -------------------------------
+class Decoder(nn.Module):
+    def __init__(self, tgt_vocab_size, d_model=8, nhead=2):
+        super().__init__()
+        self.embedding = nn.Embedding(tgt_vocab_size, d_model, padding_idx=0)
+        self.pos_enc = PositionalEncoding(d_model)
+        self.self_attn = nn.MultiheadAttention(d_model, nhead, batch_first=True)
+        self.cross_attn = nn.MultiheadAttention(d_model, nhead, batch_first=True)
+        self.fc = nn.Linear(d_model, tgt_vocab_size)
 
-        # [06과 동일] 단어 → 8차원 밀집 벡터
-        self.embedding = nn.Embedding(len(self.src_vocab), 8, padding_idx=0)
+    def forward(self, tgt_ids, memory, tgt_mask=None):
+        emb = self.embedding(tgt_ids)
+        emb = self.pos_enc(emb)
+        self_out, _ = self.self_attn(emb, emb, emb, attn_mask=tgt_mask)
+        cross_out, _ = self.cross_attn(self_out, memory, memory)
+        logits = self.fc(cross_out)
+        return logits
 
-        # [핵심 추가] Self-Attention: 단어들이 서로를 참조해 문맥 반영
-        # "수정" 앞에 "버그"가 있으면 → fix
-        # "수정" 앞에 "코드"가 있으면 → refactor
-        self.attention = nn.MultiheadAttention(embed_dim=8, num_heads=2, batch_first=True)
 
-        # embed_dim=8은 전체 임베딩 차원입니다. 단어 하나가 8차원 벡터로 표현되죠.
-        # num_heads=2 "왜 되는지 모르는데 그냥 씀" 이 AI 전체의 분위기거든.
+# -------------------------------
+# 4. Seq2Seq Transformer
+# -------------------------------
+class Seq2SeqTransformer(nn.Module):
+    def __init__(self, src_vocab, tgt_vocab, d_model=8, nhead=2):
+        super().__init__()
+        self.src_stoi = {w: i for i, w in enumerate(src_vocab)}
+        self.tgt_stoi = {w: i for i, w in enumerate(tgt_vocab)}
+        self.tgt_itos = {i: w for i, w in enumerate(tgt_vocab)}
 
-        # 8차원 → 출력 단어 수만큼 점수
-        self.fc = nn.Linear(8, len(self.tgt_vocab))
+        self.encoder = Encoder(len(src_vocab), d_model, nhead)
+        self.decoder = Decoder(len(tgt_vocab), d_model, nhead)
 
         self.criterion = nn.CrossEntropyLoss(ignore_index=0)
         self.optimizer = optim.Adam(self.parameters(), lr=0.05)
 
-    def forward(self, src_ids):
-        # src_ids = tensor([[1, 2]])   # [버그(1), 수정(2)] 인덱스
-        # 인덱스 → 벡터로 변환
-        emb = self.embedding(src_ids)
+    def generate_mask(self, sz):
+        mask = torch.triu(torch.ones(sz, sz) * float('-inf'), diagonal=1)
+        return mask
 
-        # 문장: ["버그", "수정"]
-        # 임베딩 이후 emb (가상의 값):
-
-        # 기존 위치 정보 없는 상태
-        # emb[0] = '버그' 벡터: [0.12, -0.45,  0.88,  0.01, -0.33,  0.77, -0.09,  0.51]
-        # emb[1] = '수정' 벡터: [0.34,  0.21, -0.72,  0.99, -0.15,  0.44,  0.67, -0.88]
-
-        # self.pe에 미리 계산된 위치 신호 (0번째, 1번째 위치):
-
-        # PE(pos, 2i)   = sin( pos / 10000^(2i / d_model) )
-        # PE(pos, 2i+1) = cos( pos / 10000^(2i / d_model) )
-
-        # pos: 단어의 위치 (0, 1, 2, ...)
-        # 차원 인덱스 (0, 1, 2, ... , d_model/2 -1)
-        # d_model: 우리가 정한 임베딩 차원 (여기서는 8)
-
-        # 그 결과,
-        # pe[0] = [ 0.0000,  1.0000,  0.0000,  1.0000,  0.0000,  1.0000,  0.0000,  1.0000] , sin(0) = 0, cos(0) = 1, 고유한 지문
-
-        # PE(1, 0) = sin(1 / 1) = sin(1)   ≈ 0.8415
-        # PE(1, 1) = cos(1 / 1) = cos(1)   ≈ 0.5403
-        # pe[1] = [ 0.8415,  0.5403,  0.0100,  0.9999,  0.0099,  1.0000,  0.0001,  1.0000]
-        # 1부터 i가 커지면 분모가 폭발적으로 커지기 때문
-
-        # i별 분모 크기 (d_model=8)
-        # i	2i	2i / d_model	10000^(2i/d_model)	계산 결과 (근사)
-        # 0	0	0	10000^0	1
-        # 1	2	0.25	10000^0.25	10
-        # 2	4	0.5	10000^0.5	100
-        # 3	6	0.75	10000^0.75	1000
-        # 이제 pos=1일 때 pos / 분모 값을 계산해 보죠.
-        #
-        # pos=1일 때 각 차원 쌍의 각도
-        # i	   분모	  1 / 분모 (라디안)	    sin 값	                cos 값
-        # 0	    1	    1.0	            sin(1.0) ≈ 0.8415   	cos(1.0) ≈ 0.5403
-        # 1	    10	    0.1	            sin(0.1) ≈ 0.0998	    cos(0.1) ≈ 0.9950
-        # 2	    100	    0.01	        sin(0.01) ≈ 0.0099998	cos(0.01) ≈ 0.99995
-        # 3	    1000	0.001	        sin(0.001) ≈ 0.001	    cos(0.001) ≈ 0.9999995
-
-        # forward에서 x + self.pe[:, :2, :]가 실행되면:
-
-        # emb[0] + pe[0] = [0.1200, 0.5500, 0.8800, 1.0100, -0.3300, 1.7700, -0.0900, 1.5100]
-        # emb[1] + pe[1] = [1.1815, 0.7503, -0.7100, 1.9899, -0.1401, 1.4400, 0.6701, 0.1200]
-        # 이제 emb는 더 이상 순수 단어 의미 벡터가 아니라,
-        # 위치 신호가 묻어 있는 벡터가 됩니다.
-
-
-        emb = self.pos_enc(emb)  # # Positional Encoding 위치 정보 더하기, nn.Module.__call__() 그 안에 PositionalEncoding.forward(x) 실행
-
-        # tensor([[[0.3, -0.1, 0.8, ...],   ← 버그의 8차원 벡터
-        #          [0.1,  0.5, 0.2, ...]]])  ← 수정의 8차원 벡터
-
-        # shape: (1, 2, 8)  = (배치(문장이 1개), 단어수 2개 (버그, 수정), 차원 (단어하나가 8차원 벡터))
-        # [                        # 배치 1개
-        #   [                      # 문장
-        #     [0.3, -0.1, 0.8, 0.2, 0.5, -0.3, 0.1, 0.7],   # 버그 (8차원)
-        #     [0.1,  0.5, 0.2, 0.9, 0.3,  0.4, 0.6, 0.2],   # 수정 (8차원)
-        #   ]
-        # ]
-
-        # 학습할 때 문장 여러 개를 한 번에 넣을 수 있어
-        # 배치 1  →  (1, 2, 8)   문장 1개
-        # 배치 32 →  (32, 2, 8)  문장 32개 동시에
-
-        attn_out, attn_weights = self.attention(emb, emb, emb)  # # Q, K, V
-
-        # Q (Query) → "나는 뭘 찾고 있나?" (수정이 묻는다)
-        # K (Key) → "나는 어떤 단어야?" (버그, 코드 가 대답)
-        # V (Value) → "참조 비중 결정되면 실제로 가져올 정보"
-
-        logits = self.fc(attn_out)  # (1, seq, vocab)
-        return logits, attn_weights
+    def forward(self, src_ids, tgt_ids):
+        memory = self.encoder(src_ids)
+        tgt_mask = self.generate_mask(tgt_ids.size(1)).to(src_ids.device)
+        logits = self.decoder(tgt_ids, memory, tgt_mask)
+        return logits
 
     def train_step(self, src_ids, tgt_ids):
-        # 모델을 학습 모드로 전환 (Dropout, BatchNorm 등이 학습용으로 활성화)
-        # predict()에서 self.eval()로 끈 걸 다시 켜는 것
-        # self.train()  →  학습할 때
-        # self.eval()   →  예측할 때 (predict)
         self.train()
-
-        # 순전파: 입력 → 모델 통과 → 예측 점수 반환
-        # logits shape: (1, 2, 5) = (배치, 단어수, 후보수)
-        # _ 는 attn_weights인데 학습에 안 쓰니까 버림
-        logits, _ = self.forward(src_ids)
-
-        # CrossEntropyLoss가 (N, C) 형태만 받아서 펴주는 것
-        # CrossEntropyLoss가 하는 일:
-        # 1. output 점수들을 확률로 변환 (softmax)
-        # 2. 정답 위치(1번)의 확률이 높을수록 loss는 작아짐
-        #    - 정답 확률 0.7 → loss 0.35 (작음)
-        #    - 정답 확률 0.9 → loss 0.10 (더 작음)
-        #    - 정답 확률 0.3 → loss 1.20 (큼)
-
-        # 05. loss = self.criterion(output.unsqueeze(0), target)
-        # output = self.fc(inp)        # shape: (10,)   1차원
-        # output.unsqueeze(0)          # shape: (1, 10) 2차원으로 승격,  배치 차원 추가
-
-        # N=1 (문장 or 입력 1개), C=10 (후보 10개)
-
-        # 07  단어 2개 → 3차원을 2차원으로 펴야 함
-        # logits.view(-1, len(self.tgt_vocab))        # (1, 2, 5) → (2, 5), 입력 2개, 후보 5개
-        # tgt_ids.view(-1)                            # (1, 2)    → (2,),   정답 2개
-
-        # 배치 2  →  문장 2개 동시에
-        #
-        # logits shape: (2, 2, 5)  = (배치2, 단어2개, 후보5개)
-        # tgt_ids shape: (2, 2)    = (배치2, 단어2개)
-        #
-        # view(-1, 5) → (4, 5)    2문장 × 2단어 = 4개 펼쳐짐
-        # view(-1)    → (4,)       정답도 4개
-        # -1 이 알아서 계산하는 거니까:
-        # 배치 1  →  (1, 2, 5) → view(-1, 5) → (2, 5)   1×2=2
-        # 배치 2  →  (2, 2, 5) → view(-1, 5) → (4, 5)   2×2=4
-        # 배치 4  →  (4, 2, 5) → view(-1, 5) → (8, 5)   4×2=8
-        # 배치가 바뀌어도 view(-1, 5) 코드는 그대로야. -1 이 배치 × 단어수를 자동 계산해주니까. 그게 -1 쓰는 이유
-
-        # (1, 2, 5)
-        #  ↑
-        # 문장 몇 개를 한 번에 넣었냐
-        #
-        # 지금은 ["버그", "수정"] 1문장만 넣으니까 1
-
-        # 배치가 왜 있냐면:
-        # 배치 1  →  (1, 2, 5)   문장 1개씩 학습
-        # 배치 4  →  (4, 2, 5)   문장 4개 동시에 학습
-        # 배치 32 →  (32, 2, 5)  문장 32개 동시에 학습
-
-        # 실제 대형 모델은 배치 32~512씩 넣어서 한 번에 학습해. 속도가 훨씬 빠르거든.
-        # 07.py는 문장 1개씩 넣으니까 항상 1이고, 그래서 view(-1)로 그 1을 날려버리는 거야.
-        # (1, 2, 5) → view(-1, 5) → (2, 5)   배치 1 사라짐
-        # (1, 2)    → view(-1)    → (2,)     배치 1 사라짐
-
-        # 배치 2  →  문장 2개 동시에 입력
-        #
-        # src_ids = tensor([[1, 2],    # 문장1: [버그, 수정]
-        #                   [3, 2]])   # 문장2: [코드, 수정]
-        # # shape: (2, 2)  = (배치2, 단어2개)
-        # 그러면 logits는:
-        # (2, 2, 5)
-        #  ↑
-        #  배치 2
-        #
-        # view(-1, 5) → (4, 5)   2문장 × 2단어 = 4개 펼쳐짐
-
-        # 배치 1   →  문장 1개 보고 바로 업데이트
-        #            방향이 정확한데 자주 흔들림 (지그재그, 느림)
-        #
-        # 배치 2   →  문장 2개 평균 내서 업데이트
-        #            방향이 더 안정적, 업데이트 횟수 절반 (개별 특성 뭉개짐)
-        #
-        # 배치 32  →  32개 평균
-        #            매우 안정적, GPU 병렬처리로 속도 빠름 (절충점, 실험으로 찾는 것)
-
-        # logits.view(-1, 5) : (1, 2, 5) → (2, 5)  단어별 후보 점수
-        # tgt_ids.view(-1)   : (1, 2)    → (2,)    단어별 정답 인덱스
-        loss = self.criterion(logits.view(-1, len(self.tgt_vocab)), tgt_ids.view(-1))
-
-        # 이전 step()에서 누적된 기울기 초기화
-        # 안 하면 이전 학습 기울기가 더해져서 엉뚱한 방향으로 업데이트됨
+        logits = self.forward(src_ids, tgt_ids[:, :-1])
+        loss = self.criterion(logits.view(-1, logits.size(-1)), tgt_ids[:, 1:].reshape(-1))
         self.optimizer.zero_grad()
-
-        # 역전파: loss 기준으로 모든 파라미터의 기울기 자동 계산
-        # embedding, W_Q, W_K, W_V, fc 전부 기울기 계산됨
         loss.backward()
-
-        # 계산된 기울기로 파라미터 업데이트
-        # learning_rate 만큼 정답 방향으로 이동
         self.optimizer.step()
-
-        # loss 값을 Python float으로 반환 (tensor → 숫자)
-        # .item() 없으면 tensor 객체가 반환되어 출력/비교 불편
         return loss.item()
 
-    def predict(self, src_words):
+    def translate(self, src_words, max_len=10):
         self.eval()
         src_ids = torch.tensor([[self.src_stoi[w] for w in src_words]])
-        with torch.no_grad():
-            logits, attn_weights = self.forward(src_ids)
+        memory = self.encoder(src_ids)
+        tgt_ids = torch.tensor([[self.tgt_stoi['<s>']]])
 
-            # 05.py
-            # predicted_idx = torch.argmax(output).item() # 가장 높은 점수 인덱스 1개
-            # predicted_word = self.candidates[predicted_idx] # 인덱스 → 단어 1개
+        for _ in range(max_len):
+            tgt_mask = self.generate_mask(tgt_ids.size(1))
+            with torch.no_grad():
+                logits = self.decoder(tgt_ids, memory, tgt_mask)
+            next_id = logits[:, -1, :].argmax(dim=-1, keepdim=True)
+            if next_id.item() == self.tgt_stoi['<eos>']:
+                break
+            tgt_ids = torch.cat([tgt_ids, next_id], dim=1)
 
-            # 05, 06   단어 1개 입력 → 정답 1개
-            #   "추가" → "insert"
-            #
-            # 07       문장 전체 입력 → 정답 2개
-            #   ["버그", "수정"] → ["bug", "fix"]
-
-            # # 07  문장 전체 한 번에 처리
-            # logits = self.fc(attn_out)                   # shape: (1, 2, 5)  단어 2개 × 후보 5개
-            # pred_ids = logits.argmax(dim=-1)             # shape: (1, 2)     단어 2개의 정답 인덱스,  (정답: ['bug', 'fix'])
-            # pred_words = [self.tgt_itos[i.item()] for i in pred_ids[0]]  # 인덱스 2개 → 단어 2개
-
-            pred_ids = logits.argmax(dim=-1)
-            pred_words = [self.tgt_itos[i.item()] for i in pred_ids[0]]
-        return pred_words, attn_weights, src_words
+        result_ids = tgt_ids[0, 1:].tolist()
+        return [self.tgt_itos[i] for i in result_ids if i not in [0, self.tgt_stoi['<eos>']]]
 
 
-bot = CommitBot()
+# -------------------------------
+# 5. 학습 데이터 & 실행
+# -------------------------------
+if __name__ == "__main__":
+    # 학습 데이터 먼저 정의
+    train_data = [
+        (['버그', '수정'],              ['fix', 'bug']),
+        (['코드', '수정'],              ['refactor', 'code']),
+        (['리팩토링', '코드'],          ['refactor', 'code']),
+        (['기능', '추가'],              ['add', 'feature']),
+        (['로그인', '오류', '수정'],    ['fix', 'login', 'error']),
+        (['회원가입', '버그', '수정'],  ['fix', 'signup', 'bug']),
+        (['버그', '수정', '코드'],      ['fix', 'bug', 'code']),
+        (['기능', '삭제'],              ['remove', 'feature']),
+        (['로그인', '버그'],            ['login', 'bug']),
+        (['회원가입', '기능', '추가'],  ['add', 'signup', 'feature']),
+        (['오류', '수정'],              ['fix', 'error']),
+        (['코드', '리팩토링'],          ['refactor', 'code']),
+        (['버그', '추가'],              ['add', 'bug']),
+        (['기능', '수정'],              ['modify', 'feature']),
+        (['로그인', '기능', '추가'],    ['add', 'login', 'feature']),
+        (['회원가입', '오류'],          ['signup', 'error']),
+        (['삭제', '기능'],              ['remove', 'feature']),
+        (['추가', '기능'],              ['add', 'feature']),
+        (['수정', '버그'],              ['fix', 'bug']),
+        (['수정', '코드'],              ['refactor', 'code']),
+        (['코드', '추가'],              ['add', 'code']),
+        (['리팩토링', '로그인'],        ['refactor', 'login']),
+        (['버그', '리팩토링'],          ['refactor', 'bug']),
+        (['회원가입', '수정'],          ['fix', 'signup']),
+        (['로그인', '수정'],            ['fix', 'login']),
+        (['오류', '추가'],              ['add', 'error']),
+        (['코드', '오류', '수정'],      ['fix', 'code', 'error']),
+        (['리팩토링', '오류'],          ['refactor', 'error']),
+        (['기능', '오류'],              ['feature', 'error']),
+        (['버그', '회원가입'],          ['signup', 'bug']),
+        (['로그인', '리팩토링'],        ['refactor', 'login']),
+        (['회원가입', '리팩토링'],      ['refactor', 'signup']),
+        (['삭제', '버그'],              ['remove', 'bug']),
+        (['삭제', '코드'],              ['delete', 'code']),
+        (['수정', '로그인', '오류'],    ['fix', 'login', 'error']),
+        (['추가', '로그인'],            ['add', 'login']),
+        (['추가', '회원가입'],          ['add', 'signup']),
+        (['오류', '회원가입'],          ['signup', 'error']),
+        (['코드', '버그'],              ['code', 'bug']),
+        (['리팩토링', '버그'],          ['refactor', 'bug']),
+        (['기능', '로그인'],            ['login', 'feature']),
+        (['기능', '회원가입'],          ['signup', 'feature']),
+        (['버그', '코드', '수정'],      ['fix', 'code', 'bug']),
+        (['오류', '코드'],              ['code', 'error']),
+        (['수정', '회원가입', '버그'],  ['fix', 'signup', 'bug']),
+        (['추가', '버그'],              ['add', 'bug']),
+        (['삭제', '로그인'],            ['remove', 'login']),
+        (['삭제', '회원가입'],          ['delete', 'signup']),
+        (['리팩토링', '기능'],          ['refactor', 'feature']),
+        (['수정', '기능', '오류'],      ['fix', 'feature', 'error']),
+        (['코드', '회원가입'],          ['signup', 'code']),
+        (['로그인', '삭제'],            ['remove', 'login']),
+        (['회원가입', '삭제'],          ['delete', 'signup']),
+        (['오류', '삭제'],              ['remove', 'error']),
+        (['버그', '삭제'],              ['delete', 'bug']),
+        (['코드', '삭제'],              ['remove', 'code']),
+        (['리팩토링', '삭제'],          ['delete', 'refactor']),
+        (['기능', '리팩토링'],          ['refactor', 'feature']),
+        (['로그인', '버그', '수정'],    ['fix', 'login', 'bug']),
+        (['회원가입', '코드', '수정'],  ['refactor', 'signup', 'code']),
+        (['기능', '버그'],              ['feature', 'bug']),
+        (['오류', '리팩토링'],          ['refactor', 'error']),
+        (['수정', '오류', '로그인'],    ['fix', 'login', 'error']),
+        (['추가', '오류'],              ['add', 'error']),
+        (['버그', '기능', '수정'],      ['fix', 'feature', 'bug']),
+        (['코드', '기능', '추가'],      ['add', 'feature', 'code']),
+        (['로그인', '코드'],            ['login', 'code']),
+        (['회원가입', '기능'],          ['signup', 'feature']),
+        (['리팩토링', '회원가입'],      ['refactor', 'signup']),
+        (['오류', '기능'],              ['feature', 'error']),
+        (['버그', '로그인'],            ['login', 'bug']),
+        (['삭제', '오류'],              ['delete', 'error']),
+        (['수정', '리팩토링'],          ['refactor', 'fix']),
+        (['추가', '리팩토링'],          ['refactor', 'add']),
+        (['코드', '로그인', '오류'],    ['fix', 'login', 'code', 'error']),
+        (['회원가입', '오류', '수정'],  ['fix', 'signup', 'error']),
+        (['기능', '삭제', '버그'],      ['remove', 'bug', 'feature']),
+        (['로그인', '기능', '삭제'],    ['delete', 'login', 'feature']),
+        (['리팩토링', '수정'],          ['fix', 'refactor']),
+        (['버그', '오류'],              ['bug', 'error']),
+        (['코드', '추가', '기능'],      ['add', 'feature', 'code']),
+        (['회원가입', '추가'],          ['add', 'signup']),
+        (['로그인', '추가'],            ['add', 'login']),
+        (['삭제', '기능', '로그인'],    ['remove', 'login', 'feature']),
+        (['수정', '추가'],              ['fix', 'add']),
+        (['오류', '버그', '수정'],      ['fix', 'bug', 'error']),
+        (['리팩토링', '코드', '버그'],  ['refactor', 'bug', 'code']),
+        (['기능', '코드'],              ['feature', 'code']),
+        (['회원가입', '코드'],          ['signup', 'code']),
+        (['로그인', '리팩토링', '오류'],['refactor', 'login', 'error']),
+        (['버그', '리팩토링', '수정'],  ['fix', 'refactor', 'bug']),
+        (['코드', '수정', '로그인'],    ['fix', 'login', 'code']),
+        (['삭제', '리팩토링'],          ['delete', 'refactor']),
+        (['추가', '코드', '수정'],      ['fix', 'add', 'code']),
+        (['기능', '수정', '버그'],      ['fix', 'bug', 'feature']),
+        (['오류', '추가', '로그인'],    ['add', 'login', 'error']),
+        (['회원가입', '삭제', '오류'],  ['delete', 'signup', 'error']),
+        (['로그인', '버그', '리팩토링'],['refactor', 'login', 'bug']),
+        (['리팩토링', '기능', '추가'],  ['add', 'feature', 'refactor']),
+        (['버그', '코드', '리팩토링'],  ['refactor', 'code', 'bug']),
+    ]
 
-train_data = [
-    (['버그', '수정'], ['bug', 'fix']),
-    (['코드', '수정'], ['code', 'refactor']),
-    (['리팩토링', '코드'], ['refactor', 'code']),
-]
+    # ✅ vocab을 학습 데이터에서 자동 추출
+    src_words_all = {w for src, _ in train_data for w in src}
+    tgt_words_all = {w for _, tgt in train_data for w in tgt}
 
-# ---------- 학습 전 ----------
-print("🧪 학습 전 예측:")
-for src_words, _ in train_data:
-    words, _, _ = bot.predict(src_words)
-    print(f"  {src_words} → {words}")
+    src_vocab = ['<pad>'] + sorted(src_words_all)
+    tgt_vocab = ['<pad>'] + sorted(tgt_words_all) + ['<s>', '<eos>']
 
-# ---------- 학습 ----------
-print("\n📚 300번 학습 시작...")
+    print(f"📖 src_vocab ({len(src_vocab)}): {src_vocab}")
+    print(f"📖 tgt_vocab ({len(tgt_vocab)}): {tgt_vocab}")
 
+    model = Seq2SeqTransformer(src_vocab, tgt_vocab)
 
-# def to_ids(bot, src_words, tgt_words):
-#     src_ids = torch.tensor([[bot.src_stoi[w] for w in src_words]])
-#     tgt_ids = torch.tensor([[bot.tgt_stoi[w] for w in tgt_words]])
-#     return src_ids, tgt_ids
+    def make_tensors(model, src_words, tgt_words):
+        src_ids = torch.tensor([[model.src_stoi[w] for w in src_words]])
+        tgt_ids = torch.tensor([[model.tgt_stoi['<s>']] +
+                                 [model.tgt_stoi[w] for w in tgt_words] +
+                                 [model.tgt_stoi['<eos>']]])
+        return src_ids, tgt_ids
 
-def to_ids(bot, src_words, tgt_words):
-    src_list = []
-    for w in src_words:
-        src_list.append(bot.src_stoi[w])  # ["버그", "수정"] → [1, 2]
-    src_ids = torch.tensor([src_list])  # [1, 2] → tensor([[1, 2]])
+    print("\n🧪 학습 전 번역 테스트 (처음 3개):")
+    for src_words, _ in train_data[:3]:
+        print(f"  {src_words} → {model.translate(src_words)}")
 
-    tgt_list = []
-    for w in tgt_words:
-        tgt_list.append(bot.tgt_stoi[w])
-    tgt_ids = torch.tensor([tgt_list])
+    print("\n📚 10000 에폭 학습 시작...")
+    for epoch in range(10000):
+        total_loss = 0
+        for src_words, tgt_words in train_data:
+            src_ids, tgt_ids = make_tensors(model, src_words, tgt_words)
+            total_loss += model.train_step(src_ids, tgt_ids)
+        if epoch % 1000 == 0:
+            print(f"  Epoch {epoch:5d} | Loss: {total_loss:.4f}")
 
-    return src_ids, tgt_ids
-
-
-for epoch in range(300):
-    total_loss = 0
+    print("\n✅ 학습 후 번역 결과:")
+    correct_count = 0
     for src_words, tgt_words in train_data:
-        src_ids, tgt_ids = to_ids(bot, src_words, tgt_words)
-        total_loss += bot.train_step(src_ids, tgt_ids)
-    if epoch % 60 == 0:
-        print(f"  Epoch {epoch:3d} | Loss: {total_loss:.4f}")
+        pred = model.translate(src_words)
+        correct = pred == tgt_words
+        if correct:
+            correct_count += 1
+        print(f"  {src_words} → {pred} {'✅' if correct else '❌'} (정답: {tgt_words})")
 
-# ---------- 학습 후 ----------
-print("\n✅ 학습 후 예측:")
-for src_words, tgt_words in train_data:
-    words, attn_weights, _ = bot.predict(src_words)
-    correct = words == tgt_words
-    print(f"  {src_words} → {words}  {'✅' if correct else '❌'} (정답: {tgt_words})")
+    print(f"\n🎯 정확도: {correct_count}/{len(train_data)} ({correct_count/len(train_data)*100:.1f}%)")

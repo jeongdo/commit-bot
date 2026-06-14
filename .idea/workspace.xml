@@ -7,6 +7,7 @@
     <list default="true" id="01e5cfc4-bada-4f6a-ac08-355809b6208a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/step/08_positional_encoding.py" beforeDir="false" afterPath="$PROJECT_DIR$/step/08_positional_encoding.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,61 +34,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0000006468794032" />
-      <entry key="MS500" value="1.0600573144713383" />
-      <entry key="S2" value="1.8570711822462864" />
-      <entry key="S5" value="3.466799346779446" />
-      <entry key="S10" value="5.163705022539263" />
-      <entry key="S30" value="7.350148636192525" />
-      <entry key="S60" value="8.228002158606344" />
-      <entry key="M2" value="8.886459041448346" />
-      <entry key="M5" value="9.47339864260044" />
-      <entry key="M10" value="9.850839140758598" />
-      <entry key="M15" value="10.267599247614816" />
-      <entry key="M30" value="12.424429385306105" />
-      <entry key="H1" value="19.226197500762233" />
-      <entry key="H2" value="31.972091509856668" />
-      <entry key="H4" value="46.46998663546254" />
-      <entry key="D1" value="68.04236180646349" />
-      <entry key="W1" value="73.10668800993353" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.0" />
+      <entry key="S5" value="1.0" />
+      <entry key="S10" value="1.0" />
+      <entry key="S30" value="1.0000000000000449" />
+      <entry key="S60" value="1.0000006315347483" />
+      <entry key="M2" value="1.0023810226006387" />
+      <entry key="M5" value="1.333522633675734" />
+      <entry key="M10" value="2.7412598652035616" />
+      <entry key="M15" value="4.100946618249553" />
+      <entry key="M30" value="7.400579363353137" />
+      <entry key="H1" value="12.525523344199968" />
+      <entry key="H2" value="21.673487852257047" />
+      <entry key="H4" value="38.54903113909479" />
+      <entry key="D1" value="83.58217783046135" />
+      <entry key="W1" value="98.24033768913786" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
       <entry key="MS500" value="0.0" />
       <entry key="S2" value="0.0" />
       <entry key="S5" value="0.0" />
-      <entry key="S10" value="2.983084905105553E-275" />
-      <entry key="S30" value="4.9129774575450676E-92" />
-      <entry key="S60" value="3.1338255045807103E-46" />
-      <entry key="M2" value="2.5033654106008267E-23" />
-      <entry key="M5" value="1.380450816823459E-9" />
-      <entry key="M10" value="5.2544146316457536E-5" />
-      <entry key="M15" value="0.0017674995363598238" />
-      <entry key="M30" value="0.05945584105252462" />
-      <entry key="H1" value="0.34483570721554707" />
-      <entry key="H2" value="0.8304645625113001" />
-      <entry key="H4" value="1.2887703868667595" />
-      <entry key="D1" value="1.8587497402766182" />
-      <entry key="W1" value="1.9791824993468705" />
+      <entry key="S10" value="0.0" />
+      <entry key="S30" value="1.029339217958568E-298" />
+      <entry key="S60" value="1.4344376802798375E-149" />
+      <entry key="M2" value="5.355841108076742E-75" />
+      <entry key="M5" value="2.9658030870239876E-30" />
+      <entry key="M10" value="2.4354825815943484E-15" />
+      <entry key="M15" value="2.2806909197964188E-10" />
+      <entry key="M30" value="2.135738563252341E-5" />
+      <entry key="H1" value="0.006535653380511928" />
+      <entry key="H2" value="0.11432981365399242" />
+      <entry key="H4" value="0.47818367313066473" />
+      <entry key="D1" value="1.575641654024457" />
+      <entry key="W1" value="1.933009187394855" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.9526386016037613" />
-      <entry key="MS500" value="1.0495672818248047" />
-      <entry key="S2" value="1.8514351386724925" />
-      <entry key="S5" value="3.4619603636699012" />
-      <entry key="S10" value="5.159895751426362" />
-      <entry key="S30" value="7.348274346574834" />
-      <entry key="S60" value="8.226941728244064" />
-      <entry key="M2" value="8.885881708161145" />
-      <entry key="M5" value="9.473150677576438" />
-      <entry key="M10" value="9.850762059596667" />
-      <entry key="M15" value="10.269270921820207" />
-      <entry key="M30" value="12.483753061914133" />
-      <entry key="H1" value="19.570785226064086" />
-      <entry key="H2" value="32.802277939563304" />
-      <entry key="H4" value="47.758542341277156" />
-      <entry key="D1" value="69.90105928305228" />
-      <entry key="W1" value="75.08586252821878" />
+      <entry key="MS100" value="0.9659363289248456" />
+      <entry key="MS500" value="0.9930924954370359" />
+      <entry key="S2" value="0.9982686325973925" />
+      <entry key="S5" value="0.9993070929904525" />
+      <entry key="S10" value="0.9996534864594093" />
+      <entry key="S30" value="0.9998844821426527" />
+      <entry key="S60" value="0.9999428682402624" />
+      <entry key="M2" value="1.0023469724147511" />
+      <entry key="M5" value="1.333218730107839" />
+      <entry key="M10" value="2.740492425730667" />
+      <entry key="M15" value="4.100062004808492" />
+      <entry key="M30" value="7.399832043496698" />
+      <entry key="H1" value="12.531543606886155" />
+      <entry key="H2" value="21.787482973395036" />
+      <entry key="H4" value="39.02697489409405" />
+      <entry key="D1" value="85.15774658482988" />
+      <entry key="W1" value="100.17333494695737" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -107,12 +108,18 @@
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "Python.06_pytorch_embedding.executor": "Run",
     "Python.08_positional_encoding.executor": "Run",
+    "Python.09_encoder.executor": "Run",
     "Python.09_positional_encoding_result_compare.executor": "Run",
+    "Python.09_최적화기능없는_인코더_디코더.executor": "Run",
+    "Python.10_인코더_디코더_최적화.executor": "Run",
+    "Python.15_commit_bot_01.executor": "Run",
     "Python.main.executor": "Run",
+    "Python.refined.executor": "Run",
     "Python.step_001_print 명령어.executor": "Run",
     "Python.step_003_간단한 함수 만들기.executor": "Run",
     "RunOnceActivity.MCP Project settings loaded": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -135,43 +142,20 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Dropbox\PyCharm\commit-bot\step" />
+      <recent name="C:\Dropbox\PyCharm\commit-bot\data" />
       <recent name="C:\Dropbox\PyCharm\commit-bot\doc" />
       <recent name="C:\Dropbox\PyCharm\commit-bot" />
       <recent name="C:\Dropbox\PyCharm\commit-bot\study" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Dropbox\PyCharm\commit-bot\step\backup" />
+      <recent name="C:\Dropbox\PyCharm\commit-bot\step\final" />
       <recent name="C:\Dropbox\PyCharm\commit-bot\step" />
+      <recent name="C:\Dropbox\PyCharm\commit-bot\step\backup" />
       <recent name="C:\Dropbox\PyCharm\commit-bot\study\backup" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.main">
-    <configuration name="06_pytorch_embedding" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="commit-bot" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="DEBUG_JUST_MY_CODE" value="false" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="RUN_TOOL" value="" />
-      <option name="SCRIPT_NAME" value="C:\Dropbox\PyCharm\commit-bot\step\06_pytorch_embedding.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="08_positional_encoding" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.15_commit_bot_01">
+    <configuration name="09_최적화기능없는_인코더_디코더" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="commit-bot" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -187,7 +171,7 @@
       <option name="DEBUG_JUST_MY_CODE" value="false" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="RUN_TOOL" value="" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/step/08_positional_encoding.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/step/09_최적화기능없는_인코더_디코더.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -196,7 +180,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="09_positional_encoding_result_compare" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="10_인코더_디코더_최적화" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="commit-bot" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -212,7 +196,7 @@
       <option name="DEBUG_JUST_MY_CODE" value="false" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="RUN_TOOL" value="" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/step/09_positional_encoding_result_compare.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/step/10_인코더_디코더_최적화.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -221,7 +205,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="11_encoder" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="commit-bot" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -230,14 +214,14 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/step" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="DEBUG_JUST_MY_CODE" value="false" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="RUN_TOOL" value="" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="SCRIPT_NAME" value="C:\Dropbox\PyCharm\commit-bot\step\11_encoder.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -246,7 +230,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="step_003_간단한 함수 만들기" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="15_commit_bot_01" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="commit-bot" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -255,14 +239,39 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/study" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/step" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="DEBUG_JUST_MY_CODE" value="false" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="RUN_TOOL" value="" />
-      <option name="SCRIPT_NAME" value="C:\Dropbox\PyCharm\commit-bot\study\backup\step_003_간단한 함수 만들기.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/step/15_commit_bot_01.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="refined" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="commit-bot" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/util" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="DEBUG_JUST_MY_CODE" value="false" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="RUN_TOOL" value="" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/util/refined.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -273,11 +282,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.main" />
-        <item itemvalue="Python.09_positional_encoding_result_compare" />
-        <item itemvalue="Python.08_positional_encoding" />
-        <item itemvalue="Python.06_pytorch_embedding" />
-        <item itemvalue="Python.step_003_간단한 함수 만들기" />
+        <item itemvalue="Python.15_commit_bot_01" />
+        <item itemvalue="Python.refined" />
+        <item itemvalue="Python.10_인코더_디코더_최적화" />
+        <item itemvalue="Python.09_최적화기능없는_인코더_디코더" />
+        <item itemvalue="Python.11_encoder" />
       </list>
     </recent_temporary>
   </component>
@@ -297,7 +306,7 @@
       <option name="presentableId" value="Default" />
       <updated>1781373811217</updated>
       <workItem from="1781373813732" duration="256000" />
-      <workItem from="1781398385021" duration="20860000" />
+      <workItem from="1781398385021" duration="30434000" />
     </task>
     <servers />
   </component>
@@ -305,11 +314,16 @@
     <option name="version" value="3" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/commit_bot$09___.coverage" NAME="09_최적화기능없는_인코더_디코더 Coverage Results" MODIFIED="1781444971484" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/step" />
     <SUITE FILE_PATH="coverage/commit_bot$09_positional_encoding_result_compare.coverage" NAME="09_positional_encoding_result_compare Coverage Results" MODIFIED="1781424866693" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/step" />
+    <SUITE FILE_PATH="coverage/commit_bot$refined.coverage" NAME="refined Coverage Results" MODIFIED="1781449569334" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/util" />
+    <SUITE FILE_PATH="coverage/commit_bot$10___.coverage" NAME="10_인코더_디코더_최적화 Coverage Results" MODIFIED="1781445026547" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/step" />
+    <SUITE FILE_PATH="coverage/commit_bot$15_commit_bot_01.coverage" NAME="15_commit_bot_01 Coverage Results" MODIFIED="1781449822710" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/step" />
     <SUITE FILE_PATH="coverage/commit_bot$step_003___.coverage" NAME="step_003_간단한 함수 만들기 Coverage Results" MODIFIED="1781373969914" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/study" />
     <SUITE FILE_PATH="coverage/commit_bot$06_pytorch_embedding.coverage" NAME="06_pytorch_embedding Coverage Results" MODIFIED="1781412795082" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/commit_bot$09_encoder.coverage" NAME="09_encoder Coverage Results" MODIFIED="1781443307538" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/step" />
     <SUITE FILE_PATH="coverage/commit_bot$step_001_print_.coverage" NAME="step_001_print 명령어 Coverage Results" MODIFIED="1781373950619" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/study" />
     <SUITE FILE_PATH="coverage/commit_bot$08_positional_encoding.coverage" NAME="08_positional_encoding Coverage Results" MODIFIED="1781424476895" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/step" />
-    <SUITE FILE_PATH="coverage/commit_bot$main.coverage" NAME="main Coverage Results" MODIFIED="1781427636185" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/commit_bot$main.coverage" NAME="main Coverage Results" MODIFIED="1781442197692" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

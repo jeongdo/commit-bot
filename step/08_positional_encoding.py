@@ -11,6 +11,7 @@ class PositionalEncoding(nn.Module):
         # 1. pe: 위치 인코딩을 저장할 빈 행렬 생성
         #    shape: (max_len, d_model) = (최대 문장 길이, 임베딩 차원)
         #    여기에 미리 계산한 위치 신호를 채워넣을 예정
+        #     -  실제 입력은 5개 단어밖에 없는데, 100개 위치 정보 저장되어 있는 상태입니다.
         # ------------------------------------------------
         pe = torch.zeros(max_len, d_model)
 
@@ -56,7 +57,9 @@ class PositionalEncoding(nn.Module):
         # ------------------------------------------------
         self.pe = pe.unsqueeze(0)
 
+    # pos_encoder(x) 를 실행한 순간,
     def forward(self, x):
+        # print("PositionalEncoding forward 호출")
         # x: (batch, seq_len, d_model)
         seq_len = x.size(1)
         # self.pe[:, :seq_len, :]  → (1, seq_len, d_model)
@@ -101,7 +104,40 @@ class CommitBot(nn.Module):
         # 인덱스 → 벡터로 변환
         emb = self.embedding(src_ids)
 
-        emb = self.pos_enc(emb)  # # Positional Encoding 위치 정보 더하기
+        # 문장: ["버그", "수정"]
+        # 임베딩 이후 emb (가상의 값):
+
+        # 기존 위치 정보 없는 상태
+        # emb[0] = '버그' 벡터: [0.12, -0.45,  0.88,  0.01, -0.33,  0.77, -0.09,  0.51]
+        # emb[1] = '수정' 벡터: [0.34,  0.21, -0.72,  0.99, -0.15,  0.44,  0.67, -0.88]
+
+        # self.pe에 미리 계산된 위치 신호 (0번째, 1번째 위치):
+
+        # PE(pos, 2i)   = sin( pos / 10000^(2i / d_model) )
+        # PE(pos, 2i+1) = cos( pos / 10000^(2i / d_model) )
+
+        # pos: 단어의 위치 (0, 1, 2, ...)
+        # 차원 인덱스 (0, 1, 2, ... , d_model/2 -1)
+        # d_model: 우리가 정한 임베딩 차원 (여기서는 8)
+
+        # 그 결과,
+        # pe[0] = [ 0.0000,  1.0000,  0.0000,  1.0000,  0.0000,  1.0000,  0.0000,  1.0000] , sin(0) = 0, cos(0) = 1, 고유한 지문
+
+        # PE(1, 0) = sin(1 / 1) = sin(1)   ≈ 0.8415
+        # PE(1, 1) = cos(1 / 1) = cos(1)   ≈ 0.5403
+        # pe[1] = [ 0.8415,  0.5403,  0.0100,  0.9999,  0.0099,  1.0000,  0.0001,  1.0000]
+        # 1부터 i가 커지면 분모가 폭발적으로 커지기 때문
+
+
+        # forward에서 x + self.pe[:, :2, :]가 실행되면:
+
+        # emb[0] + pe[0] = [0.1200, 0.5500, 0.8800, 1.0100, -0.3300, 1.7700, -0.0900, 1.5100]
+        # emb[1] + pe[1] = [1.1815, 0.7503, -0.7100, 1.9899, -0.1401, 1.4400, 0.6701, 0.1200]
+        # 이제 emb는 더 이상 순수 단어 의미 벡터가 아니라,
+        # 위치 신호가 묻어 있는 벡터가 됩니다.
+
+
+        emb = self.pos_enc(emb)  # # Positional Encoding 위치 정보 더하기, nn.Module.__call__() 그 안에 PositionalEncoding.forward(x) 실행
 
         # tensor([[[0.3, -0.1, 0.8, ...],   ← 버그의 8차원 벡터
         #          [0.1,  0.5, 0.2, ...]]])  ← 수정의 8차원 벡터

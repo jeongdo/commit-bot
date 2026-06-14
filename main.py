@@ -1,192 +1,240 @@
-# step-04_pytorch_baby.py
 import torch
 import torch.nn as nn
 import torch.optim as optim
 
 
-class BabyBrain(nn.Module):
+class CommitBot(nn.Module):
     def __init__(self):
         super().__init__()
 
-        # 단어 사전 만들기 (한글 단어 → 인덱스)
-        self.word_to_idx = {
-            "추가": 0, "수정": 1, "삭제": 2,
-            "버그": 3, "로그인": 4, "회원가입": 5
-        }
-        self.idx_to_word = {v: k for k, v in self.word_to_idx.items()}
+        # 입력 단어 (한글)
+        self.src_vocab = ['<pad>', '버그', '수정', '코드', '리팩토링']
+        self.src_stoi = {w: i for i, w in enumerate(self.src_vocab)}
 
-        # 영어 후보 (정답 후보들)
-        self.candidates = ["add", "insert", "fix", "modify",
-                           "remove", "delete", "bug", "login", "signup", "register"]
+        # 출력 단어 (영어)
+        self.tgt_vocab = ['<pad>', 'bug', 'fix', 'code', 'refactor']
+        self.tgt_stoi = {w: i for i, w in enumerate(self.tgt_vocab)}
+        self.tgt_itos = {i: w for i, w in enumerate(self.tgt_vocab)}
 
-        # 신경망: 입력(한글 단어 인덱스) → 출력(각 영어 후보의 점수)
-        # 6개 한글 단어 → 10개 영어 후보
-        # 내부적으로 가중치를 랜덤하게 초기화함
-        # (보통 균등분포 또는 정규분포에서 작은 랜덤 값)
-        # 그래서 학습전은 랜덤값이 매핑됨.
-        # add: -0.091
-        # insert: -0.131
-        # fix: 0.578
-        # modify: 0.409
-        # remove: -0.072
-        # delete: -0.556
-        # bug: -0.201
-        # login: 0.391
-        # signup: 0.345
-        # register: -0.485
-        self.fc = nn.Linear(6, 10)  # 6차원 입력, 10차원 출력 / 6개의 숫자를 입력받아 → 10개의 숫자를 출력하는 단순한 계산기
-        #  parameters : 70개의 파라미터 + 내부메서드 생성
+        # [06과 동일] 단어 → 8차원 밀집 벡터
+        self.embedding = nn.Embedding(len(self.src_vocab), 8, padding_idx=0)
 
-        #  6: 우리가 아는 한글 단어 개수 (추가, 수정, 삭제, 버그, 로그인, 회원가입)
-        # 10: 영어 후보 개수 (add, insert, fix, modify, remove, delete, bug, login, signup, register)
+        # [핵심 추가] Self-Attention: 단어들이 서로를 참조해 문맥 반영
+        # "수정" 앞에 "버그"가 있으면 → fix
+        # "수정" 앞에 "코드"가 있으면 → refactor
+        self.attention = nn.MultiheadAttention(embed_dim=8, num_heads=2, batch_first=True)
 
-        # 손실함수와 옵티마이저
-        self.criterion = nn.CrossEntropyLoss() # 정답과 비교해서 오차 계산, 처음에 당연히 틀림.
-        self.optimizer = optim.SGD(self.parameters(), lr=0.1)
+        # embed_dim=8은 전체 임베딩 차원입니다. 단어 하나가 8차원 벡터로 표현되죠.
+        # num_heads=2 "왜 되는지 모르는데 그냥 씀" 이 AI 전체의 분위기거든.
 
-        #SGD : 확률적 경사하강법(간단하고 빠른 업데이트 방식)
-        # self.parameters() : 기본적으로 존재하고 있는 값 또는 범위: 10개 (bias) + (6*10의 연결강도 : 모든 경우의 수의 인식 + 그 상태값 증감함)
+        # 8차원 → 출력 단어 수만큼 점수
+        self.fc = nn.Linear(8, len(self.tgt_vocab))
 
-        # lr = 0.01(작은 걸음) → 천천히, 안정적으로 감 → 오래 걸림, but 잘감
-        # lr = 0.9(큰 걸음)→ 빨리 감 → 근데 절벽으로 뛰어내릴 수도 있음(발산)
+        self.criterion = nn.CrossEntropyLoss(ignore_index=0)
+        self.optimizer = optim.Adam(self.parameters(), lr=0.05)
 
-        # Step-03과 똑같이 학습 기록용
-        self.last_input = None
-        self.last_output = None
+    def forward(self, src_ids):
+        # src_ids = tensor([[1, 2]])   # [버그(1), 수정(2)] 인덱스
+        # 인덱스 → 벡터로 변환
+        emb = self.embedding(src_ids)
+        # tensor([[[0.3, -0.1, 0.8, ...],   ← 버그의 8차원 벡터
+        #          [0.1,  0.5, 0.2, ...]]])  ← 수정의 8차원 벡터
 
-    def _word_to_onehot(self, word):
-        """단어를 원-핫 벡터로 변환 (예: '추가' → [1,0,0,0,0,0])"""
-        tensor = torch.zeros(6)  # 6개 단어만큼 길이의 텐서 생성 (모두 0으로 채움)
-        tensor[self.word_to_idx[word]] = 1.0 # 해당 단어 위치만 1로 바꿈
-        # 하나만 1 이고, 나머지는 0인 벡터 (GPU 연산 가능 + 자동 미분 지원)
-        # "리스트랑 비슷한데, GPU에서 빠르게 계산 가능한 자료형" + 신호전달
-        # 미분은 계속 증감이 아니라 학습 후반은 그 증감이 점점 감소하는 형태로 이어지는 가중지 조절 연산.
-        return tensor
+        # shape: (1, 2, 8)  = (배치(문장이 1개), 단어수 2개 (버그, 수정), 차원 (단어하나가 8차원 벡터))
+        # [                        # 배치 1개
+        #   [                      # 문장
+        #     [0.3, -0.1, 0.8, 0.2, 0.5, -0.3, 0.1, 0.7],   # 버그 (8차원)
+        #     [0.1,  0.5, 0.2, 0.9, 0.3,  0.4, 0.6, 0.2],   # 수정 (8차원)
+        #   ]
+        # ]
 
-    def think(self, sentence: str) -> str:
-        """문장을 입력받아 영어로 변환"""
-        words = sentence.strip().split()
-        result_parts = []
-        self.last_input = []
-        self.last_output = []
+        # 학습할 때 문장 여러 개를 한 번에 넣을 수 있어
+        # 배치 1  →  (1, 2, 8)   문장 1개
+        # 배치 32 →  (32, 2, 8)  문장 32개 동시에
 
-        for w in words:
-            if w not in self.word_to_idx:
-                result_parts.append(w)  # 모르는 단어는 그대로
-                continue
+        attn_out, attn_weights = self.attention(emb, emb, emb)  # # Q, K, V
 
-            # 1. 입력을 텐서로 변환
-            input_tensor = self._word_to_onehot(w)
-            self.last_input.append(input_tensor)
+        # Q (Query) → "나는 뭘 찾고 있나?" (수정이 묻는다)
+        # K (Key) → "나는 어떤 단어야?" (버그, 코드 가 대답)
+        # V (Value) → "참조 비중 결정되면 실제로 가져올 정보"
 
-            # 2. 신경망 통과 (순전파)
-            output = self.fc(input_tensor)  # 10개의 점수(로짓)가 나옴
+        logits = self.fc(attn_out)  # (1, seq, vocab)
+        return logits, attn_weights
 
-            # 3. 가장 높은 점수의 후보 선택
-            predicted_idx = torch.argmax(output).item()
-            predicted_word = self.candidates[predicted_idx]
+    def train_step(self, src_ids, tgt_ids):
+        # 모델을 학습 모드로 전환 (Dropout, BatchNorm 등이 학습용으로 활성화)
+        # predict()에서 self.eval()로 끈 걸 다시 켜는 것
+        # self.train()  →  학습할 때
+        # self.eval()   →  예측할 때 (predict)
+        self.train()
 
-            result_parts.append(predicted_word)
-            self.last_output.append(output)
+        # 순전파: 입력 → 모델 통과 → 예측 점수 반환
+        # logits shape: (1, 2, 5) = (배치, 단어수, 후보수)
+        # _ 는 attn_weights인데 학습에 안 쓰니까 버림
+        logits, _ = self.forward(src_ids)
 
-        return ' '.join(result_parts)
+        # CrossEntropyLoss가 (N, C) 형태만 받아서 펴주는 것
+        # CrossEntropyLoss가 하는 일:
+        # 1. output 점수들을 확률로 변환 (softmax)
+        # 2. 정답 위치(1번)의 확률이 높을수록 loss는 작아짐
+        #    - 정답 확률 0.7 → loss 0.35 (작음)
+        #    - 정답 확률 0.9 → loss 0.10 (더 작음)
+        #    - 정답 확률 0.3 → loss 1.20 (큼)
 
-    def learn(self, correct_sentence: str):
-        """정답을 보고 학습 (역전파)"""
-        correct_words = correct_sentence.strip().split()
+        # 05. loss = self.criterion(output.unsqueeze(0), target)
+        # output = self.fc(inp)        # shape: (10,)   1차원
+        # output.unsqueeze(0)          # shape: (1, 10) 2차원으로 승격,  배치 차원 추가
 
-        total_loss = 0
+        # N=1 (문장 or 입력 1개), C=10 (후보 10개)
+
+        # 07  단어 2개 → 3차원을 2차원으로 펴야 함
+        # logits.view(-1, len(self.tgt_vocab))        # (1, 2, 5) → (2, 5), 입력 2개, 후보 5개
+        # tgt_ids.view(-1)                            # (1, 2)    → (2,),   정답 2개
+
+        # 배치 2  →  문장 2개 동시에
+        #
+        # logits shape: (2, 2, 5)  = (배치2, 단어2개, 후보5개)
+        # tgt_ids shape: (2, 2)    = (배치2, 단어2개)
+        #
+        # view(-1, 5) → (4, 5)    2문장 × 2단어 = 4개 펼쳐짐
+        # view(-1)    → (4,)       정답도 4개
+        # -1 이 알아서 계산하는 거니까:
+        # 배치 1  →  (1, 2, 5) → view(-1, 5) → (2, 5)   1×2=2
+        # 배치 2  →  (2, 2, 5) → view(-1, 5) → (4, 5)   2×2=4
+        # 배치 4  →  (4, 2, 5) → view(-1, 5) → (8, 5)   4×2=8
+        # 배치가 바뀌어도 view(-1, 5) 코드는 그대로야. -1 이 배치 × 단어수를 자동 계산해주니까. 그게 -1 쓰는 이유
+
+        # (1, 2, 5)
+        #  ↑
+        # 문장 몇 개를 한 번에 넣었냐
+        #
+        # 지금은 ["버그", "수정"] 1문장만 넣으니까 1
+
+        # 배치가 왜 있냐면:
+        # 배치 1  →  (1, 2, 5)   문장 1개씩 학습
+        # 배치 4  →  (4, 2, 5)   문장 4개 동시에 학습
+        # 배치 32 →  (32, 2, 5)  문장 32개 동시에 학습
+
+        # 실제 대형 모델은 배치 32~512씩 넣어서 한 번에 학습해. 속도가 훨씬 빠르거든.
+        # 07.py는 문장 1개씩 넣으니까 항상 1이고, 그래서 view(-1)로 그 1을 날려버리는 거야.
+        # (1, 2, 5) → view(-1, 5) → (2, 5)   배치 1 사라짐
+        # (1, 2)    → view(-1)    → (2,)     배치 1 사라짐
+
+        # 배치 2  →  문장 2개 동시에 입력
+        #
+        # src_ids = tensor([[1, 2],    # 문장1: [버그, 수정]
+        #                   [3, 2]])   # 문장2: [코드, 수정]
+        # # shape: (2, 2)  = (배치2, 단어2개)
+        # 그러면 logits는:
+        # (2, 2, 5)
+        #  ↑
+        #  배치 2
+        #
+        # view(-1, 5) → (4, 5)   2문장 × 2단어 = 4개 펼쳐짐
+
+        # 배치 1   →  문장 1개 보고 바로 업데이트
+        #            방향이 정확한데 자주 흔들림 (지그재그, 느림)
+        #
+        # 배치 2   →  문장 2개 평균 내서 업데이트
+        #            방향이 더 안정적, 업데이트 횟수 절반 (개별 특성 뭉개짐)
+        #
+        # 배치 32  →  32개 평균
+        #            매우 안정적, GPU 병렬처리로 속도 빠름 (절충점, 실험으로 찾는 것)
+
+        # logits.view(-1, 5) : (1, 2, 5) → (2, 5)  단어별 후보 점수
+        # tgt_ids.view(-1)   : (1, 2)    → (2,)    단어별 정답 인덱스
+        loss = self.criterion(logits.view(-1, len(self.tgt_vocab)), tgt_ids.view(-1))
+
+        # 이전 step()에서 누적된 기울기 초기화
+        # 안 하면 이전 학습 기울기가 더해져서 엉뚱한 방향으로 업데이트됨
         self.optimizer.zero_grad()
-        # ✅ 기울기 초기화: 원래는 매 스텝 초기화가 기본
-        # 💡 한 번에 던져야 하는 큰 AI 연산(대배치)에서는 누적할 수도 있음
 
-        # self.last_input = [추가_텐서]           # 마지막에 생각했던 입력 단어 (1개)
-        # self.last_output = [add_출력]          # think()가 출력한 영어 후보 (1개)
-        # correct_words = ["insert"]            # 정답 단어 (1개)
-        for i, (input_tensor, output) in enumerate(zip(self.last_input, self.last_output)):
-            # 정답 개수보다 많으면 나머지는 학습 안 함 (버림)
-            if i >= len(correct_words):
-                break
+        # 역전파: loss 기준으로 모든 파라미터의 기울기 자동 계산
+        # embedding, W_Q, W_K, W_V, fc 전부 기울기 계산됨
+        loss.backward()
 
-            # 정답의 인덱스 찾기
-            correct_word = correct_words[i]
-            if correct_word not in self.candidates:
-                continue # 후보에 없으면 그냥 넘어감 (학습도 안 함, 패널티도 없음)
-
-            # 정답 단어("insert")가 후보 목록에서 몇 번째인지 찾기
-            # self.candidates = ["add", "insert", "fix", "remove", ...] 라고 가정
-            target_idx = self.candidates.index(correct_word)  # "insert" → 1 (두 번째)
-            # PyTorch 텐서로 변환 (신경망이 이해하는 숫자 형태)
-            target = torch.tensor([target_idx])
-
-            # 1. 먼저 예측 (순전파)
-            # output = brain.think("추가")
-            # output = [0.2, 0.7, 0.05, ...]
-
-            # ↑ "insert"에 대한 점수 = 0.7
-
-            # 2. 손실(loss) 계산
-            # output: 모델이 예측한 점수들 (예: "add":0.2, "insert":0.7, "fix":0.05, ...)
-            # target: 정답은 "insert" (1번 인덱스)
-            #
-            # CrossEntropyLoss가 하는 일:
-            # 1. output 점수들을 확률로 변환 (softmax)
-            # 2. 정답 위치(1번)의 확률이 높을수록 loss는 작아짐
-            #    - 정답 확률 0.7 → loss 0.35 (작음)
-            #    - 정답 확률 0.9 → loss 0.10 (더 작음)
-            #    - 정답 확률 0.3 → loss 1.20 (큼)
-
-            # 즉, loss는 정답 확률이 올라갈수록 내려감 (반비례)
-            # 손실 계산 (기울기) :  doc/(딥러닝) 역전파의_본질.md
-
-            loss = self.criterion(output.unsqueeze(0), target) # 정답은 더 정답답게, 오답은 더 오답답게" 만들어주는 도구다.
-            total_loss += loss # loss 값이 점점 줄어드는 걸 보여주기 위해 계산
-
-        # 역전파 (PyTorch가 자동으로 가중치 업데이트!)
-        # 이 단 한 줄의 코드가 실행되는 순간,
-        # PyTorch는 수식 (p_i - y_i)를 계산하여 각 Logit의 기울기를 구합니다.
-        # logits.grad 안에는 [-0.4, 0.2, 0.2] 라는 값이 꽂히게 됩니다.
-        total_loss.backward()
-
-        # 위해서 구한 기울기를 가져다가
-        # optimizer.step() 로 전달되어, 최종적으로 신경망의 가중치를 정답은 밀어 올리고 오답은 끌어내리는 방향으로 수정
+        # 계산된 기울기로 파라미터 업데이트
+        # learning_rate 만큼 정답 방향으로 이동
         self.optimizer.step()
 
-        return total_loss.item()
+        # loss 값을 Python float으로 반환 (tensor → 숫자)
+        # .item() 없으면 tensor 객체가 반환되어 출력/비교 불편
+        return loss.item()
 
-    def show_weights(self, word):
-        """특정 단어의 가중치(점수) 보여주기"""
-        if word not in self.word_to_idx:
-            print(f"'{word}'는 모르는 단어입니다")
-            return
-
-        input_tensor = self._word_to_onehot(word)
+    def predict(self, src_words):
+        self.eval()
+        src_ids = torch.tensor([[self.src_stoi[w] for w in src_words]])
         with torch.no_grad():
-            scores = self.fc(input_tensor)
+            logits, attn_weights = self.forward(src_ids)
 
-        print(f"\n'{word}'에 대한 각 후보 점수:")
-        for i, candidate in enumerate(self.candidates):
-            print(f"  {candidate:10} : {scores[i].item():.3f}")
+            # 05.py
+            # predicted_idx = torch.argmax(output).item() # 가장 높은 점수 인덱스 1개
+            # predicted_word = self.candidates[predicted_idx] # 인덱스 → 단어 1개
+
+            # 05, 06   단어 1개 입력 → 정답 1개
+            #   "추가" → "insert"
+            #
+            # 07       문장 전체 입력 → 정답 2개
+            #   ["버그", "수정"] → ["bug", "fix"]
+
+            # # 07  문장 전체 한 번에 처리
+            # logits = self.fc(attn_out)                   # shape: (1, 2, 5)  단어 2개 × 후보 5개
+            # pred_ids = logits.argmax(dim=-1)             # shape: (1, 2)     단어 2개의 정답 인덱스,  (정답: ['bug', 'fix'])
+            # pred_words = [self.tgt_itos[i.item()] for i in pred_ids[0]]  # 인덱스 2개 → 단어 2개
+
+            pred_ids = logits.argmax(dim=-1)
+            pred_words = [self.tgt_itos[i.item()] for i in pred_ids[0]]
+        return pred_words, attn_weights, src_words
 
 
-# 실행 데모
-if __name__ == "__main__":
-    brain = BabyBrain()
+bot = CommitBot()
 
-    # print("=" * 50)
-    print("🧠 PyTorch 아기 뇌 (Step-04)")
-    # print("=" * 50)
+train_data = [
+    (['버그', '수정'], ['bug', 'fix']),
+    (['코드', '수정'], ['code', 'refactor']),
+    (['리팩토링', '코드'], ['refactor', 'code']),
+]
 
-    print("\n=== 학습 전 ===")
-    brain.show_weights("추가")
-    print(f"\n🤔 생각한 결과: {brain.think('추가')}")
+# ---------- 학습 전 ----------
+print("🧪 학습 전 예측:")
+for src_words, _ in train_data:
+    words, _, _ = bot.predict(src_words)
+    print(f"  {src_words} → {words}")
 
-    print("\n=== 학습: '추가' → 'insert' 라고 알려줌 ===")
-    for step in range(5):
-        brain.think("추가")
-        loss = brain.learn("insert")
-        print(f"Step {step + 1}: loss = {loss:.4f}")
+# ---------- 학습 ----------
+print("\n📚 300번 학습 시작...")
 
-    print("\n=== 학습 후 ===")
-    brain.show_weights("추가")
-    print(f"\n🤔 생각한 결과: {brain.think('추가')}")
+
+# def to_ids(bot, src_words, tgt_words):
+#     src_ids = torch.tensor([[bot.src_stoi[w] for w in src_words]])
+#     tgt_ids = torch.tensor([[bot.tgt_stoi[w] for w in tgt_words]])
+#     return src_ids, tgt_ids
+
+def to_ids(bot, src_words, tgt_words):
+    src_list = []
+    for w in src_words:
+        src_list.append(bot.src_stoi[w])  # ["버그", "수정"] → [1, 2]
+    src_ids = torch.tensor([src_list])  # [1, 2] → tensor([[1, 2]])
+
+    tgt_list = []
+    for w in tgt_words:
+        tgt_list.append(bot.tgt_stoi[w])
+    tgt_ids = torch.tensor([tgt_list])
+
+    return src_ids, tgt_ids
+
+
+for epoch in range(300):
+    total_loss = 0
+    for src_words, tgt_words in train_data:
+        src_ids, tgt_ids = to_ids(bot, src_words, tgt_words)
+        total_loss += bot.train_step(src_ids, tgt_ids)
+    if epoch % 60 == 0:
+        print(f"  Epoch {epoch:3d} | Loss: {total_loss:.4f}")
+
+# ---------- 학습 후 ----------
+print("\n✅ 학습 후 예측:")
+for src_words, tgt_words in train_data:
+    words, attn_weights, _ = bot.predict(src_words)
+    correct = words == tgt_words
+    print(f"  {src_words} → {words}  {'✅' if correct else '❌'} (정답: {tgt_words})")

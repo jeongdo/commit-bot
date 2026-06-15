@@ -136,7 +136,9 @@ class CommitBot(nn.Module):
         # 이제 emb는 더 이상 순수 단어 의미 벡터가 아니라,
         # 위치 신호가 묻어 있는 벡터가 됩니다.
 
-
+        # 학습하는 한 라인마다 라인마다 기동.
+        # 차원 인덱스($i$)가 커질수록 분모가 폭발적으로 커지기 때문에 뒤쪽 차원으로 갈수록 값이 아주 작아지거나 느리게 변함.
+        
         emb = self.pos_enc(emb)  # # Positional Encoding 위치 정보 더하기, nn.Module.__call__() 그 안에 PositionalEncoding.forward(x) 실행
 
         # tensor([[[0.3, -0.1, 0.8, ...],   ← 버그의 8차원 벡터

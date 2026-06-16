@@ -74,6 +74,7 @@ class PositionalEncoding(nn.Module):
 
     def forward(self, x):
         # x.size(1): 파이프라인을 타고 들어온 현재 문장의 '실제 단어 개수' (예: ['버그', '수정'] 이면 2)
+
         # PyTorch 텐서의 shape 조회 방식
         # x.size(0) → 배치 개수
         # x.size(1) → 시퀀스 길이 (토큰 개수)
@@ -85,6 +86,52 @@ class PositionalEncoding(nn.Module):
         # 컴퓨터 아키텍처 관점에서 새로운 메모리 할당(Allocation) 없이 주소값만 툭 던지는 연산이기 때문에 비용이 사실상 0에 가깝습니다.
         # 딱 현재 문장 길이만큼만 앞에서부터 칼로 잘라서([:seq_len] -> 2칸) 1:1로 더해줌.
         # ----------------------------------------------------------------------
+
+        # 1단계: 입구에서 들어온 순수 의미 텐서 x
+        # 유저 데이터 ['버그', '수정']이 nn.Embedding 테이블을 참조하여 복사해 온 8차원 float 배열입니다. 이 시점의 x는 단어의 순서(위치)는 전혀 모른 채, 오직 단어 자체의 순수한 사전적 의미만 들고 있습니다.
+        #
+        # Shape: [1, 2, 8] (1개 문장, 2개 단어, 8차원 임베딩)
+        #
+        # Python
+        # # x의 실물 메모리 상태 (의미만 있고 위치는 없는 상태)
+        # x = [
+        #   [
+        #     # 0번 단어 ['버그']의 의미 벡터 (8차원)
+        #     [ 0.12, -0.45,  0.88, -0.21,  0.05,  0.63, -0.17,  0.34 ],
+        #
+        #     # 1번 단어 ['수정']의 의미 벡터 (8차원)
+        #     [-0.71,  0.29, -0.04,  0.55, -0.92,  0.18,  0.41, -0.62 ]
+        #   ]
+        # ]
+
+        # 2 단계: 주소값 포인터로 칼같이 잘라낸 위치 지문 self.pe[:, :seq_len, :]여기서 유저님이 주석으로 극찬하신 '비용 0원짜리 슬라이싱 마법'이 작동합니다.
+        # 원래 self.pe는 $100$칸짜리 거대한 도화지([1, 100, 8])이지만, [:seq_len] (즉, :2) 명령을 통해 메모리 할당 없이 앞의 딱 2칸만 돋보기로 비춥니다.
+        # 값은 유저님이 코드 주석에 적어두신 삼각함수($\sin, \cos$) 연산 결과 값을 그대로 가져왔습니다.
+        # Shape: [1, 2, 8] (100칸 중 단 2칸만 바라보는 포인터 뷰)Python# self.pe[:, :2, :] 의 실물 메모리 상태 (순수 위치 정보 좌표)
+        # pe_sliced = [
+        #   [
+        #     # 0번 인덱스 자리 (문장의 맨 첫 번째 칸)의 고유 지문 좌표
+        #     [ 0.00,  1.00,  0.00,  1.00,  0.00,  1.00,  0.00,  1.00 ],
+        #
+        #     # 1번 인덱스 자리 (문장의 두 번째 칸)의 고유 지문 좌표
+        #     [ 0.84,  0.54,  0.09,  0.99,  0.01,  1.00,  0.00,  1.00 ]
+        #   ]
+        # ]
+
+        # 3단계: 대망의 연산 return x + self.pe[:, :seq_len, :]이제 컴퓨터는 두 2차원 표의 행과 열을 맞추어 1:1 원소별 행렬 덧셈(Element-wise Addition)을 수행합니다.
+        # 디버거 창에서 두 벡터의 방 번호가 매칭되어 연산 되는 과정을 직렬로 풀어헤쳐 보겠습니다.1)
+        # 0번 방: '버그' 벡터 + 0번째 위치 좌표$$\text{[버그 의미]} + \text{[0번 자리 좌표]}$$Plaintext
+        #   [ 0.12, -0.45,  0.88, -0.21,  0.05,  0.63, -0.17,  0.34 ]  # 의미
+        # + [ 0.00,  1.00,  0.00,  1.00,  0.00,  1.00,  0.00,  1.00 ]  # 위치
+        # ------------------------------------------------------------------
+        # = [ 0.12,  0.55,  0.88,  0.79,  0.05,  1.63, -0.17,  1.34 ]  # 최종 결과
+
+        # 2) 1번 방: '수정' 벡터 + 1번째 위치 좌표$$\text{[수정 의미]} + \text{[1번 자리 좌표]}$$Plaintext
+        #   [-0.71,  0.29, -0.04,  0.55, -0.92,  0.18,  0.41, -0.62 ]  # 의미
+        # + [ 0.84,  0.54,  0.09,  0.99,  0.01,  1.00,  0.00,  1.00 ]  # 위치
+        # ------------------------------------------------------------------
+        # = [ 0.13,  0.83,  0.05,  1.54, -0.91,  1.18,  0.41,  0.38 ]  # 최종 결과
+
         return x + self.pe[:, :seq_len, :]
 
 
@@ -97,11 +144,62 @@ class CommitBot(nn.Module):
 
         # [토크나이저 사전 정의] 고유 번호(ID)가 마스터 임베딩 테이블의 '행(Row) 인덱스' 주소가 됨
         self.src_vocab = ['<pad>', '버그', '수정', '코드', '리팩토링']
-        self.src_stoi = {w: i for i, w in enumerate(self.src_vocab)}
 
+        # 1. 날것의 빈 딕셔너리(자바의 HashMap)를 먼저 선언합니다.
+        self.src_stoi = {}
+
+        # 2. enumerate()를 쓰면 순서 번호(i)와 단어(w)가 동시에 튀어나옵니다.
+        #    i는 0부터 시작해서 1씩 자동으로 늘어나는 카운터 변수입니다.
+        for i, w in enumerate(self.src_vocab):
+            self.src_stoi[w] = i  # Key(단어)에 Value(숫자 ID)를 맵핑해서 저장!
+
+        # 1바퀴 차 (i=0, w='<pad>'): self.src_stoi['<pad>'] = 0
+        #
+        # 2바퀴 차 (i=1, w='버그'): self.src_stoi['버그'] = 1
+        #
+        # 3바퀴 차 (i=2, w='수정'): self.src_stoi['수정'] = 2
+        #
+        # 4바퀴 차 (i=3, w='코드'): self.src_stoi['코드'] = 3
+        #
+        # 5바퀴 차 (i=4, w='리팩토링'): self.src_stoi['리팩토링'] = 4
+
+        # {
+        #     '<pad>': 0,
+        #     '버그': 1,
+        #     '수정': 2,
+        #     '코드': 3,
+        #     '리팩토링': 4
+        # }
+
+        # [기존 영어 정답 단어장]
         self.tgt_vocab = ['<pad>', 'bug', 'fix', 'code', 'refactor']
-        self.tgt_stoi = {w: i for i, w in enumerate(self.tgt_vocab)}
-        self.tgt_itos = {i: w for i, w in enumerate(self.tgt_vocab)}
+        # self.tgt_stoi = {w: i for i, w in enumerate(self.tgt_vocab)}
+
+        # 1. 자바의 new HashMap<String, Integer>() 처럼 빈 딕셔너리를 선언합니다.
+        self.tgt_stoi = {}
+
+        # 2. 루프를 돌면서 단어(w)와 자동 카운트 번호(i)를 하나씩 매핑합니다.
+        for i, w in enumerate(self.tgt_vocab):
+            self.tgt_stoi[w] = i  # Key(영어 단어) : Value(숫자 ID) 형태로 저장!
+
+        # 1바퀴 차 (i=0, w='<pad>'): self.tgt_stoi['<pad>'] = 0
+        #
+        # 2바퀴 차 (i=1, w='bug'): self.tgt_stoi['bug'] = 1
+        #
+        # 3바퀴 차 (i=2, w='fix'): self.tgt_stoi['fix'] = 2
+        #
+        # 4바퀴 차 (i=3, w='code'): self.tgt_stoi['code'] = 3
+        #
+        # 5바퀴 차 (i=4, w='refactor'): self.tgt_stoi['refactor'] = 4
+
+        # # 최종 완성된 self.tgt_stoi의 실물 맵 구조
+        # {
+        #     '<pad>': 0,
+        #     'bug': 1,
+        #     'fix': 2,
+        #     'code': 3,
+        #     'refactor': 4
+        # }
 
         # ----------------------------------------------------------------------
         # ★ 핵심: 진짜 단어 총개수(Vocab Size)는 바로 여기서 통제함!
@@ -298,11 +396,13 @@ class CommitBot(nn.Module):
 
     # (순전파 단계) : 학생의 찍기 (시험지 풀기)
     def forward(self, src_ids):
-        # READ (Copy-by-Value): 마스터 DB 테이블 행 주소에서 8칸짜리 float 값을 복사해옴
+        # READ (Copy-by-Value): 마스터 데이터베이스 주소록(nn.Embedding(5, 8)) 테이블의 1번 행('버그')과 2번 행('수정')을 가리키는 포인터를 들고 가서,
+        # 그 칸에 들어있는 8칸짜리 float 값들을 복사해옵니다.
         emb = self.embedding(src_ids)
 
         # 100칸짜리 번호표 판에서 현재 문장 길이만큼만 슬라이싱해서 덧셈 집행
         emb = self.pos_enc(emb)
+        # [버그, 수정]을 nn.MultiheadAttention으로 토스
 
         # 동적 연산: 복사해온 로컬 변수들을 Q, K, V로 통과시켜 주변 단어들의 문맥을 융합
         attn_out, attn_weights = self.attention(emb, emb, emb)
@@ -334,15 +434,6 @@ class CommitBot(nn.Module):
 
         return loss.item()
 
-    def predict(self, src_words):
-        self.eval()
-        src_ids = torch.tensor([[self.src_stoi[w] for w in src_words]])
-        with torch.no_grad():
-            logits, attn_weights = self.forward(src_ids)
-            pred_ids = logits.argmax(dim=-1)
-            pred_words = [self.tgt_itos[i.item()] for i in pred_ids[0]]
-        return pred_words, attn_weights, src_words
-
 
 # ---------- 데이터 로드 및 빌드 런타임 ----------
 bot = CommitBot()
@@ -353,38 +444,47 @@ train_data = [
     (['리팩토링', '코드'], ['refactor', 'code']),
 ]
 
-print("🧪 학습 전 예측:")
-for src_words, _ in train_data:
-    words, _, _ = bot.predict(src_words)
-    print(f"  {src_words} → {words}")
-
 print("\n📚 300번 학습 시작...")
 
-
-def to_ids(bot, src_words, tgt_words):
-    src_list = []
-    for w in src_words:
-        src_list.append(bot.src_stoi[w])
-    src_ids = torch.tensor([src_list])
-
-    tgt_list = []
-    for w in tgt_words:
-        tgt_list.append(bot.tgt_stoi[w])
-    tgt_ids = torch.tensor([tgt_list])
-
-    return src_ids, tgt_ids
-
-
+# 300번 전체 학습을 도는 메인 루프 (1층)
 for epoch in range(300):
     total_loss = 0
+
+    # 학습 데이터셋에서 한 문장씩 꺼내는 루프 (2층)
     for src_words, tgt_words in train_data:
-        src_ids, tgt_ids = to_ids(bot, src_words, tgt_words)
-        total_loss += bot.train_step(src_ids, tgt_ids)
+
+        # -------------------------------------------------------------
+        # [단계 1] 입력 단어(['버그', '수정'])를 숫자 ID 배열로 바꾸는 단순 for문
+        # -------------------------------------------------------------
+        src_list = []
+        for w in src_words:
+            src_list.append(bot.src_stoi[w])  # 결과 예시: [1, 2]
+
+        # w = '버그' 일 때: bot.src_stoi['버그']를 조회 -> 마스터 테이블에서 1을 꺼내옴 -> src_list.append(1)
+        # w = '수정' 일 때: bot.src_stoi['수정']를 조회 -> 마스터 테이블에서 2을 꺼내옴 -> src_list.append(2)
+
+        # 방금 만든 1차원 리스트를 대괄호 하나 더 씌워서([[ ]]) 2차원 텐서로 변환
+        src_ids = torch.tensor([src_list])  # 결과: [[1, 2]] (Shape: [1, 2])
+
+        # -------------------------------------------------------------
+        # [단계 2] 정답 단어(['bug', 'fix'])를 숫자 ID 배열로 바꾸는 단순 for문
+        # -------------------------------------------------------------
+        tgt_list = []
+        for w in tgt_words:
+            tgt_list.append(bot.tgt_stoi[w])  # 결과 예시: [1, 2]
+
+        # w = 'bug' 일 때: bot.tgt_stoi['bug']를 조회 -> 테이블에서 1을 꺼내옴 -> tgt_list.append(1)
+        # w = 'fix' 일 때: bot.tgt_stoi['fix']를 조회 -> 테이블에서 2를 꺼내옴 -> tgt_list.append(2)
+
+        # 역시 대괄호 하나 더 씌워서 2차원 텐서로 변환
+        tgt_ids = torch.tensor([tgt_list])  # 결과: [[1, 2]] (Shape: [1, 2])
+
+        # -------------------------------------------------------------
+        # [단계 3] 조립된 데이터를 들고 진짜 엔진룸(train_step)으로 입장
+        # -------------------------------------------------------------
+        loss_value = bot.train_step(src_ids, tgt_ids)
+        total_loss += loss_value
+
+    # 60에포크마다 화면에 누적 오차 출력
     if epoch % 60 == 0:
         print(f"  Epoch {epoch:3d} | Loss: {total_loss:.4f}")
-
-print("\n✅ 학습 후 예측:")
-for src_words, tgt_words in train_data:
-    words, attn_weights, _ = bot.predict(src_words)
-    correct = words == tgt_words
-    print(f"  {src_words} → {words}  {'✅' if correct else '❌'} (정답: {tgt_words})")

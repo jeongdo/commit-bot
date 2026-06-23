@@ -4,6 +4,46 @@ import torch.optim as optim
 import math
 
 
+# 임베딩 (Embedding)	                self.embedding = nn.Embedding(len(self.src_vocab), 8, padding_idx=0) → 단어 → 8차원 밀집 벡터
+
+# Positional Encoding	            self.pos_enc = PositionalEncoding(d_model=8, max_len=100) → sin/cos 주파수로 위치 신호를 벡터에 더함
+
+# Multi-Head Attention	            self.attention = nn.MultiheadAttention(embed_dim=8, num_heads=2, batch_first=True) → Q, K, V 생성, Head 분할, 병렬 Attention, Concat
+
+# 선형 분류기 (Linear Layer)	        self.fc = nn.Linear(8, len(self.tgt_vocab)) → 8차원 문맥 벡터를 단어 점수(Logits)로 변환
+
+# Loss 계산 (CrossEntropyLoss)	    self.criterion = nn.CrossEntropyLoss(ignore_index=0) → 패딩 무시, 정답과 비교
+
+# Optimizer (Adam)	                self.optimizer = optim.Adam(self.parameters(), lr=0.05) → 가중치 업데이트
+
+# Train Step (Forward/Backward)	    train_step → logits 뽑고, loss 계산, zero_grad, backward, step
+
+# 데이터 → 텐서 변환	                src_ids = torch.tensor([src_list]) → 단어 인덱스로 변환
+
+# 배치/시퀀스/차원 구조	            [1, 2, 5] 같은 Shape에 대한 이해
+
+# [1단계: 시작] 태초의 입력
+    # 입력 단어들이 nn.Embedding 사전을 통해 8차원 입력 벡터로 변환되어 출발합니다.
+
+# [2단계: 순방향 전진] N층의 인코더/디코더 블록 통과 (Forward Pass)
+    # 1층: Q, K, V를 섞어 1차 문맥 칵테일 완성 -> Add & Norm -> FFN
+    # 2층: 1층의 결과물을 받아 독립적인 가중치로 2차 문맥 칵테일 완성
+    # ... 6층(또는 12층)까지 이 과정을 반복하며 고도로 추상화된 '최종 문맥 텐서'를 뽑아냅니다.
+
+# [3단계: 채점 준비] 대망의 점수판 (Logits)
+    # N층을 모두 무사히 탈출한 최종 텐서가 출력 가중치 기계(self.fc, [8 × 10,000])에 들어갑니다.
+    # 여기서 단어장의 모든 단어(10,000개)에 대한 점수가 쫙 펼쳐집니다.
+
+# [4단계: 오차 계산 및 역전파] (Loss & Backward Pass)
+    # 펼쳐진 점수판과 실제 정답지를 대조하여 오차(Loss)를 계산합니다.
+    # loss.backward()가 호출되면, 오차의 미분값이 폭포수처럼 맨 꼭대기 점수판에서부터 맨 밑바닥 입력층까지 거꾸로 쏟아져 내려갑니다.
+
+# [5단계: 최종 리펙토링] 파라미터 일제히 업데이트 (Optimizer Step)
+    # 폭포수를 맞은 모든 가중치 기계들이 일제히 오차를 줄이는 방향으로 내부 숫자를 미세 조정합니다.
+        # 맨 위의 self.fc (출력 점수판 나사 조이기)
+        # 중간층들의 $W_q, W_k, W_v$ 및 FFN (어텐션 믹서기 나사 조이기)
+        # 맨 밑바닥의 nn.Embedding (개발자님이 짚으신 '입력 벡터 자체'의 8차원 좌표 이동)
+
 class PositionalEncoding(nn.Module):
     def __init__(self, d_model, max_len=100):
         super().__init__()
@@ -502,7 +542,25 @@ class CommitBot(nn.Module):
         # Key0 생성 : [5×8]×[8×4] =[5×4]
         # Q = emb @ W_Q → (5, 4)
         # K = emb @ W_K → (5, 4)
-        # Q @ K^T → (5, 4) × (4, 5) = (5, 5) ← 바로 이 연산!
+        # Q @ K^T → (5, 4) × (4, 5) = (5, 5) ← 바로 이 연산! (본인 포함 모든 단어들과의 상관관계 형성)
+
+        # 1. 차원 계산 팩트 체크
+        # 문장 길이가 5에서 10,000으로 늘어났을 때의 행렬 크기 변화입니다.
+        # Q 생성: [10000 × 8] @ [8 × 4] = [10000 × 4]
+        # K 생성: [10000 × 8] @ [8 × 4] = [10000 × 4]
+        # 대망의 점수판 ($Q \times K^T$): [10000 × 4] @ [4 × 10000] = [10000 × 10000]
+        #
+        # 결과적으로 가로 10,000칸, 세로 10,000칸짜리 거대한 점수판이 구워집니다.
+        # 모든 단어가 본인을 포함한 다른 9,999개의 단어와 1:1로 전부 매칭 스코어를 계산하는 것입니다.
+
+        # [혼동 주의]
+        # Sequence Length (문장 길이 = 10,000): 방금 우리가 계산한 10000 * 10000 점수판입니다.
+        # (결국 Q, K는 학습 순간의 모든 상관관계 표인  10000 * 10000 점수판 만들기 위함.) : '어텐션 스코어 맵(Attention Score Map)'
+        # 한 번에 입력된 '책 한 권' 분량의 토큰 개수입니다.
+
+        # Vocab Size (단어장 크기 = 80,000): 아까 우리가 맨 마지막 출력층(self.fc)에서 봤던 [8 × 80000]짜리 정답지 과녁판입니다.
+        # 모델이 알고 있는 전체 언어 사전의 크기입니다
+
         # Softmax → 가중치를 확률로 변환
         # 가중치 @ V → 최종 문맥 벡터 생성
 
@@ -542,7 +600,7 @@ class CommitBot(nn.Module):
 
         # 트랜스포머 엔진의 전체 실행 파이프라인
 
-        # 1. 순방향 전진 (Forward Pass)Q, K로 점수판을 짜고 V를 섞어서 '문맥 칵테일 벡터'를 만듭니다.
+        # 1. 순방향 전진 (Forward Pass)Q, K로 점수판을 짜고 V를 섞어서 '문맥 칵테일 벡터(학적으로 여러 물질을 섞는 것을 벡터의 선형 결합(Linear Combination))'를 만듭니다.
         # "다음 층이 있으면?" -> 이 칵테일 벡터를 그대로 다음 층(Layer 2)의 새로운 입력으로 넘겨서 이 짓을 또 반복하며 더 깊은 문맥을 파악합니다.
 
         # 2. 최종 관문과 채점 (Loss Calculation)

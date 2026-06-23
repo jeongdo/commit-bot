@@ -7,197 +7,6 @@
     <list default="true" id="01e5cfc4-bada-4f6a-ac08-355809b6208a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/step/08_positional_encoding_제미나이_정리본.py" beforeDir="false" afterPath="$PROJECT_DIR$/step/08_positional_encoding_제미나이_정리본.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/py_ad_1_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/py_ad_1_2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/py_ad_1_3.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/py_ad_1_3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/py_ad_1_4.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/py_ad_1_4.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/py_ad_1_5.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/py_ad_1_5.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/py_ad_2_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/py_ad_2_1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/py_ad_2_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/py_ad_2_2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/py_ad_2_3.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/py_ad_2_3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/py_ad_2_4.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/py_ad_2_4.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/py_ad_2_5.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/py_ad_2_5.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/py_ad_3_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/py_ad_3_1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/py_ad_3_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/py_ad_3_2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/py_ad_3_3.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/py_ad_3_3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/py_ad_3_4.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/py_ad_3_4.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/py_ad_3_5.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/py_ad_3_5.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/py_ad_4_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/py_ad_4_1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/py_ad_4_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/py_ad_4_2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/py_ad_4_3.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/py_ad_4_3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/py_ad_4_4.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/py_ad_4_4.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/py_ad_4_5.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/py_ad_4_5.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_001_print 명령어.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_001_print 명령어.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_002_변수와 is_integer(), bin(), bit_length() 함수.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_002_변수와 is_integer(), bin(), bit_length() 함수.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_003_간단한 함수 만들기.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_003_간단한 함수 만들기.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_004_함수의 디폴트값과 main 함수 그리고 print 메소드의 end, step.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_004_함수의 디폴트값과 main 함수 그리고 print 메소드의 end, step.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_005_input 함수로 입력받기와 eval 함수의 예시.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_005_input 함수로 입력받기와 eval 함수의 예시.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_006_for_in_처리방식 확인.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_006_for_in_처리방식 확인.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_007_range 함수의 예시.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_007_range 함수의 예시.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_008_float형 데이터.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_008_float형 데이터.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_009_type 함수를 통해서 자료형 클래스 확인.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_009_type 함수를 통해서 자료형 클래스 확인.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_010_기본적인 산술연산자와 연산잔 우선순위.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_010_기본적인 산술연산자와 연산잔 우선순위.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_011_int, float, eval 로 캐스팅하기.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_011_int, float, eval 로 캐스팅하기.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_012_list 자료형과 list 인덱스.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_012_list 자료형과 list 인덱스.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_013_list 자료형 슬라이싱.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_013_list 자료형 슬라이싱.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_014_string 자료형과 len().py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_014_string 자료형과 len().py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_015_list 객체의 메소드.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_015_list 객체의 메소드.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_016_string 객체의 메소드.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_016_string 객체의 메소드.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_017_bool 자료형과 bool 함수.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_017_bool 자료형과 bool 함수.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_018_if_statement_01.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_018_if_statement_01.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_019_if_statement_02.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_019_if_statement_02.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_020_if_statement_03_in_and_not_in.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_020_if_statement_03_in_and_not_in.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_021_비교문과 isdigit(), isalpha(), isalnum().py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_021_비교문과 isdigit(), isalpha(), isalnum().py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_022_이중_for.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_022_이중_for.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_023_tuple.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_023_tuple.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_024_range.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_024_range.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_025_객체의 함수 매개변수와 참조 관계.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_025_객체의 함수 매개변수와 참조 관계.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_026_module_모듈의 방법과 다양한 예시들.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_026_module_모듈의 방법과 다양한 예시들.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_027_module_builtin_function.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_027_module_builtin_function.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_028_dictionary.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_028_dictionary.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_029_global_variable_declare.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_029_global_variable_declare.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_030_class_case_01_클래스의 초기 모습과 객체변수는 자동적으로 만들어진다..py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_030_class_case_01_클래스의 초기 모습과 객체변수는 자동적으로 만들어진다..py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_031_class_case_02_생성자의 개념.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_031_class_case_02_생성자의 개념.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_032_exception_case_01_예외의 처리가능과 불가능.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_032_exception_case_01_예외의 처리가능과 불가능.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_033_exception_case_02_예외의 처리예시.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_033_exception_case_02_예외의 처리예시.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_034_exception_case_03_두개 이상의 예외처리.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_034_exception_case_03_두개 이상의 예외처리.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_035_exception_case_04_finally 키워드를 사용.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_035_exception_case_04_finally 키워드를 사용.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_036_exception_case_05_except 키워드로 모든예외를 처리.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_036_exception_case_05_except 키워드로 모든예외를 처리.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_037_garbage_collection.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_037_garbage_collection.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_038_immutable_and_mutable 객체의 처리방식이 다른 부분.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_038_immutable_and_mutable 객체의 처리방식이 다른 부분.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_039_두 객체의 비교와 복사.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_039_두 객체의 비교와 복사.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_040_sallow_copy.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_040_sallow_copy.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_041_deep_copy.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_041_deep_copy.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_042_list_comprehension_리스트를 만드는 여러 방법.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_042_list_comprehension_리스트를 만드는 여러 방법.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_043_Iterable 객체와 Iterator 객체.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_043_Iterable 객체와 Iterator 객체.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_044_객체처럼 다뤄지는 함수.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_044_객체처럼 다뤄지는 함수.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_045_람다.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_045_람다.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_046_map.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_046_map.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_047_슬라이싱 연산의 예시와 map_and_lamda.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_047_슬라이싱 연산의 예시와 map_and_lamda.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_048_filter.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_048_filter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_049_map과_filter를 대체하는 리스트 컴프리핸션.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_049_map과_filter를 대체하는 리스트 컴프리핸션.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_050_제너레이터_함수 정의.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_050_제너레이터_함수 정의.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_051_제너레이터_함수가 가지는 장점.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_051_제너레이터_함수가 가지는 장점.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_052_제너레이터_표현식.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_052_제너레이터_표현식.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_053_튜플의 패킹(묶기)과 언패킹(풀기).py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_053_튜플의 패킹(묶기)과 언패킹(풀기).py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_054_함수호출 및 반환과정에서 튜플의 패킹과 언패킹.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_054_함수호출 및 반환과정에서 튜플의 패킹과 언패킹.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_055_네임드_튜플.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_055_네임드_튜플.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_056_dict의 생성과 zip 함수.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_056_dict의 생성과 zip 함수.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_057_dict의 key와 value, items 뷰_객체.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_057_dict의 key와 value, items 뷰_객체.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_058_dict_컴프리헨션.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_058_dict_컴프리헨션.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_059_함수호출과 생성시의 리스트, 튜플, dic 에스크립트 관계.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_059_함수호출과 생성시의 리스트, 튜플, dic 에스크립트 관계.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_060_dict_&amp;_setdefault.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_060_dict_&amp;_setdefault.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_061_dict_&amp;_defaultdict.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_061_dict_&amp;_defaultdict.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_062_dict_&amp;_OrderedDict.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_062_dict_&amp;_OrderedDict.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_063_자료형 분류와 set &amp; frozenset.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_063_자료형 분류와 set &amp; frozenset.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_064_기본적인 리스트 정렬과 sorted 함수.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_064_기본적인 리스트 정렬과 sorted 함수.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_065_문자열 상호간 우선순위 비교와 enumerate.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_065_문자열 상호간 우선순위 비교와 enumerate.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_066_표현식을 기반으로 하는 문자열 조합.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_066_표현식을 기반으로 하는 문자열 조합.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_067_메소드 기반으로 하는 문자열 조합.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_067_메소드 기반으로 하는 문자열 조합.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_068_클래스와 객체의 본질.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_068_클래스와 객체의 본질.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_069_객체에 변수와 메서드 붙였다 떼었다 해보기.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_069_객체에 변수와 메서드 붙였다 떼었다 해보기.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_070_클래스에 변수 추가하기.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_070_클래스에 변수 추가하기.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_071_파이썬에서는 클래스도 객체.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_071_파이썬에서는 클래스도 객체.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_072_파이썬의 상속_기본예시.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_072_파이썬의 상속_기본예시.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_073_파이썬의 상속_메소드_오버라이딩과 super.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_073_파이썬의 상속_메소드_오버라이딩과 super.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_074_파이썬의 상속_init_메소드_오버라이딩.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_074_파이썬의 상속_init_메소드_오버라이딩.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_075_isinstacne 함수와 object 클래스.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_075_isinstacne 함수와 object 클래스.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_076_스페셜_메소드의 정의.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_076_스페셜_메소드의 정의.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_077_스페셜_메소드_직접_정의하기.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_077_스페셜_메소드_직접_정의하기.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_078_스페셜_메소드_iterable 객체가 되게끔 하기 - iter 스페셜메소드 정의와 iterable 객체와 iterator 객체 정의 다시 확인.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_078_스페셜_메소드_iterable 객체가 되게끔 하기 - iter 스페셜메소드 정의와 iterable 객체와 iterator 객체 정의 다시 확인.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_079_스페셜_메소드_iterator 객체가 되게끔 하기 - next 스페셜메소드 정의.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_079_스페셜_메소드_iterator 객체가 되게끔 하기 - next 스페셜메소드 정의.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_080_스페셜_메소드_iterator 객체이자_iterable 객체가 되게끔 하기.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_080_스페셜_메소드_iterator 객체이자_iterable 객체가 되게끔 하기.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_081_연산자_오버로딩_+를 add로 오버로딩, add_sub_call.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_081_연산자_오버로딩_+를 add로 오버로딩, add_sub_call.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_082_연산자_오버로딩_문자열의 add_연산자 오버로딩_분석.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_082_연산자_오버로딩_문자열의 add_연산자 오버로딩_분석.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_083_연산자_오버로딩_오브젝트의 str 메소드 오버로딩.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_083_연산자_오버로딩_오브젝트의 str 메소드 오버로딩.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_084_연산자_오버로딩_=+와 같은 in_place.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_084_연산자_오버로딩_=+와 같은 in_place.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_085_정보은닉 (1) - 직접접근.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_085_정보은닉 (1) - 직접접근.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_086_정보은닉 (2) - 메소드의 효용성 확인.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_086_정보은닉 (2) - 메소드의 효용성 확인.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_087_정보은닉 (3) - 직접접근의 방지.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_087_정보은닉 (3) - 직접접근의 방지.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_088_정보은닉 (4) - 직접접근 방지의 개선점.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_088_정보은닉 (4) - 직접접근 방지의 개선점.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_089 __dict__.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_089 __dict__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_090 __slots__의 효과.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_090 __slots__의 효과.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_091 프로퍼티 (1) - property 객체 사용 전.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_091 프로퍼티 (1) - property 객체 사용 전.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_092 프로퍼티 (2) - property 객체 사용 후.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_092 프로퍼티 (2) - property 객체 사용 후.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_093 프로퍼티 (3) - property 객체 메서드 살펴보기.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_093 프로퍼티 (3) - property 객체 메서드 살펴보기.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_094 프로퍼티 (4) - property 객체 메서드 이름을 동일하게 설정하여 재활용하는 경우.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_094 프로퍼티 (4) - property 객체 메서드 이름을 동일하게 설정하여 재활용하는 경우.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_095 프로퍼티 (5) - property 객체와 데코레이션 맛보기.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_095 프로퍼티 (5) - property 객체와 데코레이션 맛보기.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_096_네스티드 함수의 개념.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_096_네스티드 함수의 개념.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_097_클로저의 개념.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_097_클로저의 개념.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_098_데코레이터 (1) 기본개념.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_098_데코레이터 (1) 기본개념.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_099_데코레이터 (2) 전달인자가 있는 함수 기반의 데코레이터.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_099_데코레이터 (2) 전달인자가 있는 함수 기반의 데코레이터.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_100_데코레이터 (3) 데코레이터 키워드 @ 사용하기.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_100_데코레이터 (3) 데코레이터 키워드 @ 사용하기.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_101_데코레이터 (4) 함수 두 번 이상 통과시키기.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_101_데코레이터 (4) 함수 두 번 이상 통과시키기.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_102_클래스 메소드와 static 메소드 (1) - 인스턴스 변수와 클래스 변수.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_102_클래스 메소드와 static 메소드 (1) - 인스턴스 변수와 클래스 변수.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_103_클래스 메소드와 static 메소드 (2) - 클래스 변수의 유용성 예제.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_103_클래스 메소드와 static 메소드 (2) - 클래스 변수의 유용성 예제.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_104_클래스 메소드와 static 메소드 (3) - staticmethod로 static 메소드 만들기 (1).py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_104_클래스 메소드와 static 메소드 (3) - staticmethod로 static 메소드 만들기 (1).py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_105_클래스 메소드와 static 메소드 (4) - staticmethod로 static 메소드 만들기 (2).py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_105_클래스 메소드와 static 메소드 (4) - staticmethod로 static 메소드 만들기 (2).py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_106_클래스 메소드와 static 메소드 (5) - classmethod로 class 메소드 만들기 (1).py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_106_클래스 메소드와 static 메소드 (5) - classmethod로 class 메소드 만들기 (1).py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_107_클래스 메소드와 static 메소드 (6) - classmethod로 class 메소드 만들기 (2).py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_107_클래스 메소드와 static 메소드 (6) - classmethod로 class 메소드 만들기 (2).py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_108_클래스 메소드와 static 메소드 (7) - classmethod로 class 메소드 만들기 (3).py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_108_클래스 메소드와 static 메소드 (7) - classmethod로 class 메소드 만들기 (3).py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_109_클래스 메소드와 static 메소드 (8) - static 메소드보다 class 메소드가 더 어울리는 경우.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_109_클래스 메소드와 static 메소드 (8) - static 메소드보다 class 메소드가 더 어울리는 경우.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_110 ___name__과 __main__ (1) -  __name__ 값 확인하기.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_110 ___name__과 __main__ (1) -  __name__ 값 확인하기.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_111 ___name__과 __main__ (2) - 임포트 후 문제점 확인.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_111 ___name__과 __main__ (2) - 임포트 후 문제점 확인.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_112 ___name__과 __main__ (3).py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_112 ___name__과 __main__ (3).py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_113 ___name__과 __main__ (4) - 임포트한 main 함수가 실행되지 않게 하기.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_113 ___name__과 __main__ (4) - 임포트한 main 함수가 실행되지 않게 하기.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_114 id와 hex로 메모리 위치 확인.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_114 id와 hex로 메모리 위치 확인.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_115 제곱승 계산하기와 max 최대값 구하기.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_115 제곱승 계산하기와 max 최대값 구하기.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_116 문자열에 따옴표 붙히기.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_116 문자열에 따옴표 붙히기.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_117 math.pi로 원주율 구하기와 문자열의 split 함수 예제.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_117 math.pi로 원주율 구하기와 문자열의 split 함수 예제.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_118 파이썬 스크립트 파일이름 및 파일 경로 확인.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_118 파이썬 스크립트 파일이름 및 파일 경로 확인.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_119 파이썬 스크립트 현재 파일의 디렉토리(폴더) 경로 확인.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_119 파이썬 스크립트 현재 파일의 디렉토리(폴더) 경로 확인.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_120 현재 디렉토리에 있는 파일 리스트 확인.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_120 현재 디렉토리에 있는 파일 리스트 확인.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_121 절대경로 및 상대 경로 구하기.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_121 절대경로 및 상대 경로 구하기.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_122 파일 작업 (1) - 파일 열기 및 읽기관련 함수 readlines, readline, strip, read, with.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_122 파일 작업 (1) - 파일 열기 및 읽기관련 함수 readlines, readline, strip, read, with.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_123 파일 작업 (2) - 파일 쓰기 writelines, write, 모드결합과 인코딩.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_123 파일 작업 (2) - 파일 쓰기 writelines, write, 모드결합과 인코딩.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_124 파일 작업 (3) - 파일 내용 추가 append.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_124 파일 작업 (3) - 파일 내용 추가 append.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_125 파일 작업 (4) - file read(n)과 seek().py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_125 파일 작업 (4) - file read(n)과 seek().py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_126 임포트 하지 않아도 사용할 수 있는 내장함수 확인 __builtins__.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_126 임포트 하지 않아도 사용할 수 있는 내장함수 확인 __builtins__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_127 __del__ 소멸함수, del() 호출.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_127 __del__ 소멸함수, del() 호출.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_128 구구단 구현 포함한 for loop 예제.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_128 구구단 구현 포함한 for loop 예제.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_129 dictionary to list.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_129 dictionary to list.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_130 리스트 오브 리스트의 평균값 계산.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_130 리스트 오브 리스트의 평균값 계산.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_131 리스토 오브 딕셔너리의 평균값 계산.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_131 리스토 오브 딕셔너리의 평균값 계산.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_132 리스트 오브 파일 리소스의 평균값 계산.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_132 리스트 오브 파일 리소스의 평균값 계산.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_133 샘플 프로젝트 - 파일기반 전화번호부.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_133 샘플 프로젝트 - 파일기반 전화번호부.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_134 sqlite (0) - python에서 sql 사용예제.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_134 sqlite (0) - python에서 sql 사용예제.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_135 sqlite (1) - DDL &amp; DML.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_135 sqlite (1) - DDL &amp; DML.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_136 sqlite (2) - CRUD 기본기능 확인.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_136 sqlite (2) - CRUD 기본기능 확인.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_137 sqlite (3) - Query 외부 함수로 분리.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_137 sqlite (3) - Query 외부 함수로 분리.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_138 requests와 BeautifulSoup으로 웹 크롤러 만들기.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_138 requests와 BeautifulSoup으로 웹 크롤러 만들기.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_139 같은 이름의 함수는 파라미터에 상관없이 마지막으로 선언된 함수가 실행된다.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_139 같은 이름의 함수는 파라미터에 상관없이 마지막으로 선언된 함수가 실행된다.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_140 matplotlib와 pandas를 이용한 chart 표출.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_140 matplotlib와 pandas를 이용한 chart 표출.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_141 pendulum 타임존 테스트.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_141 pendulum 타임존 테스트.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_142 cmd에서 python 버전 확인과 exit().py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_142 cmd에서 python 버전 확인과 exit().py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_143 cmd에서 python 가상환경 venv 만들기 및 라이브러리 가져오기.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_143 cmd에서 python 가상환경 venv 만들기 및 라이브러리 가져오기.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_144 클래스 및 메소드 심화 (1) - repr과 str.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_144 클래스 및 메소드 심화 (1) - repr과 str.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_145 클래스 및 메소드 심화 (2) - 클래스 변수.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_145 클래스 및 메소드 심화 (2) - 클래스 변수.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_146 클래스 및 메소드 심화 (3) - classmethod와 staticmethod.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_146 클래스 및 메소드 심화 (3) - classmethod와 staticmethod.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_147 dictionary에서 key로 value 얻기.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_147 dictionary에서 key로 value 얻기.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_148 스페셜 메소드 심화 (1).py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_148 스페셜 메소드 심화 (1).py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_149 스페셜 메소드 심화 (2).py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_149 스페셜 메소드 심화 (2).py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_150 max 함수.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_150 max 함수.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_151 스페셜 메소드 심화 (3).py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_151 스페셜 메소드 심화 (3).py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_152 시퀀스 심화 (1).py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_152 시퀀스 심화 (1).py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_153 시퀀스 심화 (2).py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_153 시퀀스 심화 (2).py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_154 시퀀스 심화 (3).py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_154 시퀀스 심화 (3).py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_155 시퀀스 심화 (4).py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_155 시퀀스 심화 (4).py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_156 일급함수 심화 (1).py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_156 일급함수 심화 (1).py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_157 일급함수 심화 (2).py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_157 일급함수 심화 (2).py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_158 일급함수 심화 (3) - 클로저.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_158 일급함수 심화 (3) - 클로저.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_159 일급함수 심화 (4) - 데코레이터.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_159 일급함수 심화 (4) - 데코레이터.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_160 병행성 (1).py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_160 병행성 (1).py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_161 병행성 (2).py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_161 병행성 (2).py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_162 코루틴 (1).py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_162 코루틴 (1).py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_163 코루틴 (2).py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_163 코루틴 (2).py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_164 코루틴 (3).py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_164 코루틴 (3).py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_165 코루틴 (4).py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_165 코루틴 (4).py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_166 Futures (1).py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_166 Futures (1).py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_167 Futures (2) - 시간제어 가능한 wait 결과 출력.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_167 Futures (2) - 시간제어 가능한 wait 결과 출력.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_168 Futures (3) - 먼저 끝나는 거 우선 as_completed 결과 출력.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_168 Futures (3) - 먼저 끝나는 거 우선 as_completed 결과 출력.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_169 asyncio와 웹 스크랩핑 (1).py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_169 asyncio와 웹 스크랩핑 (1).py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_170 asyncio와 웹 스크랩핑 (2).py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_170 asyncio와 웹 스크랩핑 (2).py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_171 현재실행 운영체제 확인.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_171 현재실행 운영체제 확인.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/backup/step_172 전역변수와 지역변수 비교.py" beforeDir="false" afterPath="$PROJECT_DIR$/study/old/step_172 전역변수와 지역변수 비교.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -224,23 +33,23 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0000044124152523" />
-      <entry key="MS500" value="1.084905392784309" />
-      <entry key="S2" value="1.53980116666569" />
-      <entry key="S5" value="1.7814362027239379" />
-      <entry key="S10" value="1.8839888023747462" />
-      <entry key="S30" value="1.9597296701132627" />
-      <entry key="S60" value="1.9796579727227774" />
-      <entry key="M2" value="1.9902661069930088" />
-      <entry key="M5" value="2.1452581907161674" />
-      <entry key="M10" value="3.020020846190734" />
-      <entry key="M15" value="3.983862761113514" />
-      <entry key="M30" value="6.533891180332958" />
-      <entry key="H1" value="12.522876419055581" />
-      <entry key="H2" value="30.214283504777235" />
-      <entry key="H4" value="68.07055907742188" />
-      <entry key="D1" value="196.15343162559364" />
-      <entry key="W1" value="249.29050100034982" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0000000626625807" />
+      <entry key="S2" value="1.0274787270600987" />
+      <entry key="S5" value="1.443819265077734" />
+      <entry key="S10" value="2.1471627786532848" />
+      <entry key="S30" value="3.1773750546268484" />
+      <entry key="S60" value="3.6276354129849966" />
+      <entry key="M2" value="4.152121897167661" />
+      <entry key="M5" value="4.947431974873528" />
+      <entry key="M10" value="5.5818584113904945" />
+      <entry key="M15" value="6.207286116269522" />
+      <entry key="M30" value="8.382596267605187" />
+      <entry key="H1" value="13.795083054196235" />
+      <entry key="H2" value="29.955046749935736" />
+      <entry key="H4" value="66.65537469159167" />
+      <entry key="D1" value="198.4294162411133" />
+      <entry key="W1" value="254.60901925659982" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
@@ -250,35 +59,35 @@
       <entry key="S10" value="0.0" />
       <entry key="S30" value="0.0" />
       <entry key="S60" value="0.0" />
-      <entry key="M2" value="5.5275157229831185E-167" />
-      <entry key="M5" value="4.760178449046589E-67" />
-      <entry key="M10" value="9.757206318154023E-34" />
-      <entry key="M15" value="1.2394435177294696E-22" />
-      <entry key="M30" value="1.5744477148226958E-11" />
-      <entry key="H1" value="5.611501560113176E-6" />
-      <entry key="H2" value="0.0033500750313896687" />
-      <entry key="H4" value="0.08185444399933027" />
-      <entry key="D1" value="1.174082748080821" />
-      <entry key="W1" value="1.8534576561637761" />
+      <entry key="M2" value="5.713599026034123E-173" />
+      <entry key="M5" value="1.9203267988628802E-69" />
+      <entry key="M10" value="6.197284627356746E-35" />
+      <entry key="M15" value="1.973077042498035E-23" />
+      <entry key="M30" value="6.281840343850932E-12" />
+      <entry key="H1" value="3.54452801898617E-6" />
+      <entry key="H2" value="0.0026625280810920124" />
+      <entry key="H4" value="0.07297298208397354" />
+      <entry key="D1" value="1.1518219358032005" />
+      <entry key="W1" value="1.8483961088226484" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.9075231596685236" />
-      <entry key="MS500" value="1.0640524305568027" />
-      <entry key="S2" value="1.532348100677267" />
-      <entry key="S5" value="1.7779821227207582" />
-      <entry key="S10" value="1.8821614550154129" />
-      <entry key="S30" value="1.9590958614495169" />
-      <entry key="S60" value="1.9793378199308707" />
-      <entry key="M2" value="1.9901051487450379" />
-      <entry key="M5" value="2.1451865321843395" />
-      <entry key="M10" value="3.019963840787644" />
-      <entry key="M15" value="3.9838078574873226" />
-      <entry key="M30" value="6.533834851446726" />
-      <entry key="H1" value="12.522816390448975" />
-      <entry key="H2" value="30.217535704080973" />
-      <entry key="H4" value="68.15227251474971" />
-      <entry key="D1" value="197.32742125072414" />
-      <entry key="W1" value="251.14394073204372" />
+      <entry key="MS100" value="0.8950250709279725" />
+      <entry key="MS500" value="0.9780635348253277" />
+      <entry key="S2" value="1.0218090991700326" />
+      <entry key="S5" value="1.4407015500576308" />
+      <entry key="S10" value="2.144888467769305" />
+      <entry key="S30" value="3.176267697913945" />
+      <entry key="S60" value="3.627005561847885" />
+      <entry key="M2" value="4.151762839457089" />
+      <entry key="M5" value="4.947261653095439" />
+      <entry key="M10" value="5.581762204219874" />
+      <entry key="M15" value="6.207213604922776" />
+      <entry key="M30" value="8.38254077501547" />
+      <entry key="H1" value="13.7950283223128" />
+      <entry key="H2" value="29.957623003002233" />
+      <entry key="H4" value="66.72821770311883" />
+      <entry key="D1" value="199.5811461061598" />
+      <entry key="W1" value="256.4573973879129" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -510,7 +319,7 @@
       <workItem from="1781611603682" duration="11127000" />
       <workItem from="1782124217449" duration="1517000" />
       <workItem from="1782127558343" duration="11955000" />
-      <workItem from="1782213810165" duration="6693000" />
+      <workItem from="1782213810165" duration="9369000" />
     </task>
     <servers />
   </component>

@@ -35,25 +35,23 @@ class CommitBot(nn.Module):
         self.tgt_stoi = {w: i for i, w in enumerate(self.tgt_vocab)}
 
         # ----------------------------------------------------------------------
-        # [1. 인코더 부품] (기존 동일)
+        # [1. 인코더] (기존 동일)
         # 한국어(입력)를 8차원 벡터로 바꾸는 임베딩과 셀프 어텐션
         # ----------------------------------------------------------------------
         self.embedding = nn.Embedding(len(self.src_vocab), 8, padding_idx=0)
-        self.encoder_attention = nn.MultiheadAttention(embed_dim=8, num_heads=2, batch_first=True)
+        self.attention = nn.MultiheadAttention(embed_dim=8, num_heads=2, batch_first=True)
 
         # ----------------------------------------------------------------------
-        # [2. 디코더 부품] (✨ 신규 추가)
+        # [2. 디코더 부품] (✨ 신규)
         # 영어(정답)를 다루기 위해 디코더 전용 임베딩과 어텐션 기계가 독립적으로 필요합니다.
         # ----------------------------------------------------------------------
-
         # 1) 디코더 전용 임베딩: 영어 단어장 크기(5)에 맞춰 8차원 공간을 새로 팝니다.
         self.tgt_embedding = nn.Embedding(len(self.tgt_vocab), 8, padding_idx=0)
-
         # 2) 디코더 셀프 어텐션: 번역된 영어 단어들끼리 문법적 호응(예: bug 다음에 fix가 오네?)을 파악하는 기계
         self.decoder_attention = nn.MultiheadAttention(embed_dim=8, num_heads=2, batch_first=True)
 
         # ----------------------------------------------------------------------
-        # [3. 인코더-디코더 결합 (Cross-Attention)] (✨ 대망의 브릿지 추가)
+        # [3. 인코더-디코더 결합 (Cross-Attention)]
         # 한국어 원문(인코더)과 현재까지 번역된 영어(디코더)를 융합하는 최종 믹서기입니다.
         # ----------------------------------------------------------------------
         self.cross_attention = nn.MultiheadAttention(embed_dim=8, num_heads=2, batch_first=True)
@@ -76,7 +74,7 @@ class CommitBot(nn.Module):
 
         # 2. 인코더 셀프 어텐션: [버그, 수정] 끼리 서로 바라보며 '한국어 문맥' 완성
         # Q, K, V 모두 src_emb(한국어)가 들어감
-        enc_out, _ = self.encoder_attention(src_emb, src_emb, src_emb)
+        enc_out, _ = self.attention(src_emb, src_emb, src_emb)
         # 결과물 enc_out Shape: [1, 2, 8] (배치 1, 단어 2개, 차원 8) -> 이게 한국어 요약본!
 
         # ==========================================

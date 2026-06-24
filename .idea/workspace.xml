@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="01e5cfc4-bada-4f6a-ac08-355809b6208a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/step/08_positional_encoding_제미나이_정리본.py" beforeDir="false" afterPath="$PROJECT_DIR$/step/08_positional_encoding_제미나이_정리본.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/step/09_인코더_디코더_제미나이.py" beforeDir="false" afterPath="$PROJECT_DIR$/step/09_인코더_디코더_제미나이.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/step/commit_bot_d32.pt" beforeDir="false" afterPath="$PROJECT_DIR$/step/commit_bot_d32.pt" afterDir="false" />
-    </list>
+    <list default="true" id="01e5cfc4-bada-4f6a-ac08-355809b6208a" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,22 +31,22 @@
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
       <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.000000238418579" />
-      <entry key="S2" value="1.0220970869120796" />
-      <entry key="S5" value="1.217637640824031" />
-      <entry key="S10" value="1.4665164957684036" />
-      <entry key="S30" value="1.7755723809168673" />
-      <entry key="S60" value="1.8806658735961483" />
-      <entry key="M2" value="1.9384379966711631" />
-      <entry key="M5" value="1.9749081731915836" />
-      <entry key="M10" value="1.9893050413971705" />
-      <entry key="M15" value="2.0112216507550347" />
-      <entry key="M30" value="2.3670329133815167" />
-      <entry key="H1" value="4.7882132022151005" />
-      <entry key="H2" value="14.756021208373097" />
-      <entry key="H4" value="44.539110171573974" />
-      <entry key="D1" value="189.63528169139514" />
-      <entry key="W1" value="261.0449095535096" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.0" />
+      <entry key="S5" value="1.0" />
+      <entry key="S10" value="1.0" />
+      <entry key="S30" value="1.0" />
+      <entry key="S60" value="1.0" />
+      <entry key="M2" value="1.0" />
+      <entry key="M5" value="1.0" />
+      <entry key="M10" value="1.0000000000087144" />
+      <entry key="M15" value="1.0000000538457057" />
+      <entry key="M30" value="1.0003873021119922" />
+      <entry key="H1" value="1.0612486137916302" />
+      <entry key="H2" value="2.6689013380696727" />
+      <entry key="H4" value="15.97863480177474" />
+      <entry key="D1" value="159.13970481049142" />
+      <entry key="W1" value="255.35888467972325" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
@@ -61,35 +56,35 @@
       <entry key="S10" value="0.0" />
       <entry key="S30" value="0.0" />
       <entry key="S60" value="0.0" />
-      <entry key="M2" value="4.305535368925026E-203" />
-      <entry key="M5" value="1.714834070972141E-81" />
-      <entry key="M10" value="5.856321670942613E-41" />
-      <entry key="M15" value="1.9000266701989122E-27" />
-      <entry key="M30" value="6.164455491097904E-14" />
-      <entry key="H1" value="3.511254648370063E-7" />
-      <entry key="H2" value="8.380041195464676E-4" />
-      <entry key="H4" value="0.04093907942295761" />
-      <entry key="D1" value="1.046039316424329" />
-      <entry key="W1" value="1.8231327103019739" />
+      <entry key="M2" value="6.945614702663512E-260" />
+      <entry key="M5" value="3.290754730693393E-104" />
+      <entry key="M10" value="2.5654386216336E-52" />
+      <entry key="M15" value="5.086872284180058E-35" />
+      <entry key="M30" value="1.0086495280596772E-17" />
+      <entry key="H1" value="4.491434921540139E-9" />
+      <entry key="H2" value="9.47780012423276E-5" />
+      <entry key="H4" value="0.013767933787520987" />
+      <entry key="D1" value="0.8723078703714536" />
+      <entry key="W1" value="1.7764376390587098" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.8888426811665702" />
-      <entry key="MS500" value="0.9767087586217594" />
-      <entry key="S2" value="1.016016849432214" />
-      <entry key="S5" value="1.2144706213482435" />
-      <entry key="S10" value="1.4644665716185483" />
-      <entry key="S30" value="1.7746959982978032" />
-      <entry key="S60" value="1.8801948500345949" />
-      <entry key="M2" value="1.9381934600322352" />
-      <entry key="M5" value="1.974808079544856" />
-      <entry key="M10" value="1.989254536258657" />
-      <entry key="M15" value="2.01118751454587" />
-      <entry key="M30" value="2.367012606302594" />
-      <entry key="H1" value="4.788192079113378" />
-      <entry key="H2" value="14.756819013976507" />
-      <entry key="H4" value="44.579967234814355" />
-      <entry key="D1" value="190.68123531962985" />
-      <entry key="W1" value="262.86802421867736" />
+      <entry key="MS100" value="0.9592641193252643" />
+      <entry key="MS500" value="0.9917167307382933" />
+      <entry key="S2" value="0.9979227189990506" />
+      <entry key="S5" value="0.999168569213607" />
+      <entry key="S10" value="0.9995841981612189" />
+      <entry key="S30" value="0.9998613801725043" />
+      <entry key="S60" value="0.9999306876841536" />
+      <entry key="M2" value="0.9999653432415313" />
+      <entry key="M5" value="0.999986137152479" />
+      <entry key="M10" value="0.9999930685609311" />
+      <entry key="M15" value="0.9999954328742646" />
+      <entry key="M30" value="1.0003849883013451" />
+      <entry key="H1" value="1.0612471883500265" />
+      <entry key="H2" value="2.6689909920089527" />
+      <entry key="H4" value="15.992374864465614" />
+      <entry key="D1" value="160.0119411760615" />
+      <entry key="W1" value="257.13530472895314" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -125,6 +120,7 @@
     "Python.23.executor": "Run",
     "Python.23_인코더_디코더_스케쥴_샘플링.executor": "Run",
     "Python.24_commit_bot_스케줄샘플링.executor": "Run",
+    "Python.25.executor": "Run",
     "Python.main.executor": "Run",
     "Python.refined.executor": "Run",
     "Python.step_001_print 명령어.executor": "Run",
@@ -331,7 +327,7 @@
       <workItem from="1782127558343" duration="11955000" />
       <workItem from="1782213810165" duration="9404000" />
       <workItem from="1782299706689" duration="20000" />
-      <workItem from="1782300761705" duration="14921000" />
+      <workItem from="1782300761705" duration="15136000" />
     </task>
     <servers />
   </component>
@@ -353,6 +349,7 @@
     <SUITE FILE_PATH="coverage/commit_bot$22___.coverage" NAME="22_인코더_디코더_딥시크 커버리지 결과" MODIFIED="1782303802286" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/step" />
     <SUITE FILE_PATH="coverage/commit_bot$09_positional_encoding_result_compare.coverage" NAME="09_positional_encoding_result_compare Coverage Results" MODIFIED="1781424866693" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/step" />
     <SUITE FILE_PATH="coverage/commit_bot$21___.coverage" NAME="21_인코더_디코더_제미나이 커버리지 결과" MODIFIED="1782302723416" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/step" />
+    <SUITE FILE_PATH="coverage/commit_bot$25.coverage" NAME="25 커버리지 결과" MODIFIED="1782337022298" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/step" />
     <SUITE FILE_PATH="coverage/commit_bot$10___.coverage" NAME="10_인코더_디코더_최적화 커버리지 결과" MODIFIED="1782301256211" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/step" />
     <SUITE FILE_PATH="coverage/commit_bot$23.coverage" NAME="23_인코더_디코더_스케쥴_샘플링 커버리지 결과" MODIFIED="1782305143877" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/step" />
     <SUITE FILE_PATH="coverage/commit_bot$06_pytorch_embedding.coverage" NAME="06_pytorch_embedding Coverage Results" MODIFIED="1781412795082" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

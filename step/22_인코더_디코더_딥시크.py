@@ -4,9 +4,9 @@ import torch.optim as optim
 import math
 
 
-# -------------------------------
-# 1. Positional Encoding
-# -------------------------------
+# =====================================================================
+# [공통] Positional Encoding
+# =====================================================================
 class PositionalEncoding(nn.Module):
     def __init__(self, d_model, max_len=100):
         super().__init__()
@@ -15,16 +15,16 @@ class PositionalEncoding(nn.Module):
         div_term = torch.exp(torch.arange(0, d_model, 2) * (-math.log(10000.0) / d_model))
         pe[:, 0::2] = torch.sin(position * div_term)
         pe[:, 1::2] = torch.cos(position * div_term)
-        self.pe = pe.unsqueeze(0)  # (1, max_len, d_model)
+        self.pe = pe.unsqueeze(0)
 
     def forward(self, x):
-        seq_len = x.size(1)
-        return x + self.pe[:, :seq_len, :]
+        return x + self.pe[:, :x.size(1), :]
 
 
-# -------------------------------
-# 2. 인코더 (Encoder)
-# -------------------------------
+# =====================================================================
+# [1단계] 인코더 (Encoder)
+# 기존 CommitBot의 forward() 안에 있던 Self-Attention을 독립된 공장으로 분리
+# =====================================================================
 class Encoder(nn.Module):
     def __init__(self, src_vocab_size, d_model=8, nhead=2):
         super().__init__()
@@ -33,36 +33,48 @@ class Encoder(nn.Module):
         self.self_attn = nn.MultiheadAttention(d_model, nhead, batch_first=True)
 
     def forward(self, src_ids, src_pad_mask=None):
-        emb = self.embedding(src_ids)
-        emb = self.pos_enc(emb)
+        emb = self.pos_enc(self.embedding(src_ids))
         memory, _ = self.self_attn(emb, emb, emb, key_padding_mask=src_pad_mask)
         return memory
 
 
-# -------------------------------
-# 3. 디코더 (Decoder)
-# -------------------------------
+# =====================================================================
+# [2단계] 디코더 (Decoder)
+# 기존 CommitBot에는 없던, 출력을 '단어 단위로 생성'하는 새로운 공장
+# =====================================================================
 class Decoder(nn.Module):
     def __init__(self, tgt_vocab_size, d_model=8, nhead=2):
         super().__init__()
         self.embedding = nn.Embedding(tgt_vocab_size, d_model, padding_idx=0)
         self.pos_enc = PositionalEncoding(d_model)
-        self.self_attn = nn.MultiheadAttention(d_model, nhead, batch_first=True)
-        self.cross_attn = nn.MultiheadAttention(d_model, nhead, batch_first=True)
-        self.fc = nn.Linear(d_model, tgt_vocab_size)
+        # 디코더는 두 개의 어텐션을 가집니다.
+        self.self_attn = nn.MultiheadAttention(d_model, nhead, batch_first=True)  # 1) 내가 만든 단어들끼리만 관계 파악
+        self.cross_attn = nn.MultiheadAttention(d_model, nhead, batch_first=True)  # 2) 인코더의 memory를 참조
+        self.fc = nn.Linear(d_model, tgt_vocab_size)  # 점수판
 
     def forward(self, tgt_ids, memory, tgt_mask=None, tgt_pad_mask=None, mem_pad_mask=None):
-        emb = self.embedding(tgt_ids)
-        emb = self.pos_enc(emb)
+        emb = self.pos_enc(self.embedding(tgt_ids))
+        # 1) Masked Self-Attention : 미래 단어를 보지 못하도록 tgt_mask를 사용합니다.
         self_out, _ = self.self_attn(emb, emb, emb, attn_mask=tgt_mask, key_padding_mask=tgt_pad_mask)
+        # 2) Cross-Attention : 디코더의 현재 상태(self_out)가 인코더의 memory를 참조합니다.
         cross_out, _ = self.cross_attn(self_out, memory, memory, key_padding_mask=mem_pad_mask)
         logits = self.fc(cross_out)
         return logits
 
 
-# -------------------------------
-# 4. 완성된 Seq2Seq Transformer
-# -------------------------------
+# =====================================================================
+# [3단계] Seq2Seq Transformer (인코더 + 디코더 조합)
+# 1. 두 개의 모듈을 연결
+#    - Encoder는 입력을 이해하고, Decoder는 출력을 생성합니다. 둘은 독립적으로 존재할 수 없고, 반드시 연결되어야 합니다.
+# 2. 학습을 관리
+#    - train_step에서 Teacher Forcing을 위해 tgt_in, tgt_out을 나누고, 마스크를 만들어서 디코더에 전달하는 모든 과정을 한 곳에서 처리합니다.
+# 3. 추론을 관리
+#    - translate에서 인코더를 한 번 실행한 후, 디코더를 루프로 돌면서 한 단어씩 생성하는 자기회귀(Autoregressive) 과정을 통제합니다.
+# 4. 마스크 생성
+#    - generate_mask로 디코더의 미래 차단 마스크를 만들어줍니다.
+# 5. 단어장 매핑
+#    - src_stoi, tgt_stoi, tgt_itos를 보관하여 입력/출력 변환을 담당합니다.
+# =====================================================================
 class Seq2SeqTransformer(nn.Module):
     def __init__(self, src_vocab, tgt_vocab, d_model=8, nhead=2):
         super().__init__()
@@ -74,13 +86,9 @@ class Seq2SeqTransformer(nn.Module):
         self.decoder = Decoder(len(tgt_vocab), d_model, nhead)
 
         self.criterion = nn.CrossEntropyLoss(ignore_index=0)
-        # ★ 학습률을 0.05 → 0.0005 로 대폭 낮춤
-        # 이유: Transformer는 작은 학습률에서 안정적으로 학습됩니다.
-        # 기존 0.05는 loss 폭발(exploding gradient)의 주범이었습니다.
-        self.optimizer = optim.Adam(self.parameters(), lr=0.0005)
+        self.optimizer = optim.Adam(self.parameters(), lr=0.0002)
 
     def generate_mask(self, sz, device='cpu'):
-        """미래를 가리는 상삼각 마스크. float형 (0: 허용, -inf: 차단)"""
         mask = torch.triu(torch.ones(sz, sz, device=device) * float('-inf'), diagonal=1)
         return mask
 
@@ -90,12 +98,8 @@ class Seq2SeqTransformer(nn.Module):
         logits = self.decoder(tgt_ids, memory, tgt_mask, tgt_pad_mask, src_pad_mask)
         return logits
 
-    # ========== 수정된 train_step ==========
     def train_step(self, src_ids, tgt_ids):
         self.train()
-        # [수정1] 마스크 타입을 float형으로 통일 (-inf/0)
-        # 이전: bool형 (src_ids == 0) → 경고 발생 (mismatched mask types)
-        # 지금: float형 .masked_fill() 로 변환 → attn_mask와 동일 타입
         src_pad_mask = (src_ids == 0).float().masked_fill(src_ids == 0, float('-inf'))
         tgt_in = tgt_ids[:, :-1]
         tgt_out = tgt_ids[:, 1:]
@@ -106,45 +110,36 @@ class Seq2SeqTransformer(nn.Module):
 
         self.optimizer.zero_grad()
         loss.backward()
-        # [수정2] 기울기 클리핑 추가
-        # 이유: 학습 초반 큰 기울기로 인한 가중치 붕괴를 막아줍니다.
         torch.nn.utils.clip_grad_norm_(self.parameters(), max_norm=1.0)
         self.optimizer.step()
         return loss.item()
 
-    # ========== 수정된 translate ==========
     def translate(self, src_words, max_len=10):
         self.eval()
-        src_ids = torch.tensor([[self.src_stoi[w] for w in src_words]])
-        # 마스크 타입 통일 (float)
+        src_ids = torch.tensor([[self.src_stoi.get(w, 0) for w in src_words]])
         src_pad_mask = (src_ids == 0).float().masked_fill(src_ids == 0, float('-inf'))
         memory = self.encoder(src_ids, src_pad_mask)
 
         tgt_ids = torch.tensor([[self.tgt_stoi['<s>']]])
         for _ in range(max_len):
-            # 마스크 타입 통일 (float)
             tgt_pad_mask = (tgt_ids == 0).float().masked_fill(tgt_ids == 0, float('-inf'))
             tgt_mask = self.generate_mask(tgt_ids.size(1), src_ids.device)
             with torch.no_grad():
                 logits = self.decoder(tgt_ids, memory, tgt_mask, tgt_pad_mask, src_pad_mask)
             next_id = logits[:, -1, :].argmax(dim=-1, keepdim=True)
-            if next_id.item() == self.tgt_stoi['<eos>']:
+            if next_id.item() == self.tgt_stoi.get('<eos>', -1):
                 break
             tgt_ids = torch.cat([tgt_ids, next_id], dim=1)
 
         result_ids = tgt_ids[0, 1:].tolist()
-        return [self.tgt_itos[i] for i in result_ids if i not in [0, self.tgt_stoi['<eos>']]]
+        return [self.tgt_itos[i] for i in result_ids if i not in (0, self.tgt_stoi.get('<eos>', -1))]
 
-    # ========== 새로 추가: 학습 진단용 Teacher Forcing 평가 ==========
     def eval_teacher_forcing(self, src_words, tgt_words):
-        """정답 시퀀스를 디코더 입력으로 줬을 때의 예측 결과를 반환합니다.
-        이 결과가 정확하다면 인코더/디코더는 제대로 학습된 것입니다."""
         self.eval()
         src_ids = torch.tensor([[self.src_stoi[w] for w in src_words]])
         tgt_ids = torch.tensor([[self.tgt_stoi['<s>']] +
                                 [self.tgt_stoi[w] for w in tgt_words] +
                                 [self.tgt_stoi['<eos>']]])
-        # 마스크 타입 통일
         src_pad_mask = (src_ids == 0).float().masked_fill(src_ids == 0, float('-inf'))
         tgt_pad_mask = (tgt_ids[:, :-1] == 0).float().masked_fill(tgt_ids[:, :-1] == 0, float('-inf'))
 
@@ -155,11 +150,11 @@ class Seq2SeqTransformer(nn.Module):
         return pred_tokens
 
 
-# -------------------------------
-# 5. 학습 데이터 & 실행
-# -------------------------------
+# =====================================================================
+# [실행부] 학습 전 평가 → 학습 → 최종 평가
+# =====================================================================
 if __name__ == "__main__":
-    # ★ 여기에 당신의 train_data를 넣으세요.
+    # --- 데이터 ---
     train_data = [
         (['버그', '수정'], ['fix', 'bug']),
         (['코드', '수정'], ['refactor', 'code']),
@@ -263,15 +258,11 @@ if __name__ == "__main__":
         (['버그', '코드', '리팩토링'], ['refactor', 'code', 'bug']),
     ]
 
-    # 어휘 자동 생성
+    # --- 어휘 사전 ---
     src_words_all = {w for src, _ in train_data for w in src}
     tgt_words_all = {w for _, tgt in train_data for w in tgt}
-
     src_vocab = ['<pad>'] + sorted(src_words_all)
     tgt_vocab = ['<pad>'] + sorted(tgt_words_all) + ['<s>', '<eos>']
-
-    print(f"📖 src_vocab ({len(src_vocab)}): {src_vocab}")
-    print(f"📖 tgt_vocab ({len(tgt_vocab)}): {tgt_vocab}")
 
     model = Seq2SeqTransformer(src_vocab, tgt_vocab)
 
@@ -284,34 +275,34 @@ if __name__ == "__main__":
         return src_ids, tgt_ids
 
 
-    if len(train_data) > 0:
-        print("\n🧪 학습 전 번역 테스트 (처음 3개):")
-        for src_words, _ in train_data[:3]:
-            print(f"  {src_words} → {model.translate(src_words)}")
+    # ===================== 학습 전 평가 =====================
+    print("🧪 학습 전 번역 테스트 (처음 3개):")
+    for src_words, _ in train_data[:3]:
+        print(f"  {src_words} → {model.translate(src_words)}")
 
-        print("\n📚 1000 에폭 학습 시작...")
-        for epoch in range(1000):
-            total_loss = 0
-            for src_words, tgt_words in train_data:
-                src_ids, tgt_ids = make_tensors(model, src_words, tgt_words)
-                total_loss += model.train_step(src_ids, tgt_ids)
-            if epoch % 200 == 0:
-                print(f"  Epoch {epoch:5d} | Loss: {total_loss:.4f}")
-
-        print("\n✅ 학습 후 번역 결과:")
-        correct_count = 0
+    # ===================== 학습 =====================
+    print("\n📚 1000 에폭 학습 시작...")
+    for epoch in range(1000):
+        total_loss = 0
         for src_words, tgt_words in train_data:
-            pred = model.translate(src_words)
-            correct = pred == tgt_words
-            if correct:
-                correct_count += 1
-            print(f"  {src_words} → {pred} {'✅' if correct else '❌'} (정답: {tgt_words})")
-        print(f"\n🎯 정확도: {correct_count}/{len(train_data)} ({correct_count / len(train_data) * 100:.1f}%)")
+            src_ids, tgt_ids = make_tensors(model, src_words, tgt_words)
+            total_loss += model.train_step(src_ids, tgt_ids)
+        if epoch % 200 == 0:
+            print(f"  Epoch {epoch:5d} | Loss: {total_loss:.4f}")
 
-        # 학습 진단: Teacher Forcing 결과
-        print("\n🔍 Teacher Forcing 평가 (처음 5개):")
-        for src_words, tgt_words in train_data[:5]:
-            tf_pred = model.eval_teacher_forcing(src_words, tgt_words)
-            print(f"  {' '.join(src_words):15} → TF: {tf_pred}  (정답: {tgt_words})")
-    else:
-        print("\n⚠️ train_data가 비어 있습니다. 데이터를 넣고 다시 실행하세요.")
+    # ===================== 학습 후 평가 =====================
+    print("\n✅ 학습 후 번역 결과:")
+    correct_count = 0
+    for src_words, tgt_words in train_data:
+        pred = model.translate(src_words)
+        correct = pred == tgt_words
+        if correct:
+            correct_count += 1
+        print(f"  {src_words} → {pred} {'✅' if correct else '❌'} (정답: {tgt_words})")
+    print(f"\n🎯 정확도: {correct_count}/{len(train_data)} ({correct_count / len(train_data) * 100:.1f}%)")
+
+    # ===================== Teacher Forcing 평가 =====================
+    print("\n🔍 Teacher Forcing 평가 (처음 5개):")
+    for src_words, tgt_words in train_data[:5]:
+        tf_pred = model.eval_teacher_forcing(src_words, tgt_words)
+        print(f"  {' '.join(src_words):15} → TF: {tf_pred}  (정답: {tgt_words})")

@@ -4,14 +4,17 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="01e5cfc4-bada-4f6a-ac08-355809b6208a" name="Changes" comment="" />
+    <list default="true" id="01e5cfc4-bada-4f6a-ac08-355809b6208a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/step/09_인코더_디코더_제미나이.py" beforeDir="false" afterPath="$PROJECT_DIR$/step/09_인코더_디코더_제미나이.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="272" />
+    <option name="cachedIndexableFilesCount" value="279" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
@@ -31,22 +34,22 @@
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
       <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0" />
-      <entry key="S2" value="1.0" />
-      <entry key="S5" value="1.0" />
-      <entry key="S10" value="1.0" />
-      <entry key="S30" value="1.0" />
-      <entry key="S60" value="1.0" />
-      <entry key="M2" value="1.0" />
-      <entry key="M5" value="1.0" />
-      <entry key="M10" value="1.0000000000087144" />
-      <entry key="M15" value="1.0000000538457057" />
-      <entry key="M30" value="1.0003873021119922" />
-      <entry key="H1" value="1.0612486137916302" />
-      <entry key="H2" value="2.6689013380696727" />
-      <entry key="H4" value="15.97863480177474" />
-      <entry key="D1" value="159.13970481049142" />
-      <entry key="W1" value="255.35888467972325" />
+      <entry key="MS500" value="1.0000000000008509" />
+      <entry key="S2" value="1.0009604512441663" />
+      <entry key="S5" value="1.062085675910436" />
+      <entry key="S10" value="1.249641081350762" />
+      <entry key="S30" value="1.7428014842726531" />
+      <entry key="S60" value="2.3076712507784416" />
+      <entry key="M2" value="3.083564317288745" />
+      <entry key="M5" value="4.142943066754082" />
+      <entry key="M10" value="4.8295723520614455" />
+      <entry key="M15" value="5.145868144150997" />
+      <entry key="M30" value="5.529164502246526" />
+      <entry key="H1" value="5.804048834099759" />
+      <entry key="H2" value="7.413652624257511" />
+      <entry key="H4" value="20.32920942428702" />
+      <entry key="D1" value="163.08261814573987" />
+      <entry key="W1" value="260.1162491044582" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
@@ -56,35 +59,35 @@
       <entry key="S10" value="0.0" />
       <entry key="S30" value="0.0" />
       <entry key="S60" value="0.0" />
-      <entry key="M2" value="6.945614702663512E-260" />
-      <entry key="M5" value="3.290754730693393E-104" />
-      <entry key="M10" value="2.5654386216336E-52" />
-      <entry key="M15" value="5.086872284180058E-35" />
-      <entry key="M30" value="1.0086495280596772E-17" />
-      <entry key="H1" value="4.491434921540139E-9" />
-      <entry key="H2" value="9.47780012423276E-5" />
-      <entry key="H4" value="0.013767933787520987" />
-      <entry key="D1" value="0.8723078703714536" />
-      <entry key="W1" value="1.7764376390587098" />
+      <entry key="M2" value="5.836925164261944E-262" />
+      <entry key="M5" value="4.865022904401738E-105" />
+      <entry key="M10" value="9.864073872645802E-53" />
+      <entry key="M15" value="2.6897626516204226E-35" />
+      <entry key="M30" value="7.33452261749891E-18" />
+      <entry key="H1" value="3.83001868419831E-9" />
+      <entry key="H2" value="8.752163785292951E-5" />
+      <entry key="H4" value="0.013230392062575608" />
+      <entry key="D1" value="0.8665370077158128" />
+      <entry key="W1" value="1.7747539669196464" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.9592641193252643" />
-      <entry key="MS500" value="0.9917167307382933" />
-      <entry key="S2" value="0.9979227189990506" />
-      <entry key="S5" value="0.999168569213607" />
-      <entry key="S10" value="0.9995841981612189" />
-      <entry key="S30" value="0.9998613801725043" />
-      <entry key="S60" value="0.9999306876841536" />
-      <entry key="M2" value="0.9999653432415313" />
-      <entry key="M5" value="0.999986137152479" />
-      <entry key="M10" value="0.9999930685609311" />
-      <entry key="M15" value="0.9999954328742646" />
-      <entry key="M30" value="1.0003849883013451" />
-      <entry key="H1" value="1.0612471883500265" />
-      <entry key="H2" value="2.6689909920089527" />
-      <entry key="H4" value="15.992374864465614" />
-      <entry key="D1" value="160.0119411760615" />
-      <entry key="W1" value="257.13530472895314" />
+      <entry key="MS100" value="0.8950250709279725" />
+      <entry key="MS500" value="0.9780634734481739" />
+      <entry key="S2" value="0.9954259710661806" />
+      <entry key="S5" value="1.05974968270659" />
+      <entry key="S10" value="1.248289879283972" />
+      <entry key="S30" value="1.742144528016757" />
+      <entry key="S60" value="2.307112416513223" />
+      <entry key="M2" value="3.083029565646332" />
+      <entry key="M5" value="4.142564373414776" />
+      <entry key="M10" value="4.8293359872191415" />
+      <entry key="M15" value="5.145697828871087" />
+      <entry key="M30" value="5.529072266336602" />
+      <entry key="H1" value="5.804000569466803" />
+      <entry key="H2" value="7.413711430886659" />
+      <entry key="H4" value="20.34240092511747" />
+      <entry key="D1" value="163.9490820872737" />
+      <entry key="W1" value="261.89098520718414" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -99,54 +102,54 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python.011_comparison.executor": "Run",
-    "Python.06_pytorch_embedding.executor": "Run",
-    "Python.08_positional_encoding.executor": "Run",
-    "Python.08_positional_encoding_제미나이_정리본.executor": "Run",
-    "Python.09_encoder.executor": "Run",
-    "Python.09_positional_encoding_result_compare.executor": "Run",
-    "Python.09_인코더_디코더_제미나이.executor": "Run",
-    "Python.09_최적화기능없는_인코더_디코더.executor": "Run",
-    "Python.10_인코더_디코더_최적화.executor": "Run",
-    "Python.15_commit_bot_01.executor": "Run",
-    "Python.17. commit_boot_interactive.executor": "Run",
-    "Python.18_commit_bot_ffn.executor": "Run",
-    "Python.20_인코더_디코더_제미나이.executor": "Run",
-    "Python.21_인코더_디코더_제미나이.executor": "Run",
-    "Python.22_인코더_디코더_딥시크.executor": "Run",
-    "Python.23.executor": "Run",
-    "Python.23_인코더_디코더_스케쥴_샘플링.executor": "Run",
-    "Python.24_commit_bot_스케줄샘플링.executor": "Run",
-    "Python.25.executor": "Run",
-    "Python.main.executor": "Run",
-    "Python.refined.executor": "Run",
-    "Python.step_001_print 명령어.executor": "Run",
-    "Python.step_003_간단한 함수 만들기.executor": "Run",
-    "RunOnceActivity.MCP Project settings loaded": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "C:/Dropbox/PyCharm/commit-bot/step",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
-    "to.speed.mode.migration.done": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.011_comparison.executor&quot;: &quot;Run&quot;,
+    &quot;Python.06_pytorch_embedding.executor&quot;: &quot;Run&quot;,
+    &quot;Python.08_positional_encoding.executor&quot;: &quot;Run&quot;,
+    &quot;Python.08_positional_encoding_제미나이_정리본.executor&quot;: &quot;Run&quot;,
+    &quot;Python.09_encoder.executor&quot;: &quot;Run&quot;,
+    &quot;Python.09_positional_encoding_result_compare.executor&quot;: &quot;Run&quot;,
+    &quot;Python.09_인코더_디코더_제미나이.executor&quot;: &quot;Run&quot;,
+    &quot;Python.09_최적화기능없는_인코더_디코더.executor&quot;: &quot;Run&quot;,
+    &quot;Python.10_인코더_디코더_최적화.executor&quot;: &quot;Run&quot;,
+    &quot;Python.15_commit_bot_01.executor&quot;: &quot;Run&quot;,
+    &quot;Python.17. commit_boot_interactive.executor&quot;: &quot;Run&quot;,
+    &quot;Python.18_commit_bot_ffn.executor&quot;: &quot;Run&quot;,
+    &quot;Python.20_인코더_디코더_제미나이.executor&quot;: &quot;Run&quot;,
+    &quot;Python.21_인코더_디코더_제미나이.executor&quot;: &quot;Run&quot;,
+    &quot;Python.22_인코더_디코더_딥시크.executor&quot;: &quot;Run&quot;,
+    &quot;Python.23.executor&quot;: &quot;Run&quot;,
+    &quot;Python.23_인코더_디코더_스케쥴_샘플링.executor&quot;: &quot;Run&quot;,
+    &quot;Python.24_commit_bot_스케줄샘플링.executor&quot;: &quot;Run&quot;,
+    &quot;Python.25.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.refined.executor&quot;: &quot;Run&quot;,
+    &quot;Python.step_001_print 명령어.executor&quot;: &quot;Run&quot;,
+    &quot;Python.step_003_간단한 함수 만들기.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Dropbox/PyCharm/commit-bot/step&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Dropbox\PyCharm\commit-bot\step" />
@@ -328,6 +331,7 @@
       <workItem from="1782213810165" duration="9404000" />
       <workItem from="1782299706689" duration="20000" />
       <workItem from="1782300761705" duration="15136000" />
+      <workItem from="1782399123125" duration="2433000" />
     </task>
     <servers />
   </component>
